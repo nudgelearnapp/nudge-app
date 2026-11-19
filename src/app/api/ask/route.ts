@@ -36,39 +36,34 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    const groqModels = ['llama-3.1-8b-instant', 'llama3-8b-8192', 'gemma2-9b-it']
+    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
+        'HTTP-Referer': 'https://nudge-app-mu.vercel.app',
+        'X-Title': 'Nudge AI Tutor',
+      },
+      body: JSON.stringify({
+        model: 'meta-llama/llama-4-scout:free',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          ...messages,
+        ],
+        max_tokens: 1024,
+        temperature: 0.7,
+      }),
+    })
 
-    for (const model of groqModels) {
-      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.GROQ_API_KEY}`,
-        },
-        body: JSON.stringify({
-          model,
-          messages: [
-            { role: 'system', content: systemPrompt },
-            ...messages,
-          ],
-          max_tokens: 1024,
-          temperature: 0.7,
-        }),
-      })
-
-      if (response.ok) {
-        const data = await response.json()
-        const text = data.choices?.[0]?.message?.content || 'Sorry, I could not generate a response.'
-        return NextResponse.json({ answer: text })
-      }
-
+    if (!response.ok) {
       const err = await response.text()
-      console.error(`Groq model ${model} failed:`, err)
-
-      if (!err.includes('does not exist') && !err.includes('model_not_found')) break
+      console.error('OpenRouter error:', err)
+      return NextResponse.json({ error: 'Failed to get answer' }, { status: 500 })
     }
 
-    return NextResponse.json({ error: 'Failed to get answer' }, { status: 500 })
+    const data = await response.json()
+    const text = data.choices?.[0]?.message?.content || 'Sorry, I could not generate a response.'
+    return NextResponse.json({ answer: text })
 
   } catch (error) {
     console.error('AI error:', error)
