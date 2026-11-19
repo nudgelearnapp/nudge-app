@@ -36,37 +36,32 @@ export async function POST(req: NextRequest) {
     }
 
     const apiKey = process.env.GEMINI_API_KEY!
-    const models = ['gemini-1.5-flash', 'gemini-1.5-flash-latest', 'gemini-pro', 'gemini-1.0-pro']
 
-    let lastError = ''
-    for (const modelName of models) {
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent`
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-goog-api-key': apiKey,
-        },
-        body: JSON.stringify({
-          contents: [{ parts }],
-          generationConfig: { temperature: 0.7, maxOutputTokens: 1024 },
-        }),
-      })
+    // AQ. keys use Vertex AI endpoint in us-central1
+    const projectId = 'gen-lang-client-0786147611'
+    const url = `https://us-central1-aiplatform.googleapis.com/v1/projects/${projectId}/locations/us-central1/publishers/google/models/gemini-1.5-flash:generateContent`
 
-      if (response.ok) {
-        const data = await response.json()
-        const text = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, I could not generate a response.'
-        return NextResponse.json({ answer: text })
-      }
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        contents: [{ role: 'user', parts }],
+        generationConfig: { temperature: 0.7, maxOutputTokens: 1024 },
+      }),
+    })
 
+    if (!response.ok) {
       const err = await response.text()
-      lastError = err
-      console.error(`Model ${modelName} failed:`, err)
-      if (!err.includes('404') && !err.includes('not found')) break
+      console.error('Vertex AI error:', err)
+      return NextResponse.json({ error: 'Failed to get answer' }, { status: 500 })
     }
 
-    console.error('All models failed. Last error:', lastError)
-    return NextResponse.json({ error: 'Failed to get answer' }, { status: 500 })
+    const data = await response.json()
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, I could not generate a response.'
+    return NextResponse.json({ answer: text })
 
   } catch (error) {
     console.error('Gemini error:', error)
