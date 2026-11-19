@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
         'X-Title': 'Nudge AI Tutor',
       },
       body: JSON.stringify({
-        model: 'meta-llama/llama-4-scout:free',
+        model: 'google/gemma-4-31b-it:free',
         messages: [
           { role: 'system', content: systemPrompt },
           ...messages,
