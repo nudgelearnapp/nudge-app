@@ -1,7 +1,4 @@
-import { GoogleGenerativeAI } from '@google/generative-ai'
 import { NextRequest, NextResponse } from 'next/server'
-
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
 
 export async function POST(req: NextRequest) {
   try {
@@ -11,8 +8,6 @@ export async function POST(req: NextRequest) {
     const imageFile = formData.get('image') as File | null
     const history = JSON.parse(formData.get('history') as string || '[]')
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
-
     const langInstructions: Record<string, string> = {
       as: 'You are Nudge, an AI tutor for Class 10 SEBA board students in Assam. Always respond in Assamese (অসমীয়া). Be friendly, patient, and encouraging like a good tutor. Explain step by step. After explaining, ask the student if they understood. Keep responses concise and clear.',
       hi: 'You are Nudge, an AI tutor for Class 10 SEBA board students in Assam. Always respond in Hindi. Be friendly, patient, and encouraging like a good tutor. Explain step by step. After explaining, ask the student if they understood. Keep responses concise and clear.',
@@ -20,29 +15,50 @@ export async function POST(req: NextRequest) {
     }
 
     const systemPrompt = langInstructions[language] || langInstructions['en']
+
     const historyText = history.map((h: {role: string, text: string}) =>
       `${h.role === 'user' ? 'Student' : 'Nudge'}: ${h.text}`
     ).join('\n')
 
-    let prompt = `${systemPrompt}\n\n`
-    if (historyText) prompt += `Previous conversation:\n${historyText}\n\n`
-    prompt += `Student's question: ${question || 'Please explain what you see in this image'}`
+    let promptText = `${systemPrompt}\n\n`
+    if (historyText) promptText += `Previous conversation:\n${historyText}\n\n`
+    promptText += `Student's question: ${question || 'Please explain what you see in this image'}`
 
-    let result
+    const parts: object[] = [{ text: promptText }]
+
     if (imageFile) {
       const imageBytes = await imageFile.arrayBuffer()
-      const imageData = {
+      parts.push({
         inlineData: {
           data: Buffer.from(imageBytes).toString('base64'),
           mimeType: imageFile.type,
         },
-      }
-      result = await model.generateContent([prompt, imageData])
-    } else {
-      result = await model.generateContent(prompt)
+      })
     }
 
-    const text = result.response.text()
+    const apiKey = process.env.GEMINI_API_KEY!
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`
+
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts }],
+        generationConfig: {
+          temperature: 0.7,
+          maxOutputTokens: 1024,
+        },
+      }),
+    })
+
+    if (!response.ok) {
+      const err = await response.text()
+      console.error('Gemini API error:', err)
+      return NextResponse.json({ error: 'Failed to get answer' }, { status: 500 })
+    }
+
+    const data = await response.json()
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, I could not generate a response.'
     return NextResponse.json({ answer: text })
 
   } catch (error) {
