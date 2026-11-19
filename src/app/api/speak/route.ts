@@ -5,7 +5,6 @@ export async function POST(req: NextRequest) {
     const { text, language } = await req.json()
 
     const langMap: Record<string, string> = {
-      as: 'as-IN',
       hi: 'hi-IN',
     }
 
