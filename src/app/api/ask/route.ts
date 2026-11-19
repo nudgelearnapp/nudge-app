@@ -19,52 +19,53 @@ export async function POST(req: NextRequest) {
       `${h.role === 'user' ? 'Student' : 'Nudge'}: ${h.text}`
     ).join('\n')
 
-    let promptText = `${systemPrompt}\n\n`
-    if (historyText) promptText += `Previous conversation:\n${historyText}\n\n`
-    promptText += `Student's question: ${question || 'Please explain what you see in this image'}`
+    let userMessage = question || 'Please explain what you see in this image'
+    if (historyText) userMessage = `Previous conversation:\n${historyText}\n\nStudent: ${userMessage}`
 
-    const parts: object[] = [{ text: promptText }]
+    const messages: object[] = [{ role: 'user', content: userMessage }]
 
+    // Handle image if provided (Groq vision)
     if (imageFile) {
       const imageBytes = await imageFile.arrayBuffer()
-      parts.push({
-        inlineData: {
-          data: Buffer.from(imageBytes).toString('base64'),
-          mimeType: imageFile.type,
-        },
-      })
+      const base64 = Buffer.from(imageBytes).toString('base64')
+      messages[0] = {
+        role: 'user',
+        content: [
+          { type: 'text', text: userMessage },
+          { type: 'image_url', image_url: { url: `data:${imageFile.type};base64,${base64}` } }
+        ]
+      }
     }
 
-    const apiKey = process.env.GEMINI_API_KEY!
-
-    // AQ. keys use Vertex AI endpoint in us-central1
-    const projectId = 'gen-lang-client-0786147611'
-    const url = `https://us-central1-aiplatform.googleapis.com/v1/projects/${projectId}/locations/us-central1/publishers/google/models/gemini-1.5-flash:generateContent`
-
-    const response = await fetch(url, {
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
+        'Authorization': `Bearer ${process.env.GROQ_API_KEY}`,
       },
       body: JSON.stringify({
-        contents: [{ role: 'user', parts }],
-        generationConfig: { temperature: 0.7, maxOutputTokens: 1024 },
+        model: 'llama-3.3-70b-versatile',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          ...messages,
+        ],
+        max_tokens: 1024,
+        temperature: 0.7,
       }),
     })
 
     if (!response.ok) {
       const err = await response.text()
-      console.error('Vertex AI error:', err)
+      console.error('Groq error:', err)
       return NextResponse.json({ error: 'Failed to get answer' }, { status: 500 })
     }
 
     const data = await response.json()
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, I could not generate a response.'
+    const text = data.choices?.[0]?.message?.content || 'Sorry, I could not generate a response.'
     return NextResponse.json({ answer: text })
 
   } catch (error) {
-    console.error('Gemini error:', error)
+    console.error('AI error:', error)
     return NextResponse.json({ error: 'Failed to get answer' }, { status: 500 })
   }
 }
