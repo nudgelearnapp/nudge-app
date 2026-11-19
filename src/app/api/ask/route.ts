@@ -24,7 +24,6 @@ export async function POST(req: NextRequest) {
 
     const messages: object[] = [{ role: 'user', content: userMessage }]
 
-    // Handle image if provided (Groq vision)
     if (imageFile) {
       const imageBytes = await imageFile.arrayBuffer()
       const base64 = Buffer.from(imageBytes).toString('base64')
@@ -37,32 +36,39 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.GROQ_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
-        messages: [
-          { role: 'system', content: systemPrompt },
-          ...messages,
-        ],
-        max_tokens: 1024,
-        temperature: 0.7,
-      }),
-    })
+    const groqModels = ['llama-3.1-8b-instant', 'llama3-8b-8192', 'gemma2-9b-it']
 
-    if (!response.ok) {
+    for (const model of groqModels) {
+      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.GROQ_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model,
+          messages: [
+            { role: 'system', content: systemPrompt },
+            ...messages,
+          ],
+          max_tokens: 1024,
+          temperature: 0.7,
+        }),
+      })
+
+      if (response.ok) {
+        const data = await response.json()
+        const text = data.choices?.[0]?.message?.content || 'Sorry, I could not generate a response.'
+        return NextResponse.json({ answer: text })
+      }
+
       const err = await response.text()
-      console.error('Groq error:', err)
-      return NextResponse.json({ error: 'Failed to get answer' }, { status: 500 })
+      console.error(`Groq model ${model} failed:`, err)
+
+      if (!err.includes('does not exist') && !err.includes('model_not_found')) break
     }
 
-    const data = await response.json()
-    const text = data.choices?.[0]?.message?.content || 'Sorry, I could not generate a response.'
-    return NextResponse.json({ answer: text })
+    return NextResponse.json({ error: 'Failed to get answer' }, { status: 500 })
 
   } catch (error) {
     console.error('AI error:', error)
