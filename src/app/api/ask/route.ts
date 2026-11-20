@@ -29,8 +29,17 @@ SAFETY
 - If a student mentions self-harm, wanting to die, abuse, bullying, or feeling very sad or scared: do not lecture and do not just refuse. Respond with kindness in a few short sentences, tell them they are not alone, and encourage them to talk today to a parent, teacher, or another adult they trust. If they may be in danger, tell them to call 112 (emergency) or the Tele-MANAS helpline 14416. Then gently ask how they are feeling.
 - Never give medical, legal, or dangerous instructions.
 
+HOW STUDENTS WRITE
+- Students often type Assamese or Hindi in English letters, the way they chat on WhatsApp, with casual spelling. Examples: "photosynthesis ki?" (what is photosynthesis?), "eitu bujha nai" (I didn't understand this), "kenekoi koribo?" (how do I do it?), "aru bhal koi bujai diya" (explain better), "ha" / "hoi" (yes), "nai" (no). Understand these fully and answer the real question completely, exactly as you would if they had asked in proper English or Assamese script.
+- Short or casual questions still get a complete answer.
+
+PLAIN TEXT ONLY (your answer is also read aloud by a voice)
+- Never use markdown or symbols for formatting: no asterisks, no hash signs, no underscores, no bullet symbols, no emojis, no tables.
+- For a list, write it as spoken sentences: "First, ... Second, ... Third, ..." or put each point on its own line starting with a number like "1." only when steps are needed.
+- Maths symbols (=, +, −, ×, ÷) and numbers are fine.
+
 HOW TO TEACH
-- Keep answers short: usually under 150 words. Offer to explain more if they want.
+- Keep answers short: usually under 150 words, but always complete. Never stop in the middle of an explanation. Offer to explain more if they want.
 - Explain step by step with simple everyday examples from life in Assam (rice fields, the Brahmaputra, tea gardens, Bihu, the local market).
 - Follow the ASSEB/SEBA Class 10 textbook. If unsure whether something is in the syllabus, say so.
 - For exam-style questions, show how to write the answer to score full marks (key points, diagram if needed, keywords).
@@ -48,11 +57,27 @@ LANGUAGE: Reply in Assamese (অসমীয়া), in Assamese script.
 - Use correct Assamese spelling and letters (ৰ, ৱ), never Bengali spellings or Bengali words. Never mix in Hindi words.
 - Keep scientific and maths terms in English when students commonly say them in English (photosynthesis, acid, formula, equation, current), and add the Assamese term in brackets the first time if it helps, e.g. "photosynthesis (সালোকসংশ্লেষণ)".
 - Write numbers and formulas in standard digits (1, 2, 3) so they are easy to read.
-- If the student writes in English or mixes English and Assamese, still reply in natural Assamese mixed with English terms, the way students in Assam actually speak.`,
+- If the student writes in English letters (WhatsApp-style Assamese) or mixes English and Assamese, still reply in natural Assamese in Assamese script, mixed with English terms, the way students in Assam actually speak.`,
   hi: `
 LANGUAGE: Reply in simple, everyday spoken Hindi in Devanagari script, the way a friendly teacher talks. Address the student as "तुम". Keep common science and maths terms in English. Short sentences.`,
   en: `
 LANGUAGE: Reply in simple English that a Class 10 student whose first language is Assamese can easily understand. Short sentences, no difficult words.`,
+}
+
+// Removes markdown symbols so the voice never reads out "asterisk" etc.
+function toPlainText(s: string): string {
+  return s
+    .replace(/```[\s\S]*?```/g, (m) => m.replace(/```\w*/g, ''))
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/__(.+?)__/g, '$1')
+    .replace(/(^|[^\w*])\*(?!\s)(.+?)\*(?!\w)/g, '$1$2')
+    .replace(/^\s{0,3}#{1,6}\s*/gm, '')
+    .replace(/^\s*[-*•]\s+/gm, '')
+    .replace(/`/g, '')
+    .replace(/\*/g, '')
+    .replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
 }
 
 type Turn = { role: string; text: string }
@@ -93,8 +118,10 @@ export async function POST(req: NextRequest) {
     const contents = buildContents(history.slice(-10), question)
 
     let lastError = ''
+    const started = Date.now()
     for (const model of MODELS) {
-      const generationConfig: Record<string, unknown> = { maxOutputTokens: 800, temperature: 0.6 }
+      // Assamese script uses many more tokens per word, so it needs a bigger limit
+      const generationConfig: Record<string, unknown> = { maxOutputTokens: 2048, temperature: 0.6 }
       if (model.noThinking) generationConfig.thinkingConfig = { thinkingBudget: 0 }
 
       const res = await fetch(
@@ -116,7 +143,10 @@ export async function POST(req: NextRequest) {
           .map((p: { text?: string }) => p.text || '')
           .join('')
           .trim()
-        if (text) return NextResponse.json({ answer: text, model: model.name })
+        const finish = data.candidates?.[0]?.finishReason
+        const ms = Date.now() - started
+        console.log(`Gemini ok -> ${model.name} in ${ms} ms (finish: ${finish}, lang: ${language})`)
+        if (text) return NextResponse.json({ answer: toPlainText(text), model: model.name, ms })
         lastError = `${model.name}: empty response ${JSON.stringify(data).slice(0, 300)}`
       } else {
         lastError = `${model.name}: ${res.status} ${(await res.text()).slice(0, 300)}`
