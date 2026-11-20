@@ -4,12 +4,16 @@ import { NextRequest, NextResponse } from 'next/server'
 // Run this function in Mumbai, close to students in Assam (default is the US).
 export const preferredRegion = 'bom1'
 
-// Fastest model first. "thinking" is switched off on 2.5 models to cut waiting time.
-const MODELS: { name: string; noThinking: boolean }[] = [
-  { name: 'gemini-2.5-flash', noThinking: true },
-  { name: 'gemini-flash-latest', noThinking: false },
-  { name: 'gemini-2.5-flash-lite', noThinking: true },
+// Gemini 2.5 models are closed to new keys (they return 404), so use the Gemini 3.x family.
+// Fastest model first; "minimal" thinking keeps answers quick.
+const MODELS: { name: string; thinkingLevel?: string }[] = [
+  { name: 'gemini-3.5-flash-lite', thinkingLevel: 'minimal' },
+  { name: 'gemini-3.5-flash', thinkingLevel: 'minimal' },
+  { name: 'gemini-3.1-flash-lite', thinkingLevel: 'minimal' },
 ]
+// If a model hasn't answered in this time, give up on it and try the next one.
+const MODEL_TIMEOUT_MS = 15000
+export const maxDuration = 60
 
 // ---- Nudge's rules ----
 const CORE_RULES = `
@@ -121,21 +125,29 @@ export async function POST(req: NextRequest) {
     const started = Date.now()
     for (const model of MODELS) {
       // Assamese script uses many more tokens per word, so it needs a bigger limit
-      const generationConfig: Record<string, unknown> = { maxOutputTokens: 2048, temperature: 0.6 }
-      if (model.noThinking) generationConfig.thinkingConfig = { thinkingBudget: 0 }
+      const generationConfig: Record<string, unknown> = { maxOutputTokens: 2048 }
+      if (model.thinkingLevel) generationConfig.thinkingConfig = { thinkingLevel: model.thinkingLevel }
 
-      const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/${model.name}:generateContent`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
-          body: JSON.stringify({
-            systemInstruction: { parts: [{ text: systemText }] },
-            contents,
-            generationConfig,
-          }),
-        }
-      )
+      let res: Response
+      try {
+        res = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${model.name}:generateContent`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
+            body: JSON.stringify({
+              systemInstruction: { parts: [{ text: systemText }] },
+              contents,
+              generationConfig,
+            }),
+            signal: AbortSignal.timeout(MODEL_TIMEOUT_MS),
+          }
+        )
+      } catch (e) {
+        lastError = `${model.name}: timed out or network error after ${Date.now() - started} ms (${String(e).slice(0, 100)})`
+        console.error('Gemini error ->', lastError)
+        continue
+      }
 
       if (res.ok) {
         const data = await res.json()
