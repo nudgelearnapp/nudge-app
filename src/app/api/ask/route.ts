@@ -1,4 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
+import scienceBook from '../../../data/science-as.json'
+
+// ---- Textbook (ASSEB/SEBA Class 10 Science, Assamese medium) ----
+type Section = { id: number; chapter: number; chapterTitle: string; chapterEn: string; heading: string; pages: string; text: string; keywords: string[] }
+const SECTIONS = (scienceBook as { sections: Section[] }).sections
+// Short English index Gemini uses to pick the right sections (keeps requests small)
+const englishPart = (h: string) => (h.match(/\(([^()]*[A-Za-z]{3,}[^()]*)\)/)?.[1] || 'chapter introduction').trim()
+const SECTION_INDEX = SECTIONS.map(
+  (s) => `${s.id}: Ch${s.chapter} ${s.chapterEn} > ${englishPart(s.heading)}${s.keywords.length ? ' [' + s.keywords.join(', ') + ']' : ''}`
+).join('\n')
 
 // ---- Speed settings ----
 // Run this function in Mumbai, close to students in Assam (default is the US).
@@ -41,6 +51,12 @@ PLAIN TEXT ONLY (your answer is also read aloud by a voice)
 - Never use markdown or symbols for formatting: no asterisks, no hash signs, no underscores, no bullet symbols, no emojis, no tables.
 - For a list, write it as spoken sentences: "First, ... Second, ... Third, ..." or put each point on its own line starting with a number like "1." only when steps are needed.
 - Maths symbols (=, +, −, ×, ÷) and numbers are fine.
+
+USING THE TEXTBOOK
+- When TEXTBOOK EXTRACTS are given below, base your answer on them. Use the same scientific terms, spellings and definitions as the textbook, because these are what the HSLC exam expects.
+- The extracts were scanned from the printed book, so they may contain small scanning errors (odd letters, broken formulas, stray symbols). Silently correct obvious errors; never copy garbage characters.
+- Explain the textbook content more simply and warmly; do not just copy long passages.
+- If the extracts do not cover the question, answer from your own knowledge of the Class 10 syllabus.
 
 HOW TO TEACH
 - Keep answers short: usually under 150 words, but always complete. Never stop in the middle of an explanation. Offer to explain more if they want.
@@ -102,6 +118,64 @@ function buildContents(history: Turn[], question: string): Content[] {
   return out
 }
 
+type GeminiResult = { ok: true; text: string; model: string; finish?: string } | { ok: false; error: string }
+
+// Tries each model in order; skips models that fail or take too long.
+async function callGemini(apiKey: string, body: { generationConfig?: Record<string, unknown>; [key: string]: unknown }): Promise<GeminiResult> {
+  let lastError = ''
+  for (const model of MODELS) {
+    const generationConfig: Record<string, unknown> = { ...(body.generationConfig || {}) }
+    if (model.thinkingLevel) generationConfig.thinkingConfig = { thinkingLevel: model.thinkingLevel }
+    let res: Response
+    try {
+      res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model.name}:generateContent`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
+        body: JSON.stringify({ ...body, generationConfig }),
+        signal: AbortSignal.timeout(MODEL_TIMEOUT_MS),
+      })
+    } catch (e) {
+      lastError = `${model.name}: timed out or network error (${String(e).slice(0, 100)})`
+      console.error('Gemini error ->', lastError)
+      continue
+    }
+    if (res.ok) {
+      const data = await res.json()
+      const text = (data.candidates?.[0]?.content?.parts || []).map((p: { text?: string }) => p.text || '').join('').trim()
+      if (text) return { ok: true, text, model: model.name, finish: data.candidates?.[0]?.finishReason }
+      lastError = `${model.name}: empty response ${JSON.stringify(data).slice(0, 300)}`
+    } else {
+      lastError = `${model.name}: ${res.status} ${(await res.text()).slice(0, 300)}`
+    }
+    console.error('Gemini error ->', lastError)
+    if (res.status === 401 || res.status === 403) break
+  }
+  return { ok: false, error: lastError }
+}
+
+// Asks Gemini which textbook sections answer the question. Returns up to 3 section ids.
+async function pickSections(apiKey: string, question: string, recent: string): Promise<number[]> {
+  const prompt = `A Class 10 student in Assam asked: "${question}"${recent ? `\nEarlier questions in this chat: "${recent}"` : ''}
+The question may be in Assamese script, English, or Assamese typed in English letters (e.g. "photosynthesis ki?").
+Below is the index of the Class 10 Science textbook. Pick the sections (at most 3, best first) whose text is needed to answer.
+If the question is not about Science (e.g. maths, social science, greetings, off-topic), return an empty list.
+Reply with JSON only, like {"ids":[77,78]}.
+
+INDEX:
+${SECTION_INDEX}`
+  const r = await callGemini(apiKey, {
+    contents: [{ role: 'user', parts: [{ text: prompt }] }],
+    generationConfig: { maxOutputTokens: 100, responseMimeType: 'application/json' },
+  })
+  if (!r.ok) return []
+  try {
+    const ids = JSON.parse(r.text).ids
+    return Array.isArray(ids) ? ids.filter((n: unknown) => Number.isInteger(n) && SECTIONS[n as number]).slice(0, 3) : []
+  } catch {
+    return []
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData()
@@ -120,54 +194,33 @@ export async function POST(req: NextRequest) {
 
     const systemText = CORE_RULES + (LANGUAGE_RULES[language] || LANGUAGE_RULES.en)
     const contents = buildContents(history.slice(-10), question)
-
-    let lastError = ''
     const started = Date.now()
-    for (const model of MODELS) {
-      // Assamese script uses many more tokens per word, so it needs a bigger limit
-      const generationConfig: Record<string, unknown> = { maxOutputTokens: 2048 }
-      if (model.thinkingLevel) generationConfig.thinkingConfig = { thinkingLevel: model.thinkingLevel }
 
-      let res: Response
-      try {
-        res = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/${model.name}:generateContent`,
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
-            body: JSON.stringify({
-              systemInstruction: { parts: [{ text: systemText }] },
-              contents,
-              generationConfig,
-            }),
-            signal: AbortSignal.timeout(MODEL_TIMEOUT_MS),
-          }
-        )
-      } catch (e) {
-        lastError = `${model.name}: timed out or network error after ${Date.now() - started} ms (${String(e).slice(0, 100)})`
-        console.error('Gemini error ->', lastError)
-        continue
-      }
+    // Step 1: find the relevant textbook sections (Science only for now)
+    const t0 = Date.now()
+    const recentUser = history.filter((h) => h.role === 'user').slice(-2).map((h) => h.text).join(' | ')
+    const picked = await pickSections(apiKey, question, recentUser)
+    const extracts = picked
+      .map((id) => SECTIONS[id])
+      .filter(Boolean)
+      .map((s) => `--- অধ্যায় ${s.chapter} (${s.chapterEn}), ${s.heading}, পৃষ্ঠা ${s.pages} ---\n${s.text}`)
+      .join('\n\n')
+    const fullSystem = extracts ? `${systemText}\n\nTEXTBOOK EXTRACTS (ASSEB/SEBA Class 10 Science, Assamese medium):\n${extracts}` : systemText
+    const pickMs = Date.now() - t0
 
-      if (res.ok) {
-        const data = await res.json()
-        const text = (data.candidates?.[0]?.content?.parts || [])
-          .map((p: { text?: string }) => p.text || '')
-          .join('')
-          .trim()
-        const finish = data.candidates?.[0]?.finishReason
-        const ms = Date.now() - started
-        console.log(`Gemini ok -> ${model.name} in ${ms} ms (finish: ${finish}, lang: ${language})`)
-        if (text) return NextResponse.json({ answer: toPlainText(text), model: model.name, ms })
-        lastError = `${model.name}: empty response ${JSON.stringify(data).slice(0, 300)}`
-      } else {
-        lastError = `${model.name}: ${res.status} ${(await res.text()).slice(0, 300)}`
-      }
-      console.error('Gemini error ->', lastError)
-      // 401/403 = key problem; trying other models won't help
-      if (res.status === 401 || res.status === 403) break
+    // Step 2: answer
+    const result = await callGemini(apiKey, {
+      systemInstruction: { parts: [{ text: fullSystem }] },
+      contents,
+      generationConfig: { maxOutputTokens: 2048 },
+    })
+    if (result.ok) {
+      const ms = Date.now() - started
+      console.log(`Gemini ok -> ${result.model} in ${ms} ms (pick ${pickMs} ms, sections [${picked.join(',')}], finish: ${result.finish}, lang: ${language})`)
+      const sources = picked.map((id) => SECTIONS[id]).filter(Boolean).map((s) => ({ chapter: s.chapter, heading: s.heading, pages: s.pages }))
+      return NextResponse.json({ answer: toPlainText(result.text), model: result.model, ms, sources })
     }
-
+    const lastError = result.error
     // `detail` helps debugging during beta — remove before launch
     return NextResponse.json({ error: 'Failed to get answer', detail: lastError }, { status: 500 })
   } catch (error) {
