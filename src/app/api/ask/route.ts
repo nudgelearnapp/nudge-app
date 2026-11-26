@@ -115,7 +115,7 @@ LANGUAGE: Reply in Assamese (অসমীয়া), in Assamese script.
 - Write numbers and formulas in standard digits (1, 2, 3) so they are easy to read.
 - If the student writes in English letters (WhatsApp-style Assamese) or mixes English and Assamese, still reply in natural Assamese in Assamese script, mixed with English terms, the way students in Assam actually speak.`,
   hi: `
-LANGUAGE: Reply in simple, everyday spoken Hindi in Devanagari script, the way a friendly teacher talks. Address the student as "तुम". Keep common science and maths terms in English (photosynthesis, acid, current, formula). Short sentences. The textbook extracts are in Assamese: understand them and explain in Hindi.`,
+LANGUAGE: Reply ONLY in Hindi written in Devanagari script (हिन्दी), never in Assamese or Bengali script. Use simple, everyday spoken Hindi, the way a friendly teacher talks. Address the student as "तुम". Keep common science and maths terms in English (photosynthesis, acid, current, formula). Short sentences. The textbook extracts are in Assamese: understand them and explain in Hindi.`,
   en: `
 LANGUAGE: Reply in simple English that a Class 10 student whose first language is Assamese can easily understand. Short sentences, no difficult words.`,
 }
@@ -132,6 +132,7 @@ function toPlainText(s: string): string {
     .replace(/`/g, '')
     .replace(/\*/g, '')
     .replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, '')
+    .replace(/[\u0A00-\u0A7F\u0B00-\u0D7F]/g, '') // stray Gurmukhi/Oriya/Tamil/Telugu/Kannada/Malayalam letters
     .replace(/\n{3,}/g, '\n\n')
     .trim()
 }
@@ -157,9 +158,13 @@ function buildContents(history: Turn[], question: string): Content[] {
 type GeminiResult = { ok: true; text: string; model: string; finish?: string } | { ok: false; error: string }
 
 // Tries each model in order; skips models that fail or take too long.
-async function callGemini(apiKey: string, body: { generationConfig?: Record<string, unknown>; [key: string]: unknown }): Promise<GeminiResult> {
+async function callGemini(
+  apiKey: string,
+  body: { generationConfig?: Record<string, unknown>; [key: string]: unknown },
+  opts: { timeoutMs?: number; maxModels?: number } = {}
+): Promise<GeminiResult> {
   let lastError = ''
-  for (const model of MODELS) {
+  for (const model of MODELS.slice(0, opts.maxModels ?? MODELS.length)) {
     const generationConfig: Record<string, unknown> = { ...(body.generationConfig || {}) }
     if (model.thinkingLevel) generationConfig.thinkingConfig = { thinkingLevel: model.thinkingLevel }
     let res: Response
@@ -168,7 +173,7 @@ async function callGemini(apiKey: string, body: { generationConfig?: Record<stri
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
         body: JSON.stringify({ ...body, generationConfig }),
-        signal: AbortSignal.timeout(MODEL_TIMEOUT_MS),
+        signal: AbortSignal.timeout(opts.timeoutMs ?? MODEL_TIMEOUT_MS),
       })
     } catch (e) {
       lastError = `${model.name}: timed out or network error (${String(e).slice(0, 100)})`
@@ -196,11 +201,11 @@ async function searchTerms(apiKey: string, question: string, recent: string): Pr
 The question may be in Assamese script, English, or Assamese typed in English letters.
 Give search words to find the answer in the Assamese-medium Class 10 Science textbook (ASSEB/SEBA).
 Reply with JSON only: {"science": true or false, "as": [up to 6 Assamese textbook terms in Assamese script], "en": [up to 6 English terms]}.
-"science" is false if the question is not about Class 10 Science (maths, other subjects, greetings, off-topic).`
+"science" is false ONLY for greetings, off-topic questions, or clearly non-science subjects (maths, history, grammar). Anything about physics, chemistry, biology, electricity, light, environment or everyday science is true.`
   const r = await callGemini(apiKey, {
     contents: [{ role: 'user', parts: [{ text: prompt }] }],
     generationConfig: { maxOutputTokens: 150, responseMimeType: 'application/json' },
-  })
+  }, { timeoutMs: 6000, maxModels: 1 }) // if Gemini is slow, skip the lookup instead of waiting
   const own = tokenize(question)
   if (!r.ok) return { terms: own, science: true }
   try {
@@ -257,7 +262,14 @@ export async function POST(req: NextRequest) {
       .filter(Boolean)
       .map((s) => `--- অধ্যায় ${s.chapter} (${s.chapterEn}), ${s.heading}, পৃষ্ঠা ${s.pages} ---\n${s.text.slice(0, 2800)}`)
       .join('\n\n')
-    const fullSystem = extracts ? `${systemText}\n\nTEXTBOOK EXTRACTS (ASSEB/SEBA Class 10 Science, Assamese medium):\n${extracts}` : systemText
+    const REMINDER: Record<string, string> = {
+      as: 'Reply in Assamese (অসমীয়া) script.',
+      hi: 'Reply ONLY in Hindi (हिन्दी, Devanagari script). Do NOT reply in Assamese or Bengali script.',
+      en: 'Reply in simple English.',
+    }
+    const fullSystem = extracts
+      ? `${systemText}\n\nTEXTBOOK EXTRACTS (ASSEB/SEBA Class 10 Science, Assamese medium):\n${extracts}\n\nREMINDER: ${REMINDER[language] || REMINDER.en}`
+      : systemText
     const pickMs = Date.now() - t0
 
     // Step 2: answer
