@@ -6,7 +6,7 @@ import papersData from '@/data/papers.json'
 import bookData from '@/data/book-questions.json'
 
 type Lang = 'as' | 'en'
-type Option = { label: string; en: string; as: string }
+type Option = { label: string; en?: string; as: string }
 type Question = {
   id: string
   source: string
@@ -17,9 +17,10 @@ type Question = {
   chapter?: number
   page?: number
   answer?: string
-  en: string
+  en?: string
   as: string
   options?: Option[]
+  keyAnswer?: string
 }
 
 const PAPER_QS = (papersData as { questions: Question[] }).questions
@@ -54,7 +55,7 @@ const T = {
   fromBook: { as: '(কিতাপৰ উত্তৰমালা অনুসৰি)', en: '(from the textbook answer key)' },
   question: { as: 'প্ৰশ্ন', en: 'Q' },
   page: { as: 'পৃষ্ঠা', en: 'p.' },
-  sampleBook: { as: 'নমুনা: এতিয়ালৈ অধ্যায় 1 ৰ প্ৰশ্নহে যোগ কৰা হৈছে', en: 'Sample: only Chapter 1 questions added so far' },
+  sampleBook: { as: 'নতুন অধ্যায়ৰ প্ৰশ্ন ক্ৰমে যোগ কৰা হৈছে', en: 'Questions for more chapters are being added' },
   allYears: { as: 'সকলো বছৰ', en: 'All years' },
   allChapters: { as: 'সকলো অধ্যায়', en: 'All chapters' },
   mcq: { as: 'ক-শাখা (MCQ)', en: 'Section A (MCQ)' },
@@ -66,6 +67,7 @@ const T = {
   pickFirst: { as: 'প্ৰথমে এটা বিকল্প বাছি লোৱা', en: 'Pick an option first' },
   thinking: { as: 'Nudge এ ভাবি আছে...', en: 'Nudge is thinking...' },
   none: { as: 'এই বাছনিত কোনো প্ৰশ্ন নাই', en: 'No questions for this selection' },
+  comingSoon: { as: 'এই অধ্যায়ৰ প্ৰশ্নবোৰ সোনকালে যোগ কৰা হ’ব। তেতিয়ালৈকে “Nudge ক সোধা” ত এই অধ্যায়ৰ যিকোনো প্ৰশ্ন সুধিব পাৰা।', en: 'Questions for this chapter are coming soon. Meanwhile, you can ask Nudge anything about this chapter in “Ask Nudge”.' },
   sample: { as: 'নমুনা: এতিয়ালৈ কেইটামান প্ৰশ্নহে যোগ কৰা হৈছে', en: 'Sample: only a few questions added so far' },
   error: { as: 'কিবা ভুল হ’ল। আকৌ চেষ্টা কৰা।', en: 'Something went wrong. Please try again.' },
 }
@@ -99,8 +101,9 @@ function QuestionCard({ q, lang }: { q: Question; lang: Lang }) {
     : `HSLC ${q.year}, Question ${q.no} (${q.marks} ${q.marks === 1 ? 'mark' : 'marks'})`
   const marksText = q.marks ? ` ${q.marks} ${q.marks === 1 ? 'mark' : 'marks'}` : ' marks'
   const fullQuestion =
-    q.en +
-    (isMcq ? '\n' + q.options!.map((o) => `(${o.label}) ${o.en}`).join('\n') : '')
+    (q.en || q.as) +
+    (isMcq ? '\n' + q.options!.map((o) => `(${o.label}) ${o.en || o.as}`).join('\n') : '') +
+    (q.keyAnswer ? `\n\n[Textbook answer key: ${q.keyAnswer}]` : '')
 
   const run = async (prompt: string) => {
     setBusy(true)
@@ -122,11 +125,11 @@ function QuestionCard({ q, lang }: { q: Question; lang: Lang }) {
         return setReply(
           picked === q.answer
             ? `${T.correct[lang]} ${T.fromBook[lang]}`
-            : `${T.wrong[lang]} (${q.answer}) ${right ? right[lang] || right.en : ''} ${T.fromBook[lang]}`
+            : `${T.wrong[lang]} (${q.answer}) ${right ? right[lang] || right.as : ''} ${T.fromBook[lang]}`
         )
       }
       run(
-        `${header}\n${fullQuestion}\n\nThe student chose option (${picked}) ${o.en}. ` +
+        `${header}\n${fullQuestion}\n\nThe student chose option (${picked}) ${o.en || o.as}. ` +
           `Say clearly whether this is correct. If it is wrong, give the correct option. ` +
           `Then explain why in 2 to 4 short sentences, based on the textbook.`
       )
@@ -134,7 +137,7 @@ function QuestionCard({ q, lang }: { q: Question; lang: Lang }) {
       if (!written.trim()) return
       run(
         `${header}\n${fullQuestion}\n\nThe student's answer:\n"""${written.trim()}"""\n\n` +
-          `Check this answer like a fair HSLC examiner.${q.marks ? ` Give a score out of ${q.marks}.` : ''} ` +
+          `Check this answer like a fair HSLC examiner. If a textbook answer key is given above, treat it as correct unless it is clearly a misprint.${q.marks ? ` Give a score out of ${q.marks}.` : ''} ` +
           `Say what is correct, what is missing or wrong, and what to add to get full marks. Be encouraging. ` +
           `Do not just give the whole model answer unless the student's answer is mostly wrong.`
       )
@@ -162,7 +165,7 @@ function QuestionCard({ q, lang }: { q: Question; lang: Lang }) {
         )}
       </div>
       {q.chapter && !isBook && <p className="text-[11px] text-gray-400 mb-1">{chapterName(q.chapter, lang)}</p>}
-      <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-wrap">{q[lang] || q.en}</p>
+      <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-wrap">{q[lang] || q.as}</p>
 
       {isMcq ? (
         <div className="mt-3 space-y-2">
@@ -175,7 +178,7 @@ function QuestionCard({ q, lang }: { q: Question; lang: Lang }) {
               }`}
             >
               <span className="font-semibold mr-2">({o.label})</span>
-              {o[lang] || o.en}
+              {o[lang] || o.as}
             </button>
           ))}
         </div>
@@ -222,9 +225,11 @@ export default function PracticeView({ mode }: { mode: 'book' | 'papers' }) {
   const [year, setYear] = useState<number | 'all'>('all')
   const [section, setSection] = useState<'A' | 'B'>('A')
   const years = useMemo(() => [...new Set(ALL.map((q) => q.year).filter((y): y is number => !!y))].sort((a, b) => b - a), [ALL])
+  const loaded = useMemo(() => new Set(ALL.map((q) => q.chapter).filter((c): c is number => !!c)), [ALL])
+  // Book mode lists all 16 chapters (students can jump to any); papers list only chapters that have questions
   const chapters = useMemo(
-    () => [...new Set(ALL.map((q) => q.chapter).filter((c): c is number => !!c))].sort((a, b) => a - b),
-    [ALL]
+    () => (isBook ? Object.keys(CHAPTERS).map(Number) : [...loaded]).sort((a, b) => a - b),
+    [isBook, loaded]
   )
   const [chapter, setChapter] = useState<number | 'all'>(isBook ? chapters[0] ?? 'all' : 'all')
 
@@ -313,16 +318,21 @@ export default function PracticeView({ mode }: { mode: 'book' | 'papers' }) {
             {chapters.map((c) => (
               <option key={c} value={c}>
                 {chapterName(c, lang)}
+                {isBook && !loaded.has(c) ? (lang === 'as' ? ' (সোনকালে)' : ' (coming soon)') : ''}
               </option>
             ))}
           </select>
         </div>
-        <p className="text-[11px] text-amber-600">{isBook ? T.sampleBook[lang] : T.sample[lang]}</p>
+        {(!isBook || loaded.size < Object.keys(CHAPTERS).length) && (
+          <p className="text-[11px] text-amber-600">{isBook ? T.sampleBook[lang] : T.sample[lang]}</p>
+        )}
       </div>
 
       <div className="flex-1 overflow-y-auto p-4 space-y-3">
         {list.length === 0 ? (
-          <p className="text-center text-sm text-gray-400 mt-8">{T.none[lang]}</p>
+          <p className="text-center text-sm text-gray-400 mt-8 px-6">
+            {isBook && chapter !== 'all' && !loaded.has(chapter) ? T.comingSoon[lang] : T.none[lang]}
+          </p>
         ) : (
           list.map((q) => <QuestionCard key={q.id} q={q} lang={lang} />)
         )}
