@@ -1,0 +1,97 @@
+{
+  "subject": "General Science",
+  "papers": [
+    { "year": 2025, "code": "B25-GS/517", "fullMarks": 90, "status": "sample" },
+    { "year": 2024, "code": "B24-GS/103", "fullMarks": 90, "status": "sample" }
+  ],
+  "questions": [
+    { "id": "2025-1", "source": "paper", "year": 2025, "no": 1, "section": "A", "marks": 1, "chapter": 13,
+      "en": "Electrical appliances that have metal body are generally connected to the earthing wire. What is the reason to earth the wire?",
+      "as": "ধাতুৰ বৈদ্যুতিক সামগ্ৰীসমূহ সাধাৰণতে ভূমি-সংযোগী তাঁৰেৰে সংযোগ কৰা হয়। তাঁৰডাল ভূমি-সংযোগী কৰাৰ কাৰণ কি?",
+      "options": [
+        { "label": "a", "en": "To prevent the excess of current", "as": "অতিৰিক্ত বিদ্যুৎ প্ৰতিৰোধৰ বাবে" },
+        { "label": "b", "en": "To prevent the leakage of current", "as": "বিদ্যুৎ অৱক্ষয় ৰোধৰ বাবে" },
+        { "label": "c", "en": "To prevent the extra current to the appliances", "as": "সামগ্ৰীলৈ অতিৰিক্ত বিদ্যুৎ প্ৰবাহৰ বাধাৰ বাবে" },
+        { "label": "d", "en": "To prevent high resistance to the appliances", "as": "সামগ্ৰীলৈ উচ্চ-ৰোধ প্ৰতিৰোধ কৰিবৰ বাবে" }
+      ] },
+    { "id": "2025-2", "source": "paper", "year": 2025, "no": 2, "section": "A", "marks": 1, "chapter": 13,
+      "en": "The device used for producing electric current is called",
+      "as": "বৈদ্যুতিক প্ৰবাহ উৎপন্ন কৰা সঁজুলিক",
+      "options": [
+        { "label": "a", "en": "motor", "as": "মটৰ বোলা হয়" },
+        { "label": "b", "en": "ammeter", "as": "এমিটাৰ বোলা হয়" },
+        { "label": "c", "en": "galvanometer", "as": "গেলভেন'মিটাৰ বোলা হয়" },
+        { "label": "d", "en": "generator", "as": "জেনেৰেটৰ বোলা হয়" }
+      ] },
+    { "id": "2025-3", "source": "paper", "year": 2025, "no": 3, "section": "A", "marks": 1, "chapter": 10,
+      "en": "The refractive indices of four mediums P, Q, R, S are 1.23, 1.5, 1.25 and 2 respectively. Through which medium, the speed of light is maximum?",
+      "as": "চাৰিটা মাধ্যম P, Q, R, S ৰ ক্ষেত্ৰত প্ৰতিসৰাংক ক্ৰমে 1.23, 1.5, 1.25 আৰু 2. কোনটো মাধ্যমত পোহৰৰ দ্ৰুতি সৰ্বোচ্চ হ'ব?",
+      "options": [
+        { "label": "a", "en": "P", "as": "P" }, { "label": "b", "en": "Q", "as": "Q" },
+        { "label": "c", "en": "R", "as": "R" }, { "label": "d", "en": "S", "as": "S" }
+      ] },
+    { "id": "2025-4", "source": "paper", "year": 2025, "no": 4, "section": "A", "marks": 1, "chapter": 11,
+      "en": "Which option justifies that the sun appears red at sunrise and sunset?",
+      "as": "কোনটো বিকল্পই সূৰ্যোদয় আৰু সূৰ্যাস্তৰ সময়ত বেলিটো ৰঙা পৰাৰ সমৰ্থন কৰে?",
+      "options": [
+        { "label": "a", "en": "Red colour is scattered highest by the atmosphere", "as": "ৰঙা ৰংটো বায়ুমণ্ডলে বহুত বেছি বিক্ষেপণ কৰে" },
+        { "label": "b", "en": "The distance between the sun and the earth reduces", "as": "সূৰ্য আৰু পৃথিৱীৰ মাজৰ দূৰত্ব হ্ৰাস পায়" },
+        { "label": "c", "en": "Red colour has high wavelength, so it travels longer distance", "as": "ৰঙা ৰঙৰ তৰংগদৈৰ্ঘ্য বেছি, সেয়েহে ই অধিক দূৰত্বলৈ চালিত হয়" },
+        { "label": "d", "en": "The white light disperses into seven colours, only red enters the atmosphere", "as": "বগা ৰংটো সাতটা ৰংলৈ বিচ্ছুৰণ হৈ মাত্ৰ ৰঙা ৰংটো বায়ুমণ্ডলত প্ৰৱেশ কৰে" }
+      ] },
+    { "id": "2025-5", "source": "paper", "year": 2025, "no": 5, "section": "A", "marks": 1, "chapter": 15,
+      "en": "Which group of the following waste materials can be classified as non-biodegradable?",
+      "as": "তলৰ কোনখিনি আৱৰ্জনাৰ গোটক জীৱ অনিম্নিকৰণ গোট হিচাপে ভাগ কৰিব পাৰি?",
+      "options": [
+        { "label": "a", "en": "Plant waste, used tea bags", "as": "উদ্ভিদৰ আৱৰ্জনা, ব্যৱহৃত চাহৰ সৰু বেগ (tea bag)" },
+        { "label": "b", "en": "Polythene bags, plastic toys", "as": "পলিথিন বেগ, প্লাষ্টিকৰ পুতলা" },
+        { "label": "c", "en": "Used tea bags, paper straw", "as": "ব্যৱহৃত চাহৰ সৰু বেগ (tea bag), কাগজৰ সৰু পাইপ" },
+        { "label": "d", "en": "Old clothes, broken footwear", "as": "পুৰণা কাপোৰ, ফটা-চিটা জোতা-চেণ্ডেল" }
+      ] },
+    { "id": "2025-46", "source": "paper", "year": 2025, "no": 46, "section": "B", "marks": 2, "chapter": 1,
+      "en": "Identify the substances that are oxidized and the substances that are reduced in the following reactions:\n(a) 4Na(s) + O2(g) → 2Na2O(s)\n(b) CuO(s) + H2(g) → Cu(s) + H2O(l)",
+      "as": "তলৰ বিক্ৰিয়াকেইটাত জাৰিত আৰু বিজাৰিত হোৱা পদাৰ্থসমূহ বাছি উলিওৱা:\n(a) 4Na(s) + O2(g) → 2Na2O(s)\n(b) CuO(s) + H2(g) → Cu(s) + H2O(l)" },
+    { "id": "2025-47", "source": "paper", "year": 2025, "no": 47, "section": "B", "marks": 3, "chapter": 1,
+      "en": "Balance the following chemical equations:\n(a) BaCl2 + H2SO4 → BaSO4 + HCl\n(b) NaCl + AgNO3 → AgCl + NaNO3\n(c) HNO3 + Ca(OH)2 → Ca(NO3)2 + H2O",
+      "as": "তলৰ ৰাসায়নিক সমীকৰণসমূহ সন্তুলন কৰা:\n(a) BaCl2 + H2SO4 → BaSO4 + HCl\n(b) NaCl + AgNO3 → AgCl + NaNO3\n(c) HNO3 + Ca(OH)2 → Ca(NO3)2 + H2O" },
+    { "id": "2025-48", "source": "paper", "year": 2025, "no": 48, "section": "B", "marks": 2, "chapter": 2,
+      "en": "How is the concentration of (a) hydronium ions (H3O+) affected when a solution of an acid is diluted and (b) hydroxide ions (OH−) affected when excess base is dissolved in a solution of sodium hydroxide?",
+      "as": "(a) হাইড্ৰ'নিয়াম আয়ন (H3O+)ৰ গাঢ়তা কিদৰে পৰিৱৰ্তিত হ'ব যেতিয়া এটা এছিডৰ দ্ৰৱ লঘুকৃত কৰা হ'ব আৰু (b) হাইড্ৰ'ক্সাইড আয়ন (OH−)ৰ গাঢ়তা কিদৰে পৰিৱৰ্তিত হ'ব যেতিয়া ছ'ডিয়াম হাইড্ৰ'ক্সাইডৰ দ্ৰৱত অধিক ক্ষাৰ দ্ৰৱীভূত কৰা হ'ব?" },
+    { "id": "2024-1", "source": "paper", "year": 2024, "no": 1, "section": "A", "marks": 1, "chapter": 1,
+      "en": "Addition of aqueous solution of barium chloride to aqueous solution of sodium sulphate results in insoluble barium sulphate and the solution of sodium chloride. Which of the following is the correct balanced chemical equation with state symbols for the above reaction?",
+      "as": "বেৰিয়াম ক্ল'ৰাইডৰ জলীয় দ্ৰৱ আৰু ছ'ডিয়াম ছালফেটৰ জলীয় দ্ৰৱ যোগ কৰাৰ ফলত অদ্ৰাব্য বেৰিয়াম ছালফেট আৰু ছ'ডিয়াম ক্ল'ৰাইডৰ দ্ৰৱ প্ৰস্তুত হ'ল। উক্ত বিক্ৰিয়াটোৰ বাবে তলৰ কোনটো অৱস্থা-চিহ্নসহ সন্তুলিত সমীকৰণ শুদ্ধ হ'ব?",
+      "options": [
+        { "label": "a", "en": "BaCl2(aq) + NaSO4(aq) → BaSO4(s)↓ + NaCl(aq)", "as": "BaCl2(aq) + NaSO4(aq) → BaSO4(s)↓ + NaCl(aq)" },
+        { "label": "b", "en": "BaCl2(s) + Na2SO4(s) → BaSO4(s) + NaCl(s)", "as": "BaCl2(s) + Na2SO4(s) → BaSO4(s) + NaCl(s)" },
+        { "label": "c", "en": "BaCl2(aq) + Na2SO4(aq) → BaSO4(aq) + 2NaCl(aq)", "as": "BaCl2(aq) + Na2SO4(aq) → BaSO4(aq) + 2NaCl(aq)" },
+        { "label": "d", "en": "BaCl2(aq) + Na2SO4(aq) → BaSO4(s)↓ + 2NaCl(aq)", "as": "BaCl2(aq) + Na2SO4(aq) → BaSO4(s)↓ + 2NaCl(aq)" }
+      ] },
+    { "id": "2024-2", "source": "paper", "year": 2024, "no": 2, "section": "A", "marks": 1, "chapter": 1,
+      "en": "Which of the following does not involve a chemical reaction?",
+      "as": "তলৰ কোনটোত ৰাসায়নিক বিক্ৰিয়া ঘটা নাই?",
+      "options": [
+        { "label": "a", "en": "Digestion of food", "as": "খাদ্য হজম হোৱা" },
+        { "label": "b", "en": "Respiration", "as": "শ্বসন" },
+        { "label": "c", "en": "Burning of candle", "as": "মমবাতি জ্বলা" },
+        { "label": "d", "en": "Melting of candle", "as": "মমবাতি গলা" }
+      ] },
+    { "id": "2024-3", "source": "paper", "year": 2024, "no": 3, "section": "A", "marks": 1, "chapter": 1,
+      "en": "Which of the following laws is satisfied by a balanced chemical reaction?",
+      "as": "এটা সন্তুলিত ৰাসায়নিক বিক্ৰিয়াই তলৰ কোনটো সূত্ৰ মানি চলে?",
+      "options": [
+        { "label": "a", "en": "Conservation of momentum", "as": "ভৰবেগৰ ৰক্ষণশীলতা" },
+        { "label": "b", "en": "Conservation of mass", "as": "ভৰৰ ৰক্ষণশীলতা" },
+        { "label": "c", "en": "Conservation of energy", "as": "শক্তিৰ ৰক্ষণশীলতা" },
+        { "label": "d", "en": "Conservation of density", "as": "ঘনত্বৰ ৰক্ষণশীলতা" }
+      ] },
+    { "id": "2024-4", "source": "paper", "year": 2024, "no": 4, "section": "A", "marks": 1, "chapter": 2,
+      "en": "Which one of the following is olfactory indicator?",
+      "as": "তলৰ কোনটো ঘ্ৰাণেন্দ্ৰিয় সূচক?",
+      "options": [
+        { "label": "a", "en": "Litmus", "as": "লিটমাছ" },
+        { "label": "b", "en": "Turmeric", "as": "হালধি" },
+        { "label": "c", "en": "Vanilla", "as": "ভেনিলা" },
+        { "label": "d", "en": "Phenolphthalein", "as": "ফিন'ফথেলিন" }
+      ] }
+  ]
+}
