@@ -4,11 +4,44 @@ import scienceBook from '../../../data/science-as.json'
 // ---- Textbook (ASSEB/SEBA Class 10 Science, Assamese medium) ----
 type Section = { id: number; chapter: number; chapterTitle: string; chapterEn: string; heading: string; pages: string; text: string; keywords: string[] }
 const SECTIONS = (scienceBook as { sections: Section[] }).sections
-// Short English index Gemini uses to pick the right sections (keeps requests small)
-const englishPart = (h: string) => (h.match(/\(([^()]*[A-Za-z]{3,}[^()]*)\)/)?.[1] || 'chapter introduction').trim()
-const SECTION_INDEX = SECTIONS.map(
-  (s) => `${s.id}: Ch${s.chapter} ${s.chapterEn} > ${englishPart(s.heading)}${s.keywords.length ? ' [' + s.keywords.join(', ') + ']' : ''}`
-).join('\n')
+// ---- Built-in textbook search (no AI call needed to look things up) ----
+const norm = (t: string) => t.toLowerCase().replace(/[‌‍]/g, '')
+const tokenize = (t: string) => norm(t).match(/[a-z0-9]+|[ঀ-৿]+/g) || []
+type Doc = { tokens: string[]; head: string[] }
+const DOCS: Doc[] = SECTIONS.map((s) => ({
+  tokens: tokenize(s.text),
+  head: tokenize(`${s.heading} ${s.chapterEn} ${s.keywords.join(' ')}`),
+}))
+const AVG_LEN = DOCS.reduce((n, d) => n + d.tokens.length, 0) / DOCS.length
+
+// Scores sections with a BM25-style formula. Terms match word starts, so Assamese
+// suffixes still match (e.g. "সালোকসংশ্লেষণ" matches "সালোকসংশ্লেষণৰ").
+function searchSections(terms: string[], k: number): number[] {
+  const qs = [...new Set(terms.map(norm).filter((t) => t.length >= 3))].slice(0, 16)
+  if (!qs.length) return []
+  const scores = new Array(DOCS.length).fill(0)
+  const matched = new Array(DOCS.length).fill(0)
+  for (const q of qs) {
+    const tf = DOCS.map((d) => d.tokens.reduce((n, t) => n + (t.startsWith(q) ? 1 : 0), 0))
+    const hf = DOCS.map((d) => d.head.reduce((n, t) => n + (t.startsWith(q) ? 1 : 0), 0))
+    const df = tf.filter((n, i) => n > 0 || hf[i] > 0).length
+    if (!df) continue
+    const idf = Math.log(1 + (DOCS.length - df + 0.5) / (df + 0.5))
+    DOCS.forEach((d, i) => {
+      const f = tf[i]
+      const bm = (f * 2.2) / (f + 1.2 * (0.25 + 0.75 * (d.tokens.length / AVG_LEN)))
+      scores[i] += idf * (bm + (hf[i] > 0 ? 1.5 : 0))
+      if (f > 0 || hf[i] > 0) matched[i]++
+    })
+  }
+  // Prefer sections that match more of the search words, not just one word many times
+  return scores
+    .map((sc, i) => [sc * (0.4 + matched[i] / qs.length), i] as [number, number])
+    .filter(([sc]) => sc > 0)
+    .sort((x, y) => y[0] - x[0])
+    .slice(0, k)
+    .map(([, i]) => i)
+}
 
 // ---- Speed settings ----
 // Run this function in Mumbai, close to students in Assam (default is the US).
@@ -47,10 +80,13 @@ HOW STUDENTS WRITE
 - Students often type Assamese or Hindi in English letters, the way they chat on WhatsApp, with casual spelling. Examples: "photosynthesis ki?" (what is photosynthesis?), "eitu bujha nai" (I didn't understand this), "kenekoi koribo?" (how do I do it?), "aru bhal koi bujai diya" (explain better), "ha" / "hoi" (yes), "nai" (no). Understand these fully and answer the real question completely, exactly as you would if they had asked in proper English or Assamese script.
 - Short or casual questions still get a complete answer.
 
-PLAIN TEXT ONLY (your answer is also read aloud by a voice)
-- Never use markdown or symbols for formatting: no asterisks, no hash signs, no underscores, no bullet symbols, no emojis, no tables.
-- For a list, write it as spoken sentences: "First, ... Second, ... Third, ..." or put each point on its own line starting with a number like "1." only when steps are needed.
-- Maths symbols (=, +, −, ×, ÷) and numbers are fine.
+FORMATTING (answers are shown on a phone screen)
+- Plain text only: no markdown, no asterisks, no hash signs, no underscores, no bullet symbols, no emojis, no tables.
+- Write formulas and equations with normal symbols, never in words: 1/v − 1/u = 1/f, V = I × R, 2H2 + O2 → 2H2O.
+- For steps, put each on its own line starting with "1.", "2.", ...
+- Do not start with a greeting such as "নমস্কাৰ" or "Hello". Start directly with the answer.
+- When options are labelled (a), (b), (i), (ক) etc., always write the label exactly as printed, e.g. (c). Never write a letter's sound in Assamese script (for example never write "চি" for (c)).
+- If the student sends a photo, read the question in the photo carefully and answer it.
 
 USING THE TEXTBOOK
 - When TEXTBOOK EXTRACTS are given below, base your answer on them. Use the same scientific terms, spellings and definitions as the textbook, because these are what the HSLC exam expects.
@@ -59,7 +95,7 @@ USING THE TEXTBOOK
 - If the extracts do not cover the question, answer from your own knowledge of the Class 10 syllabus.
 
 HOW TO TEACH
-- Keep answers short: usually under 150 words, but always complete. Never stop in the middle of an explanation. Offer to explain more if they want.
+- Keep answers short: usually 60 to 120 words, but always complete. Never stop in the middle of an explanation. Offer to explain more if they want.
 - Explain step by step with simple everyday examples from life in Assam (rice fields, the Brahmaputra, tea gardens, Bihu, the local market).
 - Follow the ASSEB/SEBA Class 10 textbook. If unsure whether something is in the syllabus, say so.
 - For exam-style questions, show how to write the answer to score full marks (key points, diagram if needed, keywords).
@@ -79,7 +115,7 @@ LANGUAGE: Reply in Assamese (অসমীয়া), in Assamese script.
 - Write numbers and formulas in standard digits (1, 2, 3) so they are easy to read.
 - If the student writes in English letters (WhatsApp-style Assamese) or mixes English and Assamese, still reply in natural Assamese in Assamese script, mixed with English terms, the way students in Assam actually speak.`,
   hi: `
-LANGUAGE: Reply in simple, everyday spoken Hindi in Devanagari script, the way a friendly teacher talks. Address the student as "तुम". Keep common science and maths terms in English. Short sentences.`,
+LANGUAGE: Reply in simple, everyday spoken Hindi in Devanagari script, the way a friendly teacher talks. Address the student as "तुम". Keep common science and maths terms in English (photosynthesis, acid, current, formula). Short sentences. The textbook extracts are in Assamese: understand them and explain in Hindi.`,
   en: `
 LANGUAGE: Reply in simple English that a Class 10 student whose first language is Assamese can easily understand. Short sentences, no difficult words.`,
 }
@@ -101,7 +137,7 @@ function toPlainText(s: string): string {
 }
 
 type Turn = { role: string; text: string }
-type Content = { role: 'user' | 'model'; parts: { text: string }[] }
+type Content = { role: 'user' | 'model'; parts: ({ text: string } | { inlineData: { mimeType: string; data: string } })[] }
 
 // Gemini needs turns that start with the user and alternate user/model.
 function buildContents(history: Turn[], question: string): Content[] {
@@ -112,7 +148,7 @@ function buildContents(history: Turn[], question: string): Content[] {
     const role: 'user' | 'model' = h.role === 'user' ? 'user' : 'model'
     if (out.length === 0 && role === 'model') continue // drop leading greeting
     const last = out[out.length - 1]
-    if (last && last.role === role) last.parts[0].text += `\n\n${h.text}`
+    if (last && last.role === role) (last.parts[0] as { text: string }).text += `\n\n${h.text}`
     else out.push({ role, parts: [{ text: h.text }] })
   }
   return out
@@ -153,33 +189,37 @@ async function callGemini(apiKey: string, body: { generationConfig?: Record<stri
   return { ok: false, error: lastError }
 }
 
-// Asks Gemini which textbook sections answer the question. Returns up to 3 section ids.
-async function pickSections(apiKey: string, question: string, recent: string): Promise<number[]> {
-  const prompt = `A Class 10 student in Assam asked: "${question}"${recent ? `\nEarlier questions in this chat: "${recent}"` : ''}
-The question may be in Assamese script, English, or Assamese typed in English letters (e.g. "photosynthesis ki?").
-Below is the index of the Class 10 Science textbook. Pick the sections (at most 3, best first) whose text is needed to answer.
-If the question is not about Science (e.g. maths, social science, greetings, off-topic), return an empty list.
-Reply with JSON only, like {"ids":[77,78]}.
-
-INDEX:
-${SECTION_INDEX}`
+// One tiny Gemini call turns the question (Assamese, English or WhatsApp-style) into
+// search words, including the Assamese textbook terms. Costs a few paise at most.
+async function searchTerms(apiKey: string, question: string, recent: string): Promise<{ terms: string[]; science: boolean }> {
+  const prompt = `A Class 10 student in Assam asked: "${question}"${recent ? `\nEarlier in this chat: "${recent}"` : ''}
+The question may be in Assamese script, English, or Assamese typed in English letters.
+Give search words to find the answer in the Assamese-medium Class 10 Science textbook (ASSEB/SEBA).
+Reply with JSON only: {"science": true or false, "as": [up to 6 Assamese textbook terms in Assamese script], "en": [up to 6 English terms]}.
+"science" is false if the question is not about Class 10 Science (maths, other subjects, greetings, off-topic).`
   const r = await callGemini(apiKey, {
     contents: [{ role: 'user', parts: [{ text: prompt }] }],
-    generationConfig: { maxOutputTokens: 100, responseMimeType: 'application/json' },
+    generationConfig: { maxOutputTokens: 150, responseMimeType: 'application/json' },
   })
-  if (!r.ok) return []
+  const own = tokenize(question)
+  if (!r.ok) return { terms: own, science: true }
   try {
-    const ids = JSON.parse(r.text).ids
-    return Array.isArray(ids) ? ids.filter((n: unknown) => Number.isInteger(n) && SECTIONS[n as number]).slice(0, 3) : []
+    const j = JSON.parse(r.text)
+    const words = [...(Array.isArray(j.as) ? j.as : []), ...(Array.isArray(j.en) ? j.en : [])].join(' ')
+    return { terms: [...tokenize(words), ...own], science: j.science !== false }
   } catch {
-    return []
+    return { terms: own, science: true }
   }
 }
 
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData()
-    const question = ((formData.get('question') as string) || '').trim() || 'Please help me understand.'
+    const image = formData.get('image') as File | null
+    const hasImage = !!image && typeof image !== 'string' && image.size > 0
+    const rawQuestion = ((formData.get('question') as string) || '').trim()
+    const question = rawQuestion || (hasImage ? 'Please solve the question in this photo.' : 'Please help me understand.')
+    const k = Math.min(3, Math.max(1, Number(formData.get('k')) || 2))
     const language = (formData.get('language') as string) || 'en'
     let history: Turn[] = []
     try {
@@ -194,16 +234,28 @@ export async function POST(req: NextRequest) {
 
     const systemText = CORE_RULES + (LANGUAGE_RULES[language] || LANGUAGE_RULES.en)
     const contents = buildContents(history.slice(-10), question)
+    if (hasImage) {
+      if (image!.size > 4_000_000) {
+        return NextResponse.json({ error: 'Photo is too large. Please try again.' }, { status: 413 })
+      }
+      const data = Buffer.from(await image!.arrayBuffer()).toString('base64')
+      const last = contents[contents.length - 1] as { role: string; parts: unknown[] }
+      last.parts.push({ inlineData: { mimeType: image!.type || 'image/jpeg', data } })
+    }
     const started = Date.now()
 
-    // Step 1: find the relevant textbook sections (Science only for now)
+    // Step 1: find the relevant textbook sections (built-in search; Science only for now)
     const t0 = Date.now()
     const recentUser = history.filter((h) => h.role === 'user').slice(-2).map((h) => h.text).join(' | ')
-    const picked = await pickSections(apiKey, question, recentUser)
+    let picked: number[] = []
+    if (rawQuestion) {
+      const { terms, science } = await searchTerms(apiKey, rawQuestion, recentUser)
+      if (science) picked = searchSections(terms, k)
+    }
     const extracts = picked
       .map((id) => SECTIONS[id])
       .filter(Boolean)
-      .map((s) => `--- অধ্যায় ${s.chapter} (${s.chapterEn}), ${s.heading}, পৃষ্ঠা ${s.pages} ---\n${s.text}`)
+      .map((s) => `--- অধ্যায় ${s.chapter} (${s.chapterEn}), ${s.heading}, পৃষ্ঠা ${s.pages} ---\n${s.text.slice(0, 2800)}`)
       .join('\n\n')
     const fullSystem = extracts ? `${systemText}\n\nTEXTBOOK EXTRACTS (ASSEB/SEBA Class 10 Science, Assamese medium):\n${extracts}` : systemText
     const pickMs = Date.now() - t0
@@ -212,7 +264,7 @@ export async function POST(req: NextRequest) {
     const result = await callGemini(apiKey, {
       systemInstruction: { parts: [{ text: fullSystem }] },
       contents,
-      generationConfig: { maxOutputTokens: 2048 },
+      generationConfig: { maxOutputTokens: 1500 },
     })
     if (result.ok) {
       const ms = Date.now() - started
