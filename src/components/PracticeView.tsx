@@ -22,6 +22,8 @@ type Question = {
   as: string
   options?: Option[]
   keyAnswer?: string
+  // Stored model answers (checked in advance) — shown instantly, free, no AI call
+  explain?: { as?: string; en?: string; hi?: string }
 }
 
 const PAPER_QS = (papersData as { questions: Question[] }).questions
@@ -147,11 +149,17 @@ function QuestionCard({ q, lang, replyLang }: { q: Question; lang: Lang; replyLa
     }
   }
 
-  const explain = () =>
+  const explain = () => {
+    const stored = q.explain?.[replyLang]
+    if (stored) {
+      setReply(stored)
+      return
+    }
     run(
       `${header}\n${fullQuestion}\n\nExplain how to answer this question to score full${marksText}. ` +
         `Give the correct answer${isMcq ? ' option' : ''}${q.answer ? ` (the textbook answer key says (${q.answer}))` : ''} and a short explanation based on the textbook.`
     )
+  }
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
