@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
+import Link from 'next/link'
 
 type Language = 'as' | 'hi' | 'en'
 type Message = { role: 'user' | 'ai'; text: string; imageUrl?: string }
@@ -182,6 +183,17 @@ export default function Home() {
               </button>
             ))}
           </div>
+        </div>
+        <div className="mt-3 flex gap-2 text-xs overflow-x-auto whitespace-nowrap">
+          <span className="px-3 py-1 rounded-full bg-white text-green-700 font-medium">
+            {language === 'as' ? '💬 Nudge ক সোধা' : language === 'hi' ? '💬 Nudge से पूछें' : '💬 Ask Nudge'}
+          </span>
+          <Link href="/book" className="px-3 py-1 rounded-full bg-green-600 hover:bg-green-500">
+            {language === 'as' ? '📘 কিতাপৰ প্ৰশ্ন' : language === 'hi' ? '📘 किताब के प्रश्न' : '📘 Book Questions'}
+          </Link>
+          <Link href="/practice" className="px-3 py-1 rounded-full bg-green-600 hover:bg-green-500">
+            {language === 'as' ? '📝 পুৰণি প্ৰশ্নকাকত' : language === 'hi' ? '📝 पुराने प्रश्नपत्र' : '📝 Past Papers'}
+          </Link>
         </div>
       </div>
       <div className="flex-1 overflow-y-auto p-4 space-y-3">
