@@ -1,0 +1,60 @@
+{
+  "book": "বিজ্ঞান (Science) Class X, Assamese medium, ASSEB/SEBA",
+  "status": "sample",
+  "questions": [
+    { "id": "b1-1", "source": "book", "chapter": 1, "no": 1, "page": 14, "answer": "i", "answerSource": "textbook",
+      "as": "তলৰ বিক্ৰিয়াটোৰ বাবে উক্তিসমূহৰ কোনকেইটা অশুদ্ধ?\n2PbO(s) + C(s) → 2Pb(s) + CO2(g)\n(a) লেড বিজাৰিত হৈছে।\n(b) কাৰ্বন ডাইঅক্সাইড জাৰিত হৈছে।\n(c) কাৰ্বন জাৰিত হৈছে।\n(d) লেড অক্সাইড বিজাৰিত হৈছে।",
+      "en": "Which of the statements about the reaction below are incorrect?\n2PbO(s) + C(s) → 2Pb(s) + CO2(g)\n(a) Lead is getting reduced.\n(b) Carbon dioxide is getting oxidised.\n(c) Carbon is getting oxidised.\n(d) Lead oxide is getting reduced.",
+      "options": [
+        { "label": "i", "as": "(a) আৰু (b)", "en": "(a) and (b)" },
+        { "label": "ii", "as": "(a) আৰু (c)", "en": "(a) and (c)" },
+        { "label": "iii", "as": "(a), (b) আৰু (c)", "en": "(a), (b) and (c)" },
+        { "label": "iv", "as": "সকলো", "en": "all" }
+      ] },
+    { "id": "b1-2", "source": "book", "chapter": 1, "no": 2, "page": 14, "answer": "d", "answerSource": "textbook",
+      "as": "Fe2O3 + 2Al → Al2O3 + 2Fe\nওপৰৰ বিক্ৰিয়াটো এটা উদাহৰণ",
+      "en": "Fe2O3 + 2Al → Al2O3 + 2Fe\nThe above reaction is an example of a",
+      "options": [
+        { "label": "a", "as": "এটা সংযোজন বিক্ৰিয়াৰ", "en": "combination reaction" },
+        { "label": "b", "as": "এটা দ্বিঅপসাৰণ বিক্ৰিয়াৰ", "en": "double displacement reaction" },
+        { "label": "c", "as": "এটা বিযোজন বিক্ৰিয়াৰ", "en": "decomposition reaction" },
+        { "label": "d", "as": "এটা অপসৰণ বিক্ৰিয়াৰ", "en": "displacement reaction" }
+      ] },
+    { "id": "b1-3", "source": "book", "chapter": 1, "no": 3, "page": 15, "answer": "a", "answerSource": "textbook",
+      "as": "কি ঘটে যেতিয়া লঘু হাইড্ৰ'ক্ল'ৰিক এছিড লোৰ গুড়িত যোগ কৰা হয়? শুদ্ধ উত্তৰটোত টিক্ চিন দিয়া।",
+      "en": "What happens when dilute hydrochloric acid is added to iron filings? Tick the correct answer.",
+      "options": [
+        { "label": "a", "as": "হাইড্ৰ'জেন গেছ আৰু আইৰন ক্ল'ৰাইড উৎপন্ন হয়।", "en": "Hydrogen gas and iron chloride are produced." },
+        { "label": "b", "as": "ক্ল'ৰিণ গেছ আৰু আইৰন হাইড্ৰ'ক্সাইড উৎপন্ন হয়।", "en": "Chlorine gas and iron hydroxide are produced." },
+        { "label": "c", "as": "বিক্ৰিয়া নঘটে।", "en": "No reaction takes place." },
+        { "label": "d", "as": "আইৰন লৱণ আৰু পানী উৎপন্ন হয়।", "en": "Iron salt and water are produced." }
+      ] },
+    { "id": "b1-4", "source": "book", "chapter": 1, "no": 4, "page": 15,
+      "as": "সন্তুলিত ৰাসায়নিক সমীকৰণ কি? ৰাসায়নিক সমীকৰণসমূহ কিয় সন্তুলিত কৰিব লাগে?",
+      "en": "What is a balanced chemical equation? Why should chemical equations be balanced?" },
+    { "id": "b1-5", "source": "book", "chapter": 1, "no": 5, "page": 15,
+      "as": "তলৰ উক্তিসমূহ ৰাসায়নিক সমীকৰণৰ ৰূপত লিখা আৰু সন্তুলন কৰা।\n(a) হাইড্ৰ'জেন গেছে নাইট্ৰ'জেনৰে সৈতে লগ হৈ এম'নিয়া প্ৰস্তুত কৰে।\n(b) হাইড্ৰ'জেন ছালফাইডে বায়ুত দাহিত হৈ পানী আৰু ছালফাৰ ডাই অক্সাইড উৎপন্ন কৰে।\n(c) বেৰিয়াম ক্ল'ৰাইডে এলুমিনিয়াম ছালফেটৰে সৈতে বিক্ৰিয়া কৰি এলুমিনিয়াম ক্ল'ৰাইড আৰু বেৰিয়াম ছালফেটৰ অধঃক্ষেপ উৎপন্ন কৰে।\n(d) পটেছিয়াম ধাতুৱে পানীৰে সৈতে বিক্ৰিয়া কৰি পটেছিয়াম হাইড্ৰ'ক্সাইড আৰু হাইড্ৰ'জেন গেছ উৎপন্ন কৰে।",
+      "en": "Translate the following statements into chemical equations and then balance them.\n(a) Hydrogen gas combines with nitrogen to form ammonia.\n(b) Hydrogen sulphide gas burns in air to give water and sulphur dioxide.\n(c) Barium chloride reacts with aluminium sulphate to give aluminium chloride and a precipitate of barium sulphate.\n(d) Potassium metal reacts with water to give potassium hydroxide and hydrogen gas." },
+    { "id": "b1-6", "source": "book", "chapter": 1, "no": 6, "page": 15,
+      "as": "তলৰ ৰাসায়নিক সমীকৰণসমূহ সন্তুলন কৰা।\n(a) HNO3 + Ca(OH)2 → Ca(NO3)2 + H2O\n(b) NaOH + H2SO4 → Na2SO4 + H2O\n(c) NaCl + AgNO3 → AgCl + NaNO3\n(d) BaCl2 + H2SO4 → BaSO4 + HCl",
+      "en": "Balance the following chemical equations.\n(a) HNO3 + Ca(OH)2 → Ca(NO3)2 + H2O\n(b) NaOH + H2SO4 → Na2SO4 + H2O\n(c) NaCl + AgNO3 → AgCl + NaNO3\n(d) BaCl2 + H2SO4 → BaSO4 + HCl" },
+    { "id": "b1-7", "source": "book", "chapter": 1, "no": 7, "page": 15,
+      "as": "তলৰ বিক্ৰিয়াবোৰৰ বাবে সন্তুলিত ৰাসায়নিক সমীকৰণবোৰ লিখা।\n(a) কেলছিয়াম হাইড্ৰ'ক্সাইড + কাৰ্বন ডাই অক্সাইড → কেলছিয়াম কাৰ্বনেট + পানী।\n(b) যিংক + ছিলভাৰ নাইট্ৰেট → যিংক নাইট্ৰেট + ছিলভাৰ।\n(c) এলুমিনিয়াম + ক'পাৰ ক্ল'ৰাইড → এলুমিনিয়াম ক্ল'ৰাইড + ক'পাৰ।\n(d) বেৰিয়াম ক্ল'ৰাইড + পটেছিয়াম ছালফেট → বেৰিয়াম ছালফেট + পটেছিয়াম ক্ল'ৰাইড।",
+      "en": "Write the balanced chemical equations for the following reactions.\n(a) Calcium hydroxide + Carbon dioxide → Calcium carbonate + Water\n(b) Zinc + Silver nitrate → Zinc nitrate + Silver\n(c) Aluminium + Copper chloride → Aluminium chloride + Copper\n(d) Barium chloride + Potassium sulphate → Barium sulphate + Potassium chloride" },
+    { "id": "b1-8", "source": "book", "chapter": 1, "no": 8, "page": 15,
+      "as": "তলত দিয়াবোৰৰ বাবে সন্তুলিত ৰাসায়নিক সমীকৰণ লিখা আৰু প্ৰতিটো কোন প্ৰকাৰৰ বিক্ৰিয়া চিনাক্ত কৰা।\n(a) পটেছিয়াম ব্ৰ'মাইড (aq) + বেৰিয়াম আয়'ডাইড (aq) → পটেছিয়াম আয়'ডাইড (aq) + বেৰিয়াম ব্ৰ'মাইড (s)\n(b) যিংক কাৰ্বনেট (s) → যিংক অক্সাইড (s) + কাৰ্বন ডাই অক্সাইড (g)\n(c) হাইড্ৰ'জেন (g) + ক্ল'ৰিন (g) → হাইড্ৰ'জেন ক্ল'ৰাইড (g)\n(d) মেগনেছিয়াম (s) + হাইড্ৰ'ক্ল'ৰিক এছিড (aq) → মেগনেছিয়াম ক্ল'ৰাইড (aq) + হাইড্ৰ'জেন (g)",
+      "en": "Write the balanced chemical equation for the following and identify the type of reaction in each case.\n(a) Potassium bromide(aq) + Barium iodide(aq) → Potassium iodide(aq) + Barium bromide(s)\n(b) Zinc carbonate(s) → Zinc oxide(s) + Carbon dioxide(g)\n(c) Hydrogen(g) + Chlorine(g) → Hydrogen chloride(g)\n(d) Magnesium(s) + Hydrochloric acid(aq) → Magnesium chloride(aq) + Hydrogen(g)" },
+    { "id": "b1-9", "source": "book", "chapter": 1, "no": 9, "page": 15,
+      "as": "তাপবৰ্জী আৰু তাপগ্ৰাহী বিক্ৰিয়া বুলিলে কি বুজা? উদাহৰণ দিয়া।",
+      "en": "What does one mean by exothermic and endothermic reactions? Give examples." },
+    { "id": "b1-10", "source": "book", "chapter": 1, "no": 10, "page": 15,
+      "as": "শ্বসনক এটা তাপবৰ্জী বিক্ৰিয়া বুলি কিয় বিবেচনা কৰা হৈছে? ব্যাখ্যা কৰা।",
+      "en": "Why is respiration considered an exothermic reaction? Explain." },
+    { "id": "b1-11", "source": "book", "chapter": 1, "no": 11, "page": 15,
+      "as": "বিযোজন বিক্ৰিয়াক সংযোজন বিক্ৰিয়াৰ বিপৰীত বোলা হয় কিয়? এই সমূহ বিক্ৰিয়াৰ বাবে সমীকৰণ লিখা।",
+      "en": "Why are decomposition reactions called the opposite of combination reactions? Write equations for these reactions." },
+    { "id": "b1-12", "source": "book", "chapter": 1, "no": 12, "page": 15,
+      "as": "তাপ, পোহৰ আৰু বিদ্যুৎ শক্তিৰে সংঘটিত বিযোজন বিক্ৰিয়াৰ একোটাকৈ সমীকৰণ লিখা।",
+      "en": "Write one equation each for decomposition reactions where energy is supplied in the form of heat, light or electricity." }
+  ]
+}
