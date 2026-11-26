@@ -1,7 +1,8 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
+import { canAsk, recordAsk, checkTesterLink, LIMIT_MSG } from '@/lib/usage'
 import papersData from '@/data/papers.json'
 import bookData from '@/data/book-questions.json'
 
@@ -77,7 +78,7 @@ function chapterName(n: number | undefined, lang: Lang) {
   return `${lang === 'as' ? 'অধ্যায়' : 'Ch'} ${n}: ${CHAPTERS[n][lang]}`
 }
 
-async function askNudge(prompt: string, lang: Lang): Promise<string> {
+async function askNudge(prompt: string, lang: string): Promise<string> {
   const formData = new FormData()
   formData.append('question', prompt)
   formData.append('language', lang)
@@ -88,7 +89,7 @@ async function askNudge(prompt: string, lang: Lang): Promise<string> {
   return json.answer as string
 }
 
-function QuestionCard({ q, lang }: { q: Question; lang: Lang }) {
+function QuestionCard({ q, lang, replyLang }: { q: Question; lang: Lang; replyLang: 'as' | 'en' | 'hi' }) {
   const [picked, setPicked] = useState<string | null>(null)
   const [written, setWritten] = useState('')
   const [reply, setReply] = useState('')
@@ -106,10 +107,12 @@ function QuestionCard({ q, lang }: { q: Question; lang: Lang }) {
     (q.keyAnswer ? `\n\n[Textbook answer key: ${q.keyAnswer}]` : '')
 
   const run = async (prompt: string) => {
+    if (!canAsk()) return setReply(LIMIT_MSG[lang])
     setBusy(true)
     setReply('')
     try {
-      setReply(await askNudge(prompt, lang))
+      setReply(await askNudge(prompt, replyLang))
+      recordAsk()
     } catch {
       setReply(T.error[lang])
     }
@@ -221,7 +224,30 @@ function QuestionCard({ q, lang }: { q: Question; lang: Lang }) {
 export default function PracticeView({ mode }: { mode: 'book' | 'papers' }) {
   const isBook = mode === 'book'
   const ALL = isBook ? BOOK_QS : PAPER_QS
-  const [lang, setLang] = useState<Lang>('as')
+  const [lang, setLangState] = useState<Lang>('as')
+  // Hindi users see the English questions, but Nudge's explanations come in Hindi
+  const [replyLang, setReplyLang] = useState<'as' | 'en' | 'hi'>('as')
+  const setLang = (l: Lang) => {
+    setLangState(l)
+    setReplyLang(l)
+    try {
+      localStorage.setItem('nudge_lang', l)
+    } catch {}
+  }
+  useEffect(() => {
+    checkTesterLink()
+    try {
+      const saved = localStorage.getItem('nudge_lang')
+      if (saved === 'as' || saved === 'en') {
+        setLangState(saved)
+        setReplyLang(saved)
+      }
+      if (saved === 'hi') {
+        setLangState('en')
+        setReplyLang('hi')
+      }
+    } catch {}
+  }, [])
   const [year, setYear] = useState<number | 'all'>('all')
   const [section, setSection] = useState<'A' | 'B'>('A')
   const years = useMemo(() => [...new Set(ALL.map((q) => q.year).filter((y): y is number => !!y))].sort((a, b) => b - a), [ALL])
@@ -334,7 +360,7 @@ export default function PracticeView({ mode }: { mode: 'book' | 'papers' }) {
             {isBook && chapter !== 'all' && !loaded.has(chapter) ? T.comingSoon[lang] : T.none[lang]}
           </p>
         ) : (
-          list.map((q) => <QuestionCard key={q.id} q={q} lang={lang} />)
+          list.map((q) => <QuestionCard key={q.id} q={q} lang={lang} replyLang={replyLang} />)
         )}
       </div>
     </div>
