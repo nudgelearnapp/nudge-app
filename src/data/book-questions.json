@@ -1,60 +1,2833 @@
 {
-  "book": "বিজ্ঞান (Science) Class X, Assamese medium, ASSEB/SEBA",
-  "status": "sample",
-  "questions": [
-    { "id": "b1-1", "source": "book", "chapter": 1, "no": 1, "page": 14, "answer": "i", "answerSource": "textbook",
-      "as": "তলৰ বিক্ৰিয়াটোৰ বাবে উক্তিসমূহৰ কোনকেইটা অশুদ্ধ?\n2PbO(s) + C(s) → 2Pb(s) + CO2(g)\n(a) লেড বিজাৰিত হৈছে।\n(b) কাৰ্বন ডাইঅক্সাইড জাৰিত হৈছে।\n(c) কাৰ্বন জাৰিত হৈছে।\n(d) লেড অক্সাইড বিজাৰিত হৈছে।",
-      "en": "Which of the statements about the reaction below are incorrect?\n2PbO(s) + C(s) → 2Pb(s) + CO2(g)\n(a) Lead is getting reduced.\n(b) Carbon dioxide is getting oxidised.\n(c) Carbon is getting oxidised.\n(d) Lead oxide is getting reduced.",
-      "options": [
-        { "label": "i", "as": "(a) আৰু (b)", "en": "(a) and (b)" },
-        { "label": "ii", "as": "(a) আৰু (c)", "en": "(a) and (c)" },
-        { "label": "iii", "as": "(a), (b) আৰু (c)", "en": "(a), (b) and (c)" },
-        { "label": "iv", "as": "সকলো", "en": "all" }
-      ] },
-    { "id": "b1-2", "source": "book", "chapter": 1, "no": 2, "page": 14, "answer": "d", "answerSource": "textbook",
-      "as": "Fe2O3 + 2Al → Al2O3 + 2Fe\nওপৰৰ বিক্ৰিয়াটো এটা উদাহৰণ",
-      "en": "Fe2O3 + 2Al → Al2O3 + 2Fe\nThe above reaction is an example of a",
-      "options": [
-        { "label": "a", "as": "এটা সংযোজন বিক্ৰিয়াৰ", "en": "combination reaction" },
-        { "label": "b", "as": "এটা দ্বিঅপসাৰণ বিক্ৰিয়াৰ", "en": "double displacement reaction" },
-        { "label": "c", "as": "এটা বিযোজন বিক্ৰিয়াৰ", "en": "decomposition reaction" },
-        { "label": "d", "as": "এটা অপসৰণ বিক্ৰিয়াৰ", "en": "displacement reaction" }
-      ] },
-    { "id": "b1-3", "source": "book", "chapter": 1, "no": 3, "page": 15, "answer": "a", "answerSource": "textbook",
-      "as": "কি ঘটে যেতিয়া লঘু হাইড্ৰ'ক্ল'ৰিক এছিড লোৰ গুড়িত যোগ কৰা হয়? শুদ্ধ উত্তৰটোত টিক্ চিন দিয়া।",
-      "en": "What happens when dilute hydrochloric acid is added to iron filings? Tick the correct answer.",
-      "options": [
-        { "label": "a", "as": "হাইড্ৰ'জেন গেছ আৰু আইৰন ক্ল'ৰাইড উৎপন্ন হয়।", "en": "Hydrogen gas and iron chloride are produced." },
-        { "label": "b", "as": "ক্ল'ৰিণ গেছ আৰু আইৰন হাইড্ৰ'ক্সাইড উৎপন্ন হয়।", "en": "Chlorine gas and iron hydroxide are produced." },
-        { "label": "c", "as": "বিক্ৰিয়া নঘটে।", "en": "No reaction takes place." },
-        { "label": "d", "as": "আইৰন লৱণ আৰু পানী উৎপন্ন হয়।", "en": "Iron salt and water are produced." }
-      ] },
-    { "id": "b1-4", "source": "book", "chapter": 1, "no": 4, "page": 15,
-      "as": "সন্তুলিত ৰাসায়নিক সমীকৰণ কি? ৰাসায়নিক সমীকৰণসমূহ কিয় সন্তুলিত কৰিব লাগে?",
-      "en": "What is a balanced chemical equation? Why should chemical equations be balanced?" },
-    { "id": "b1-5", "source": "book", "chapter": 1, "no": 5, "page": 15,
-      "as": "তলৰ উক্তিসমূহ ৰাসায়নিক সমীকৰণৰ ৰূপত লিখা আৰু সন্তুলন কৰা।\n(a) হাইড্ৰ'জেন গেছে নাইট্ৰ'জেনৰে সৈতে লগ হৈ এম'নিয়া প্ৰস্তুত কৰে।\n(b) হাইড্ৰ'জেন ছালফাইডে বায়ুত দাহিত হৈ পানী আৰু ছালফাৰ ডাই অক্সাইড উৎপন্ন কৰে।\n(c) বেৰিয়াম ক্ল'ৰাইডে এলুমিনিয়াম ছালফেটৰে সৈতে বিক্ৰিয়া কৰি এলুমিনিয়াম ক্ল'ৰাইড আৰু বেৰিয়াম ছালফেটৰ অধঃক্ষেপ উৎপন্ন কৰে।\n(d) পটেছিয়াম ধাতুৱে পানীৰে সৈতে বিক্ৰিয়া কৰি পটেছিয়াম হাইড্ৰ'ক্সাইড আৰু হাইড্ৰ'জেন গেছ উৎপন্ন কৰে।",
-      "en": "Translate the following statements into chemical equations and then balance them.\n(a) Hydrogen gas combines with nitrogen to form ammonia.\n(b) Hydrogen sulphide gas burns in air to give water and sulphur dioxide.\n(c) Barium chloride reacts with aluminium sulphate to give aluminium chloride and a precipitate of barium sulphate.\n(d) Potassium metal reacts with water to give potassium hydroxide and hydrogen gas." },
-    { "id": "b1-6", "source": "book", "chapter": 1, "no": 6, "page": 15,
-      "as": "তলৰ ৰাসায়নিক সমীকৰণসমূহ সন্তুলন কৰা।\n(a) HNO3 + Ca(OH)2 → Ca(NO3)2 + H2O\n(b) NaOH + H2SO4 → Na2SO4 + H2O\n(c) NaCl + AgNO3 → AgCl + NaNO3\n(d) BaCl2 + H2SO4 → BaSO4 + HCl",
-      "en": "Balance the following chemical equations.\n(a) HNO3 + Ca(OH)2 → Ca(NO3)2 + H2O\n(b) NaOH + H2SO4 → Na2SO4 + H2O\n(c) NaCl + AgNO3 → AgCl + NaNO3\n(d) BaCl2 + H2SO4 → BaSO4 + HCl" },
-    { "id": "b1-7", "source": "book", "chapter": 1, "no": 7, "page": 15,
-      "as": "তলৰ বিক্ৰিয়াবোৰৰ বাবে সন্তুলিত ৰাসায়নিক সমীকৰণবোৰ লিখা।\n(a) কেলছিয়াম হাইড্ৰ'ক্সাইড + কাৰ্বন ডাই অক্সাইড → কেলছিয়াম কাৰ্বনেট + পানী।\n(b) যিংক + ছিলভাৰ নাইট্ৰেট → যিংক নাইট্ৰেট + ছিলভাৰ।\n(c) এলুমিনিয়াম + ক'পাৰ ক্ল'ৰাইড → এলুমিনিয়াম ক্ল'ৰাইড + ক'পাৰ।\n(d) বেৰিয়াম ক্ল'ৰাইড + পটেছিয়াম ছালফেট → বেৰিয়াম ছালফেট + পটেছিয়াম ক্ল'ৰাইড।",
-      "en": "Write the balanced chemical equations for the following reactions.\n(a) Calcium hydroxide + Carbon dioxide → Calcium carbonate + Water\n(b) Zinc + Silver nitrate → Zinc nitrate + Silver\n(c) Aluminium + Copper chloride → Aluminium chloride + Copper\n(d) Barium chloride + Potassium sulphate → Barium sulphate + Potassium chloride" },
-    { "id": "b1-8", "source": "book", "chapter": 1, "no": 8, "page": 15,
-      "as": "তলত দিয়াবোৰৰ বাবে সন্তুলিত ৰাসায়নিক সমীকৰণ লিখা আৰু প্ৰতিটো কোন প্ৰকাৰৰ বিক্ৰিয়া চিনাক্ত কৰা।\n(a) পটেছিয়াম ব্ৰ'মাইড (aq) + বেৰিয়াম আয়'ডাইড (aq) → পটেছিয়াম আয়'ডাইড (aq) + বেৰিয়াম ব্ৰ'মাইড (s)\n(b) যিংক কাৰ্বনেট (s) → যিংক অক্সাইড (s) + কাৰ্বন ডাই অক্সাইড (g)\n(c) হাইড্ৰ'জেন (g) + ক্ল'ৰিন (g) → হাইড্ৰ'জেন ক্ল'ৰাইড (g)\n(d) মেগনেছিয়াম (s) + হাইড্ৰ'ক্ল'ৰিক এছিড (aq) → মেগনেছিয়াম ক্ল'ৰাইড (aq) + হাইড্ৰ'জেন (g)",
-      "en": "Write the balanced chemical equation for the following and identify the type of reaction in each case.\n(a) Potassium bromide(aq) + Barium iodide(aq) → Potassium iodide(aq) + Barium bromide(s)\n(b) Zinc carbonate(s) → Zinc oxide(s) + Carbon dioxide(g)\n(c) Hydrogen(g) + Chlorine(g) → Hydrogen chloride(g)\n(d) Magnesium(s) + Hydrochloric acid(aq) → Magnesium chloride(aq) + Hydrogen(g)" },
-    { "id": "b1-9", "source": "book", "chapter": 1, "no": 9, "page": 15,
-      "as": "তাপবৰ্জী আৰু তাপগ্ৰাহী বিক্ৰিয়া বুলিলে কি বুজা? উদাহৰণ দিয়া।",
-      "en": "What does one mean by exothermic and endothermic reactions? Give examples." },
-    { "id": "b1-10", "source": "book", "chapter": 1, "no": 10, "page": 15,
-      "as": "শ্বসনক এটা তাপবৰ্জী বিক্ৰিয়া বুলি কিয় বিবেচনা কৰা হৈছে? ব্যাখ্যা কৰা।",
-      "en": "Why is respiration considered an exothermic reaction? Explain." },
-    { "id": "b1-11", "source": "book", "chapter": 1, "no": 11, "page": 15,
-      "as": "বিযোজন বিক্ৰিয়াক সংযোজন বিক্ৰিয়াৰ বিপৰীত বোলা হয় কিয়? এই সমূহ বিক্ৰিয়াৰ বাবে সমীকৰণ লিখা।",
-      "en": "Why are decomposition reactions called the opposite of combination reactions? Write equations for these reactions." },
-    { "id": "b1-12", "source": "book", "chapter": 1, "no": 12, "page": 15,
-      "as": "তাপ, পোহৰ আৰু বিদ্যুৎ শক্তিৰে সংঘটিত বিযোজন বিক্ৰিয়াৰ একোটাকৈ সমীকৰণ লিখা।",
-      "en": "Write one equation each for decomposition reactions where energy is supplied in the form of heat, light or electricity." }
-  ]
+ "book": "বিজ্ঞান (Science) Class X, Assamese medium, ASSEB/SEBA",
+ "status": "complete",
+ "questions": [
+  {
+   "id": "b1-1",
+   "source": "book",
+   "chapter": 1,
+   "no": 1,
+   "page": 14,
+   "answer": "i",
+   "answerSource": "textbook",
+   "as": "তলৰ বিক্ৰিয়াটোৰ বাবে উক্তিসমূহৰ কোনকেইটা অশুদ্ধ?\n2PbO(s) + C(s) → 2Pb(s) + CO2(g)\n(a) লেড বিজাৰিত হৈছে।\n(b) কাৰ্বন ডাইঅক্সাইড জাৰিত হৈছে।\n(c) কাৰ্বন জাৰিত হৈছে।\n(d) লেড অক্সাইড বিজাৰিত হৈছে।",
+   "en": "Which of the statements about the reaction below are incorrect?\n2PbO(s) + C(s) → 2Pb(s) + CO2(g)\n(a) Lead is getting reduced.\n(b) Carbon dioxide is getting oxidised.\n(c) Carbon is getting oxidised.\n(d) Lead oxide is getting reduced.",
+   "options": [
+    {
+     "label": "i",
+     "as": "(a) আৰু (b)",
+     "en": "(a) and (b)"
+    },
+    {
+     "label": "ii",
+     "as": "(a) আৰু (c)",
+     "en": "(a) and (c)"
+    },
+    {
+     "label": "iii",
+     "as": "(a), (b) আৰু (c)",
+     "en": "(a), (b) and (c)"
+    },
+    {
+     "label": "iv",
+     "as": "সকলো",
+     "en": "all"
+    }
+   ]
+  },
+  {
+   "id": "b1-2",
+   "source": "book",
+   "chapter": 1,
+   "no": 2,
+   "page": 14,
+   "answer": "d",
+   "answerSource": "textbook",
+   "as": "Fe2O3 + 2Al → Al2O3 + 2Fe\nওপৰৰ বিক্ৰিয়াটো এটা উদাহৰণ",
+   "en": "Fe2O3 + 2Al → Al2O3 + 2Fe\nThe above reaction is an example of a",
+   "options": [
+    {
+     "label": "a",
+     "as": "এটা সংযোজন বিক্ৰিয়াৰ",
+     "en": "combination reaction"
+    },
+    {
+     "label": "b",
+     "as": "এটা দ্বিঅপসাৰণ বিক্ৰিয়াৰ",
+     "en": "double displacement reaction"
+    },
+    {
+     "label": "c",
+     "as": "এটা বিযোজন বিক্ৰিয়াৰ",
+     "en": "decomposition reaction"
+    },
+    {
+     "label": "d",
+     "as": "এটা অপসৰণ বিক্ৰিয়াৰ",
+     "en": "displacement reaction"
+    }
+   ]
+  },
+  {
+   "id": "b1-3",
+   "source": "book",
+   "chapter": 1,
+   "no": 3,
+   "page": 15,
+   "answer": "a",
+   "answerSource": "textbook",
+   "as": "কি ঘটে যেতিয়া লঘু হাইড্ৰ'ক্ল'ৰিক এছিড লোৰ গুড়িত যোগ কৰা হয়? শুদ্ধ উত্তৰটোত টিক্ চিন দিয়া।",
+   "en": "What happens when dilute hydrochloric acid is added to iron filings? Tick the correct answer.",
+   "options": [
+    {
+     "label": "a",
+     "as": "হাইড্ৰ'জেন গেছ আৰু আইৰন ক্ল'ৰাইড উৎপন্ন হয়।",
+     "en": "Hydrogen gas and iron chloride are produced."
+    },
+    {
+     "label": "b",
+     "as": "ক্ল'ৰিণ গেছ আৰু আইৰন হাইড্ৰ'ক্সাইড উৎপন্ন হয়।",
+     "en": "Chlorine gas and iron hydroxide are produced."
+    },
+    {
+     "label": "c",
+     "as": "বিক্ৰিয়া নঘটে।",
+     "en": "No reaction takes place."
+    },
+    {
+     "label": "d",
+     "as": "আইৰন লৱণ আৰু পানী উৎপন্ন হয়।",
+     "en": "Iron salt and water are produced."
+    }
+   ]
+  },
+  {
+   "id": "b1-4",
+   "source": "book",
+   "chapter": 1,
+   "no": 4,
+   "page": 15,
+   "as": "সন্তুলিত ৰাসায়নিক সমীকৰণ কি? ৰাসায়নিক সমীকৰণসমূহ কিয় সন্তুলিত কৰিব লাগে?",
+   "en": "What is a balanced chemical equation? Why should chemical equations be balanced?"
+  },
+  {
+   "id": "b1-5",
+   "source": "book",
+   "chapter": 1,
+   "no": 5,
+   "page": 15,
+   "as": "তলৰ উক্তিসমূহ ৰাসায়নিক সমীকৰণৰ ৰূপত লিখা আৰু সন্তুলন কৰা।\n(a) হাইড্ৰ'জেন গেছে নাইট্ৰ'জেনৰে সৈতে লগ হৈ এম'নিয়া প্ৰস্তুত কৰে।\n(b) হাইড্ৰ'জেন ছালফাইডে বায়ুত দাহিত হৈ পানী আৰু ছালফাৰ ডাই অক্সাইড উৎপন্ন কৰে।\n(c) বেৰিয়াম ক্ল'ৰাইডে এলুমিনিয়াম ছালফেটৰে সৈতে বিক্ৰিয়া কৰি এলুমিনিয়াম ক্ল'ৰাইড আৰু বেৰিয়াম ছালফেটৰ অধঃক্ষেপ উৎপন্ন কৰে।\n(d) পটেছিয়াম ধাতুৱে পানীৰে সৈতে বিক্ৰিয়া কৰি পটেছিয়াম হাইড্ৰ'ক্সাইড আৰু হাইড্ৰ'জেন গেছ উৎপন্ন কৰে।",
+   "en": "Translate the following statements into chemical equations and then balance them.\n(a) Hydrogen gas combines with nitrogen to form ammonia.\n(b) Hydrogen sulphide gas burns in air to give water and sulphur dioxide.\n(c) Barium chloride reacts with aluminium sulphate to give aluminium chloride and a precipitate of barium sulphate.\n(d) Potassium metal reacts with water to give potassium hydroxide and hydrogen gas."
+  },
+  {
+   "id": "b1-6",
+   "source": "book",
+   "chapter": 1,
+   "no": 6,
+   "page": 15,
+   "as": "তলৰ ৰাসায়নিক সমীকৰণসমূহ সন্তুলন কৰা।\n(a) HNO3 + Ca(OH)2 → Ca(NO3)2 + H2O\n(b) NaOH + H2SO4 → Na2SO4 + H2O\n(c) NaCl + AgNO3 → AgCl + NaNO3\n(d) BaCl2 + H2SO4 → BaSO4 + HCl",
+   "en": "Balance the following chemical equations.\n(a) HNO3 + Ca(OH)2 → Ca(NO3)2 + H2O\n(b) NaOH + H2SO4 → Na2SO4 + H2O\n(c) NaCl + AgNO3 → AgCl + NaNO3\n(d) BaCl2 + H2SO4 → BaSO4 + HCl"
+  },
+  {
+   "id": "b1-7",
+   "source": "book",
+   "chapter": 1,
+   "no": 7,
+   "page": 15,
+   "as": "তলৰ বিক্ৰিয়াবোৰৰ বাবে সন্তুলিত ৰাসায়নিক সমীকৰণবোৰ লিখা।\n(a) কেলছিয়াম হাইড্ৰ'ক্সাইড + কাৰ্বন ডাই অক্সাইড → কেলছিয়াম কাৰ্বনেট + পানী।\n(b) যিংক + ছিলভাৰ নাইট্ৰেট → যিংক নাইট্ৰেট + ছিলভাৰ।\n(c) এলুমিনিয়াম + ক'পাৰ ক্ল'ৰাইড → এলুমিনিয়াম ক্ল'ৰাইড + ক'পাৰ।\n(d) বেৰিয়াম ক্ল'ৰাইড + পটেছিয়াম ছালফেট → বেৰিয়াম ছালফেট + পটেছিয়াম ক্ল'ৰাইড।",
+   "en": "Write the balanced chemical equations for the following reactions.\n(a) Calcium hydroxide + Carbon dioxide → Calcium carbonate + Water\n(b) Zinc + Silver nitrate → Zinc nitrate + Silver\n(c) Aluminium + Copper chloride → Aluminium chloride + Copper\n(d) Barium chloride + Potassium sulphate → Barium sulphate + Potassium chloride"
+  },
+  {
+   "id": "b1-8",
+   "source": "book",
+   "chapter": 1,
+   "no": 8,
+   "page": 15,
+   "as": "তলত দিয়াবোৰৰ বাবে সন্তুলিত ৰাসায়নিক সমীকৰণ লিখা আৰু প্ৰতিটো কোন প্ৰকাৰৰ বিক্ৰিয়া চিনাক্ত কৰা।\n(a) পটেছিয়াম ব্ৰ'মাইড (aq) + বেৰিয়াম আয়'ডাইড (aq) → পটেছিয়াম আয়'ডাইড (aq) + বেৰিয়াম ব্ৰ'মাইড (s)\n(b) যিংক কাৰ্বনেট (s) → যিংক অক্সাইড (s) + কাৰ্বন ডাই অক্সাইড (g)\n(c) হাইড্ৰ'জেন (g) + ক্ল'ৰিন (g) → হাইড্ৰ'জেন ক্ল'ৰাইড (g)\n(d) মেগনেছিয়াম (s) + হাইড্ৰ'ক্ল'ৰিক এছিড (aq) → মেগনেছিয়াম ক্ল'ৰাইড (aq) + হাইড্ৰ'জেন (g)",
+   "en": "Write the balanced chemical equation for the following and identify the type of reaction in each case.\n(a) Potassium bromide(aq) + Barium iodide(aq) → Potassium iodide(aq) + Barium bromide(s)\n(b) Zinc carbonate(s) → Zinc oxide(s) + Carbon dioxide(g)\n(c) Hydrogen(g) + Chlorine(g) → Hydrogen chloride(g)\n(d) Magnesium(s) + Hydrochloric acid(aq) → Magnesium chloride(aq) + Hydrogen(g)"
+  },
+  {
+   "id": "b1-9",
+   "source": "book",
+   "chapter": 1,
+   "no": 9,
+   "page": 15,
+   "as": "তাপবৰ্জী আৰু তাপগ্ৰাহী বিক্ৰিয়া বুলিলে কি বুজা? উদাহৰণ দিয়া।",
+   "en": "What does one mean by exothermic and endothermic reactions? Give examples."
+  },
+  {
+   "id": "b1-10",
+   "source": "book",
+   "chapter": 1,
+   "no": 10,
+   "page": 15,
+   "as": "শ্বসনক এটা তাপবৰ্জী বিক্ৰিয়া বুলি কিয় বিবেচনা কৰা হৈছে? ব্যাখ্যা কৰা।",
+   "en": "Why is respiration considered an exothermic reaction? Explain."
+  },
+  {
+   "id": "b1-11",
+   "source": "book",
+   "chapter": 1,
+   "no": 11,
+   "page": 15,
+   "as": "বিযোজন বিক্ৰিয়াক সংযোজন বিক্ৰিয়াৰ বিপৰীত বোলা হয় কিয়? এই সমূহ বিক্ৰিয়াৰ বাবে সমীকৰণ লিখা।",
+   "en": "Why are decomposition reactions called the opposite of combination reactions? Write equations for these reactions."
+  },
+  {
+   "id": "b1-12",
+   "source": "book",
+   "chapter": 1,
+   "no": 12,
+   "page": 15,
+   "as": "তাপ, পোহৰ আৰু বিদ্যুৎ শক্তিৰে সংঘটিত বিযোজন বিক্ৰিয়াৰ একোটাকৈ সমীকৰণ লিখা।",
+   "en": "Write one equation each for decomposition reactions where energy is supplied in the form of heat, light or electricity."
+  },
+  {
+   "id": "b1-13",
+   "source": "book",
+   "chapter": 1,
+   "no": 13,
+   "page": 16,
+   "as": "অপসৰণ আৰু দ্বিঅপসৰণ বিক্ৰিয়াৰ মাজত পাৰ্থক্য কি? এই বিক্ৰিয়াবোৰৰ বাবে সমীকৰণ লিখা।"
+  },
+  {
+   "id": "b1-14",
+   "source": "book",
+   "chapter": 1,
+   "no": 14,
+   "page": 16,
+   "as": "ছিলভাৰৰ পৰিশোধনত ছিলভাৰ নাইট্ৰেট দ্ৰৱৰ পৰা ছিলভাৰ আহৰণ কৰোঁতে ক'পাৰ ধাতুৰদ্বাৰা অপসাৰণ সংঘটিত কৰা হয়। জড়িত বিক্ৰিয়াটো লিখা।"
+  },
+  {
+   "id": "b1-15",
+   "source": "book",
+   "chapter": 1,
+   "no": 15,
+   "page": 16,
+   "as": "অধঃক্ষেপণ বিক্ৰিয়া মানে কি বুজা? উদাহৰণ দি ব্যাখ্যা কৰা।"
+  },
+  {
+   "id": "b1-16",
+   "source": "book",
+   "chapter": 1,
+   "no": 16,
+   "page": 16,
+   "as": "অক্সিজেন লাভ আৰু হেৰুৱা সংজ্ঞাৰে তলৰ পদসমূহ দুটাকৈ উদাহৰণসহ ব্যাখ্যা কৰা।\n(a) জাৰণ।\n(b) বিজাৰণ।"
+  },
+  {
+   "id": "b1-17",
+   "source": "book",
+   "chapter": 1,
+   "no": 17,
+   "page": 16,
+   "as": "এটা উজ্জ্বল মুগা ৰঙৰ মৌল 'X' ক বায়ুত গৰম কৰাত ক'লা হৈ পৰিল। মৌল 'X' আৰু উৎপন্ন হোৱা ক'লা ৰঙৰ যৌগটোৰ নাম লিখা।"
+  },
+  {
+   "id": "b1-18",
+   "source": "book",
+   "chapter": 1,
+   "no": 18,
+   "page": 16,
+   "as": "লোৰ বস্তুত ৰঙৰ প্ৰলেপ দিও কিয়?"
+  },
+  {
+   "id": "b1-19",
+   "source": "book",
+   "chapter": 1,
+   "no": 19,
+   "page": 16,
+   "as": "তেল আৰু চৰ্বি থকা খাদ্যবস্তু নাইট্ৰ'জেনৰ পৰিবেশত পেকেটত ভৰোৱা হয় কিয়?"
+  },
+  {
+   "id": "b1-20",
+   "source": "book",
+   "chapter": 1,
+   "no": 20,
+   "page": 16,
+   "as": "এটা উদাহৰণৰে সৈতে তলৰ পদসমূহ ব্যাখ্যা কৰা।\n(a) ক্ষয়ীভৱন।\n(b) চৰ্বিৰ দুৰ্গন্ধিতা।"
+  },
+  {
+   "id": "b2-1",
+   "source": "book",
+   "chapter": 2,
+   "no": 1,
+   "page": 34,
+   "as": "এটা দ্ৰৱই ৰঙা লিটমাছ নীলা কৰিছে। ইয়াৰ pH হ'ব পাৰে—",
+   "options": [
+    {
+     "label": "a",
+     "as": "1"
+    },
+    {
+     "label": "b",
+     "as": "4"
+    },
+    {
+     "label": "c",
+     "as": "5"
+    },
+    {
+     "label": "d",
+     "as": "10"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b2-2",
+   "source": "book",
+   "chapter": 2,
+   "no": 2,
+   "page": 34,
+   "as": "এটা দ্ৰৱই গুড়ি কৰি লোৱা কণীৰ খোলাৰে সৈতে বিক্ৰিয়া কৰি এটা গেছ উৎপন্ন কৰে। গেছটোৱে চূণপানী ঘোলা কৰে। দ্ৰৱটোত থাকে—",
+   "options": [
+    {
+     "label": "a",
+     "as": "NaCl"
+    },
+    {
+     "label": "b",
+     "as": "HCl"
+    },
+    {
+     "label": "c",
+     "as": "LiCl"
+    },
+    {
+     "label": "d",
+     "as": "KCl"
+    }
+   ],
+   "answer": "b",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b2-3",
+   "source": "book",
+   "chapter": 2,
+   "no": 3,
+   "page": 34,
+   "as": "NaOH দ্ৰৱ এটাৰ 10 mL এ HCl দ্ৰৱ এটাৰ 8 mL সম্পূৰ্ণৰূপে প্ৰশমিত কৰে। যদি আমি একেটা NaOH দ্ৰৱৰ 20 mL লওঁ তেন্তে এইখিনি প্ৰশমিত কৰিবলৈ লগা HCl দ্ৰৱৰ (আগৰ সৈতে একেটা দ্ৰৱ) পৰিমাণ হ'ব",
+   "options": [
+    {
+     "label": "a",
+     "as": "4 mL"
+    },
+    {
+     "label": "b",
+     "as": "8 mL"
+    },
+    {
+     "label": "c",
+     "as": "12 mL"
+    },
+    {
+     "label": "d",
+     "as": "16 mL"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b2-4",
+   "source": "book",
+   "chapter": 2,
+   "no": 4,
+   "page": 34,
+   "as": "অজীৰ্ণতাৰ চিকিৎসাৰ বাবে তলৰ কোন ধৰণৰ ঔষধ ব্যৱহাৰ কৰা হয়?",
+   "options": [
+    {
+     "label": "a",
+     "as": "এণ্টিবায়টিক"
+    },
+    {
+     "label": "b",
+     "as": "বেদনানাশক (analgesic)"
+    },
+    {
+     "label": "c",
+     "as": "অম্লনাশক"
+    },
+    {
+     "label": "d",
+     "as": "বীজাণুবাৰক (antiseptic)"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b2-5",
+   "source": "book",
+   "chapter": 2,
+   "no": 5,
+   "page": 34,
+   "as": "সংঘটিত বিক্ৰিয়াৰ বাবে শব্দ সমীকৰণ আৰু সন্তুলিত সমীকৰণ লিখা যেতিয়া —\n(a) লঘু ছালফিউৰিক এছিডে যিংকৰ গুড়িৰে সৈতে বিক্ৰিয়া কৰে।\n(b) লঘু হাইড্ৰ'ক্ল'ৰিক এছিডে মেগনেছিয়াম ফিতাৰে সৈতে বিক্ৰিয়া কৰে।\n(c) লঘু ছালফিউৰিক এছিডে এলুমিনিয়াম পাউদাৰৰ সৈতে বিক্ৰিয়া কৰে।\n(d) লঘু হাইড্ৰ'ক্ল'ৰিক এছিডে লোৰ গুড়িৰে সৈতে বিক্ৰিয়া কৰে।"
+  },
+  {
+   "id": "b2-6",
+   "source": "book",
+   "chapter": 2,
+   "no": 6,
+   "page": 34,
+   "as": "এলক'হল আৰু গ্লুক'জৰ দৰে যৌগবোৰতো হাইড্ৰ'জেন থাকে। কিন্তু সিহঁতক এছিড হিচাপে শ্ৰেণীভুক্ত কৰা হোৱা নাই। ইয়াক প্ৰমাণ কৰিবলৈ এটা পৰীক্ষা বৰ্ণনা কৰা।"
+  },
+  {
+   "id": "b2-7",
+   "source": "book",
+   "chapter": 2,
+   "no": 7,
+   "page": 34,
+   "as": "পাতিত পানীয়ে বিদ্যুৎ সৰবৰাহ নকৰে কিন্তু বৰষুণৰ পানীয়ে কৰে কিয়?"
+  },
+  {
+   "id": "b2-8",
+   "source": "book",
+   "chapter": 2,
+   "no": 8,
+   "page": 35,
+   "as": "পানীৰ অনুপস্থিতিত এছিডে এছিড ধৰ্ম প্ৰদৰ্শন নকৰে কিয়?"
+  },
+  {
+   "id": "b2-9",
+   "source": "book",
+   "chapter": 2,
+   "no": 9,
+   "page": 35,
+   "as": "পাঁচটা দ্ৰৱ A, B, C, D আৰু E ক সাৰ্বজনীন সূচকেৰে পৰীক্ষা কৰাত pH ৰ মান ক্ৰমে 4, 1, 11, 7 আৰু 9 দেখুৱাইছিল। কোনটো দ্ৰৱ\n(a) প্ৰশম\n(b) তীব্ৰ ক্ষাৰকীয়\n(c) তীব্ৰ আম্লিক\n(d) মৃদু আম্লিক\n(e) মৃদু ক্ষাৰকীয়\nহাইড্ৰ'জেন আয়নৰ গাঢ়তাৰ বৰ্ধিত ক্ৰমত pH মানবোৰ সজোৱা।"
+  },
+  {
+   "id": "b2-10",
+   "source": "book",
+   "chapter": 2,
+   "no": 10,
+   "page": 35,
+   "as": "পৰীক্ষানল A আৰু B ত সমান সমান দৈৰ্ঘ্যৰ দুডাল মেগনেছিয়ামৰ ফিতা লোৱা হ'ল। পৰীক্ষানল A ত হাইড্ৰ'ক্ল'ৰিক এছিড (HCl) আৰু পৰীক্ষানল B ত এচেটিক এছিড যোগ কৰা হ'ল। এছিড দুটাৰ গাঢ়তা একে আৰু একে পৰিমাণেই লোৱা হৈছে। কোনটো পৰীক্ষানলত বেছি বেগেৰে বুৰবুৰণি ওলাব আৰু কিয়?"
+  },
+  {
+   "id": "b2-11",
+   "source": "book",
+   "chapter": 2,
+   "no": 11,
+   "page": 35,
+   "as": "কেঁচা গাখীৰৰ pH ৰ মান 6। ই দৈত পৰিণত হ'লে pH সলনি হ'বনে? ব্যাখ্যা কৰা।"
+  },
+  {
+   "id": "b2-12",
+   "source": "book",
+   "chapter": 2,
+   "no": 12,
+   "page": 35,
+   "as": "এজন গোৱালে কেঁচা গাখীৰত সামান্য পৰিমাণৰ বেকিং ছ'ডা যোগ কৰিলে।\n(a) কিয় তেওঁ কেঁচা গাখীৰৰ pH ৰ মান 6 ৰ পৰা সামান্যভাৱে ক্ষাৰকীয় কৰি ল'লে?\n(b) এই গাখীৰখিনি দৈত পৰিণত হ'বলৈ বেছি সময় লাগে কিয়?"
+  },
+  {
+   "id": "b2-13",
+   "source": "book",
+   "chapter": 2,
+   "no": 13,
+   "page": 35,
+   "as": "প্লাষ্টাৰ অব পেৰিছক জলীয় বাষ্প সোমাব নোৱাৰা পাত্ৰত থ'ব লাগে। কিয়? ব্যাখ্যা কৰা।"
+  },
+  {
+   "id": "b2-14",
+   "source": "book",
+   "chapter": 2,
+   "no": 14,
+   "page": 35,
+   "as": "প্ৰশমন বিক্ৰিয়া কি? দুটা উদাহৰণ দিয়া। কাপোৰ ধোৱা ছ'ডা আৰু বেকিং ছ'ডাৰ দুটাকৈ গুৰুত্বপূৰ্ণ ব্যৱহাৰ লিখা।"
+  },
+  {
+   "id": "b3-1",
+   "source": "book",
+   "chapter": 3,
+   "no": 1,
+   "page": 56,
+   "as": "তলৰ কোনবোৰ ক্ষেত্ৰত প্ৰতিস্থাপন বিক্ৰিয়া ঘটিব?",
+   "options": [
+    {
+     "label": "a",
+     "as": "NaCl ৰ দ্ৰৱ আৰু কপাৰ ধাতু।"
+    },
+    {
+     "label": "b",
+     "as": "MgCl2 ৰ দ্ৰৱ আৰু এলুমিনিয়াম ধাতু।"
+    },
+    {
+     "label": "c",
+     "as": "FeSO4 ৰ দ্ৰৱ আৰু ছিলভাৰ ধাতু।"
+    },
+    {
+     "label": "d",
+     "as": "AgNO3 ৰ দ্ৰৱ আৰু কপাৰ ধাতু।"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b3-2",
+   "source": "book",
+   "chapter": 3,
+   "no": 2,
+   "page": 56,
+   "as": "লোৰ টাৱা (iron frying pan) এখন মামৰে ধৰাৰ পৰা বচাই ৰাখিবলৈ তলৰ কোনটো পদ্ধতি উপযুক্ত হ'ব?",
+   "options": [
+    {
+     "label": "a",
+     "as": "গ্ৰীজ ব্যৱহাৰ কৰি"
+    },
+    {
+     "label": "b",
+     "as": "ৰং ব্যৱহাৰ কৰি"
+    },
+    {
+     "label": "c",
+     "as": "যিংকৰ প্ৰলেপ দি"
+    },
+    {
+     "label": "d",
+     "as": "ওপৰৰ সকলো"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b3-3",
+   "source": "book",
+   "chapter": 3,
+   "no": 3,
+   "page": 56,
+   "as": "এটা মৌলই অক্সিজেনৰ লগত বিক্ৰিয়া কৰি উচ্চ গলনাংকৰ যৌগ উৎপন্ন কৰে। যৌগটো পানীত দ্ৰৱণীয়। সম্ভৱপৰ মৌলটো",
+   "options": [
+    {
+     "label": "a",
+     "as": "কেলছিয়াম"
+    },
+    {
+     "label": "b",
+     "as": "কাৰ্বন"
+    },
+    {
+     "label": "c",
+     "as": "ছিলিকন"
+    },
+    {
+     "label": "d",
+     "as": "আইৰন"
+    }
+   ],
+   "answer": "a",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b3-4",
+   "source": "book",
+   "chapter": 3,
+   "no": 4,
+   "page": 56,
+   "as": "খাদ্যবস্তু ভৰাই ৰখা পাত্ৰবোৰত টিনৰ প্ৰলেপ দিয়া হয়; যিংকৰ নহয়। কিয়নো—",
+   "options": [
+    {
+     "label": "a",
+     "as": "টিনতকৈ যিংক দামী।"
+    },
+    {
+     "label": "b",
+     "as": "যিংকৰ গলনাংক টিনতকৈ বেছি।"
+    },
+    {
+     "label": "c",
+     "as": "যিংক টিনতকৈ অধিক সক্ৰিয়।"
+    },
+    {
+     "label": "d",
+     "as": "যিংক টিনতকৈ কম সক্ৰিয়।"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b3-5",
+   "source": "book",
+   "chapter": 3,
+   "no": 5,
+   "page": 56,
+   "as": "তোমাক এটা হাতুৰী, এটা বেটাৰী, অলপ তাঁৰ আৰু এটা ছুইচ দিয়া হ'ল।\n(a) এই বস্তুবোৰ ব্যৱহাৰ কৰি ধাতু আৰু অধাতু কেনেকৈ চিনাক্ত কৰিবা?\n(b) ধাতু/অধাতুৰ চিনাক্তকৰণত এই পৰীক্ষাবোৰৰ উপযোগিতা মূল্যাংকন কৰা।"
+  },
+  {
+   "id": "b3-6",
+   "source": "book",
+   "chapter": 3,
+   "no": 6,
+   "page": 56,
+   "as": "উভধৰ্মী অক্সাইড কাক বোলে? দুটা উভধৰ্মী অক্সাইডৰ উদাহৰণ দিয়া।"
+  },
+  {
+   "id": "b3-7",
+   "source": "book",
+   "chapter": 3,
+   "no": 7,
+   "page": 56,
+   "as": "দুটাকৈ ধাতুৰ নাম লিখা যিয়ে লঘু এছিডৰ পৰা হাইড্ৰ'জেন অপসাৰণ কৰে আৰু যিয়ে নকৰে।"
+  },
+  {
+   "id": "b3-8",
+   "source": "book",
+   "chapter": 3,
+   "no": 8,
+   "page": 56,
+   "as": "M ধাতুৰ বৈদ্যুতিক শোধনৰ বেলিকা এন'ড, কেথ'ড আৰু বিদ্যুৎবিশ্লেষ্য কি ল'ব লাগিব?"
+  },
+  {
+   "id": "b3-9",
+   "source": "book",
+   "chapter": 3,
+   "no": 9,
+   "page": 57,
+   "as": "প্ৰত্যুষে সৰু চামুচ এখনত ছালফাৰৰ গুড়ি লৈ উত্তাপিত কৰিলে। উত্তৱ হোৱা গেছটো তেওঁ কাষৰ চিত্ৰত দেখুৱা ধৰণে এটা পৰীক্ষানলী ওভোটাকৈ ধৰি সংগ্ৰহ কৰিলে।\n(a) (i) শুষ্ক লিটমাছ কাগজৰ লগত (ii) সিক্ত লিটমাছ কাগজৰ লগত গেছটোৰ বিক্ৰিয়া কেনে হ'ব?\n(b) ইয়াত বিক্ৰিয়াটোৰ সন্তুলিত সমীকৰণ লিখা।",
+   "hasDiagram": true
+  },
+  {
+   "id": "b3-10",
+   "source": "book",
+   "chapter": 3,
+   "no": 10,
+   "page": 57,
+   "as": "লোত মামৰ ধৰা ৰোধ কৰিবলৈ দুটা উপায় বৰ্ণনা কৰা।"
+  },
+  {
+   "id": "b3-11",
+   "source": "book",
+   "chapter": 3,
+   "no": 11,
+   "page": 57,
+   "as": "অক্সিজেনৰ লগত বিক্ৰিয়া কৰি অধাতুবিলাকে কেনে অক্সাইড উৎপন্ন কৰে?"
+  },
+  {
+   "id": "b3-12",
+   "source": "book",
+   "chapter": 3,
+   "no": 12,
+   "page": 57,
+   "as": "কাৰণ দৰ্শোৱা\n(a) গহনা তৈয়াৰ কৰিবলৈ প্লেটিনাম, গ'ল্ড আৰু ছিলভাৰ ব্যৱহাৰ কৰা হয়।\n(b) ছ'ডিয়াম, পটাছিয়াম আৰু লিথিয়াম ধাতু তেলত ডুবাই ৰখা হয়।\n(c) এলুমিনিয়াম যথেষ্ট সক্ৰিয় ধাতু তথাপি ইয়াক ৰন্ধনত ব্যৱহাৰ কৰা বৰ্তন তৈয়াৰ কৰিবলৈ ব্যৱহাৰ কৰা হয়।\n(d) ধাতু নিষ্কাশনৰ সময়ত কাৰ্বনেট আৰু ছালফাইড আকৰ অক্সাইডলৈ ৰূপান্তৰ কৰা হয়।"
+  },
+  {
+   "id": "b3-13",
+   "source": "book",
+   "chapter": 3,
+   "no": 13,
+   "page": 57,
+   "as": "চেকা লগা কপাৰৰ পাত্ৰ নেমু বা তেতেলী (tamarind) ৰসেৰে পৰিষ্কাৰ কৰা দেখিছানে? পাত্ৰবিলাক পৰিষ্কাৰ কৰিবলৈ টেঙাজাতীয় বস্তু কিয় ব্যৱহাৰ কৰে?"
+  },
+  {
+   "id": "b3-14",
+   "source": "book",
+   "chapter": 3,
+   "no": 14,
+   "page": 57,
+   "as": "ৰাসায়নিক ধৰ্মৰ ভিত্তিত ধাতু আৰু অধাতুৰ পাৰ্থক্য লিখা।"
+  },
+  {
+   "id": "b3-15",
+   "source": "book",
+   "chapter": 3,
+   "no": 15,
+   "page": 57,
+   "as": "এজন ভণ্ড মানুহ স্বৰ্ণকাৰৰ ভাও ধৰি ঘৰে ঘৰে ঘূৰি ফুৰিছিল। তেওঁ স্নান পৰি যোৱা অলংকাৰৰ চিকমিকনি পুনৰ ঘূৰাই অনাৰ প্ৰতিশ্ৰুতি দি ফুৰিছিল। এগৰাকী মহিলাই কোনো সন্দেহ নকৰি হাতৰ খাৰুযোৰ খুলি তেওঁক দিছিল। মানুহজনে খাৰুযোৰ এটা বিশেষ দ্ৰাৱকত ডুবাই ধৰিছিল। খাৰুযোৰ নতুনৰ লেখিয়াকৈ উজ্জ্বল হৈ পৰিছিল; পিছে খাৰুযোৰৰ ওজন বহুখিনি কমি গৈছিল। মহিলাগৰাকী অপ্ৰস্তুত হৈ পৰিছিল আৰু অনৰ্থক বাকবিতণ্ডাৰ মূৰকত মানুহজন সেই ঠাইৰ পৰা পলাইছিল। মানুহজনে ব্যৱহাৰ কৰা দ্ৰাৱকটো কি আছিলে অনুমান কৰি ক'ব পাৰিবা নে?"
+  },
+  {
+   "id": "b3-16",
+   "source": "book",
+   "chapter": 3,
+   "no": 16,
+   "page": 57,
+   "as": "গৰম পানীৰ জলাধাৰ (hot water tanks) তৈয়াৰ কৰিবলৈ কপাৰ ব্যৱহাৰ কৰা হয়। কিন্তু ষ্টিল (আইৰনৰ সংকৰ ধাতু) ব্যৱহাৰ কৰা নহয়। কিয়?"
+  },
+  {
+   "id": "b4-1",
+   "source": "book",
+   "chapter": 4,
+   "no": 1,
+   "page": 77,
+   "as": "ইথেন (C2H6) অণু এটাত",
+   "options": [
+    {
+     "label": "a",
+     "as": "6 টা সহযোজী বান্ধনি আছে।"
+    },
+    {
+     "label": "b",
+     "as": "7 টা সহযোজী বান্ধনি আছে।"
+    },
+    {
+     "label": "c",
+     "as": "8 টা সহযোজী বান্ধনি আছে।"
+    },
+    {
+     "label": "d",
+     "as": "9 টা সহযোজী বান্ধনি আছে।"
+    }
+   ],
+   "answer": "b",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b4-2",
+   "source": "book",
+   "chapter": 4,
+   "no": 2,
+   "page": 77,
+   "as": "চাৰিটা কাৰ্বনৰ যৌগ বিউটান'নত থকা কাৰ্যকৰী মূলক হ'ল—",
+   "options": [
+    {
+     "label": "a",
+     "as": "কাৰ্বক্সিলিক এছিড"
+    },
+    {
+     "label": "b",
+     "as": "এলডিহাইড"
+    },
+    {
+     "label": "c",
+     "as": "কিট'ন"
+    },
+    {
+     "label": "d",
+     "as": "এলকহল"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b4-3",
+   "source": "book",
+   "chapter": 4,
+   "no": 3,
+   "page": 77,
+   "as": "ৰন্ধনৰ সময়ত ব্যৱহৃত বৰ্তনৰ তলফালে (বাহিৰত) ক'লা পৰে কিয়নো—",
+   "options": [
+    {
+     "label": "a",
+     "as": "খাদ্য ভালদৰে নিসিজিল।"
+    },
+    {
+     "label": "b",
+     "as": "ইন্ধন সম্পূৰ্ণৰূপে দহন নহয়।"
+    },
+    {
+     "label": "c",
+     "as": "ইন্ধনটো সিক্ত।"
+    },
+    {
+     "label": "d",
+     "as": "ইন্ধনটো সম্পূৰ্ণকৈ দহন হয়।"
+    }
+   ],
+   "answer": "b",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b4-4",
+   "source": "book",
+   "chapter": 4,
+   "no": 4,
+   "page": 78,
+   "as": "CH3Cl ৰ উদাহৰণ লৈ সহযোজী বান্ধনিৰ স্বৰূপ (nature) ব্যাখ্যা কৰা।"
+  },
+  {
+   "id": "b4-5",
+   "source": "book",
+   "chapter": 4,
+   "no": 5,
+   "page": 78,
+   "as": "তলত দিয়াবিলাকৰ ইলেক্ট্ৰন বিন্দু গঠন লিখা—\n(a) ইথানয়িক এছিড\n(b) H2S\n(c) প্ৰপান'ন\n(d) F2"
+  },
+  {
+   "id": "b4-6",
+   "source": "book",
+   "chapter": 4,
+   "no": 6,
+   "page": 78,
+   "as": "সমগণীয় শ্ৰেণী কাক বোলে? উদাহৰণ দি বুজাই লিখা।"
+  },
+  {
+   "id": "b4-7",
+   "source": "book",
+   "chapter": 4,
+   "no": 7,
+   "page": 78,
+   "as": "ভৌতিক আৰু ৰাসায়নিক ধৰ্মৰ ওপৰত ভিত্তি কৰি ইথানল আৰু ইথানয়িক এছিডৰ পাৰ্থক্য লিখা।"
+  },
+  {
+   "id": "b4-8",
+   "source": "book",
+   "chapter": 4,
+   "no": 8,
+   "page": 78,
+   "as": "পানীত চাবোন দিলে কিয় ফেন উঠে? বেলেগ দ্ৰাৱক যেনে ইথানলত ফেন উঠিবনে?"
+  },
+  {
+   "id": "b4-9",
+   "source": "book",
+   "chapter": 4,
+   "no": 9,
+   "page": 78,
+   "as": "প্ৰায় সকলো ক্ষেত্ৰতে কাৰ্বন আৰু ইয়াৰ যৌগ ইন্ধন হিচাপে ব্যৱহাৰ হয়। কিয়?"
+  },
+  {
+   "id": "b4-10",
+   "source": "book",
+   "chapter": 4,
+   "no": 10,
+   "page": 78,
+   "as": "কঠিন পানীত চাবোন ব্যৱহাৰ কৰিলে গেদ (scum) কিদৰে সৃষ্টি হয় ব্যাখ্যা কৰা।"
+  },
+  {
+   "id": "b4-11",
+   "source": "book",
+   "chapter": 4,
+   "no": 11,
+   "page": 78,
+   "as": "নীলা আৰু ৰঙা লিটমাছ কাগজেৰে চাবোন পৰীক্ষা কৰিলে কি দেখিবা?"
+  },
+  {
+   "id": "b4-12",
+   "source": "book",
+   "chapter": 4,
+   "no": 12,
+   "page": 78,
+   "as": "হাইড্ৰ'জেনেচন মানে কি? ইয়াৰ ঔদ্যোগিক প্ৰয়োগ লিখা।"
+  },
+  {
+   "id": "b4-13",
+   "source": "book",
+   "chapter": 4,
+   "no": 13,
+   "page": 78,
+   "as": "তলৰ কোনবিলাকৰ হাইড্ৰ'কাৰ্বনে যোগাত্মক বিক্ৰিয়া দেখুৱায়?\nC2H6, C3H8, C3H6, C2H2, আৰু CH4"
+  },
+  {
+   "id": "b4-14",
+   "source": "book",
+   "chapter": 4,
+   "no": 14,
+   "page": 78,
+   "as": "মাখন (butter) আৰু খোৱাতেলৰ (cooking oil) মাজত পাৰ্থক্য দেখুৱাব পৰা এটা পৰীক্ষা বৰ্ণনা কৰা।"
+  },
+  {
+   "id": "b4-15",
+   "source": "book",
+   "chapter": 4,
+   "no": 15,
+   "page": 78,
+   "as": "চাবোনৰ মলি আঁতৰোৱাৰ প্ৰক্ৰিয়া (cleaning action) ব্যাখ্যা কৰা।"
+  },
+  {
+   "id": "b5-1",
+   "source": "book",
+   "chapter": 5,
+   "no": 1,
+   "page": 91,
+   "as": "পৰ্যাবৃত্ত তালিকাৰ পৰ্যায়বোৰত বাঁওফালৰ পৰা সোঁফাললৈ যাওঁতে ঘটা পৰিৱৰ্তনৰ প্ৰকৃতিৰ ওপৰত আগবঢ়োৱা তলৰ উক্তি সমূহৰ কোনটো উক্তি শুদ্ধ নহয়?",
+   "options": [
+    {
+     "label": "a",
+     "as": "মৌলবোৰ কম ধাতৱধৰ্মী হৈ পৰে।"
+    },
+    {
+     "label": "b",
+     "as": "যোজক ইলেকট্ৰনৰ সংখ্যা বাঢ়ে।"
+    },
+    {
+     "label": "c",
+     "as": "পৰমাণুবোৰে সিহঁতৰ যোজক ইলেকট্ৰন অধিক সহজে হেৰুৱায়।"
+    },
+    {
+     "label": "d",
+     "as": "অক্সাইডবোৰ বেছি আম্লিক হৈ পৰে।"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b5-2",
+   "source": "book",
+   "chapter": 5,
+   "no": 2,
+   "page": 91,
+   "as": "মৌল X য়ে XCl2 সংকেতৰ ক্ল'ৰাইড গঠন কৰে। ই উচ্চ গলনাংকযুক্ত এটা গোটা পদাৰ্থ। মৌল X তলৰ কোনটোৰে সৈতে একেটা বৰ্গতে থকাৰ সম্ভাৱনা সবাতোকৈ বেছি?",
+   "options": [
+    {
+     "label": "a",
+     "as": "Na"
+    },
+    {
+     "label": "b",
+     "as": "Mg"
+    },
+    {
+     "label": "c",
+     "as": "Al"
+    },
+    {
+     "label": "d",
+     "as": "Si"
+    }
+   ],
+   "answer": "b",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b5-3",
+   "source": "book",
+   "chapter": 5,
+   "no": 3,
+   "page": 91,
+   "as": "কোনটো মৌলৰ আছে\n(a) ইলেকট্ৰনপূৰ্ণ দুটা কক্ষ?\n(b) 2, 8, 2 ইলেকট্ৰনীয় বিন্যাস?\n(c) যোজক কক্ষত চাৰিটা ইলেকট্ৰনৰে সৈতে মুঠ তিনিটা কক্ষ?\n(d) যোজক কক্ষত তিনিটা ইলেকট্ৰনৰে সৈতে মুঠ দুটা কক্ষ?\n(e) দ্বিতীয় কক্ষত প্ৰথম কক্ষৰ দুগুণ ইলেকট্ৰন?"
+  },
+  {
+   "id": "b5-4",
+   "source": "book",
+   "chapter": 5,
+   "no": 4,
+   "page": 91,
+   "as": "a. পৰ্যাবৃত্ত তালিকাত ব'ৰনৰ সৈতে একেটা স্তম্ভত থকা মৌলবোৰৰ কি কি সাধাৰণ ধৰ্ম আছে?\nb. পৰ্যাবৃত্ত তালিকাত ফ্লুৰিনৰ সৈতে একেটা স্তম্ভত থকা মৌলবোৰৰ কি কি সাধাৰণ ধৰ্ম আছে?"
+  },
+  {
+   "id": "b5-5",
+   "source": "book",
+   "chapter": 5,
+   "no": 5,
+   "page": 91,
+   "as": "এটা পৰমাণুৰ ইলেকট্ৰনীয় বিন্যাস হ'ল 2, 8, 7\na. এই মৌলটোৰ পাৰমাণৱিক সংখ্যা কি?\nb. তলৰ মৌলবোৰৰ কোনটোৰে সৈতে ইয়াৰ ৰাসায়নিক সাদৃশ্য থাকিব? (বন্ধনীৰ ভিতৰত পাৰমাণৱিক সংখ্যাবোৰ দিয়া হৈছে)\nN (7)  F (9)  P (15)  Ar (18)"
+  },
+  {
+   "id": "b5-6",
+   "source": "book",
+   "chapter": 5,
+   "no": 6,
+   "page": 92,
+   "as": "পৰ্যাবৃত্ত তালিকাত তিনিটা মৌল A, B আৰু C ৰ স্থানসমূহ তলত দেখুওৱা হৈছে।\n16 বৰ্গ: –, –, –, B\n17 বৰ্গ: –, A, –, C\n(a) মৌল A ধাতুনে অধাতু?\n(b) C মৌলটো A তকৈ বেছি সক্ৰিয়নে কম সক্ৰিয়?\n(c) C মৌলটো আকাৰত B তকৈ ডাঙৰনে সৰু?\n(d) মৌল A এ কেনে ধৰণৰ আয়ন, কেটায়ন বা এনায়ন গঠন কৰিব?"
+  },
+  {
+   "id": "b5-7",
+   "source": "book",
+   "chapter": 5,
+   "no": 7,
+   "page": 92,
+   "as": "নাইট্ৰ'জেন (পাৰমাণৱিক সংখ্যা 7) আৰু ফছফ'ৰাছ (পাৰমাণৱিক সংখ্যা 15) পৰ্যাবৃত্ত তালিকাৰ বৰ্গ 15 ত থাকে। এই মৌল দুটাৰ ইলেকট্ৰনীয় বিন্যাস লিখা। ইহঁতৰ কোনটো বেছি বিদ্যুৎঋণাত্মক হ'ব আৰু কিয়?"
+  },
+  {
+   "id": "b5-8",
+   "source": "book",
+   "chapter": 5,
+   "no": 8,
+   "page": 92,
+   "as": "পৰমাণু এটাৰ ইলেকট্ৰনীয় বিন্যাস আধুনিক পৰ্যাবৃত্ত তালিকাত তাৰ স্থানৰ সৈতে কিদৰে জড়িত হৈ আছে?"
+  },
+  {
+   "id": "b5-9",
+   "source": "book",
+   "chapter": 5,
+   "no": 9,
+   "page": 92,
+   "as": "আধুনিক পৰ্যাবৃত্ত তালিকাত কেলছিয়াম (পাৰমাণৱিক সংখ্যা 20) 12, 19, 21 আৰু 38 পাৰমাণৱিক সংখ্যা বিশিষ্ট মৌলকেইটাৰদ্বাৰা পৰিবেষ্টিত হৈ আছে। এইকেইটাৰ কাৰ কাৰ ভৌতিক আৰু ৰাসায়নিক ধৰ্মসমূহ কেলছিয়ামৰ সৈতে মিলে?"
+  },
+  {
+   "id": "b5-10",
+   "source": "book",
+   "chapter": 5,
+   "no": 10,
+   "page": 92,
+   "as": "মেণ্ডেলিভৰ পৰ্যাবৃত্ত তালিকা আৰু আধুনিক পৰ্যাবৃত্ত তালিকাৰ মৌলৰ শ্ৰেণীবিভাজন (arrangement) ৰ তুলনা কৰা।"
+  },
+  {
+   "id": "b6-1",
+   "source": "book",
+   "chapter": 6,
+   "no": 1,
+   "page": 113,
+   "as": "মানুহৰ বৃক্ক দুটা কোনটো তন্ত্ৰৰ অংশ —",
+   "options": [
+    {
+     "label": "a",
+     "as": "পৰিপুষ্টি"
+    },
+    {
+     "label": "b",
+     "as": "শ্বসন"
+    },
+    {
+     "label": "c",
+     "as": "ৰেচন"
+    },
+    {
+     "label": "d",
+     "as": "পৰিবহন"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b6-2",
+   "source": "book",
+   "chapter": 6,
+   "no": 2,
+   "page": 113,
+   "as": "উদ্ভিদৰ দেহত জাইলেমৰ কাম হ'ল—",
+   "options": [
+    {
+     "label": "a",
+     "as": "পানীৰ পৰিবহন"
+    },
+    {
+     "label": "b",
+     "as": "খাদ্যৰ পৰিবহন"
+    },
+    {
+     "label": "c",
+     "as": "এমিন' এছিডৰ পৰিবহন"
+    },
+    {
+     "label": "d",
+     "as": "অক্সিজেনৰ পৰিবহন"
+    }
+   ],
+   "answer": "a",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b6-3",
+   "source": "book",
+   "chapter": 6,
+   "no": 3,
+   "page": 113,
+   "as": "স্বপোষীয় পৰিপুষ্টিত প্ৰয়োজন হয়—",
+   "options": [
+    {
+     "label": "a",
+     "as": "কাৰ্বন ডাই অক্সাইড আৰু পানী"
+    },
+    {
+     "label": "b",
+     "as": "পত্ৰহৰিৎ"
+    },
+    {
+     "label": "c",
+     "as": "সূৰ্যৰ পোহৰ"
+    },
+    {
+     "label": "d",
+     "as": "ওপৰৰ আটাইকেইটা।"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b6-4",
+   "source": "book",
+   "chapter": 6,
+   "no": 4,
+   "page": 113,
+   "as": "পাইৰুভেট অণু ভাঙি কাৰ্বনডাই অক্সাইড, পানী আৰু শক্তি উৎপন্ন হোৱা বিক্ৰিয়াটো সম্পাদিত হয় —",
+   "options": [
+    {
+     "label": "a",
+     "as": "চাইট'প্লাজমত"
+    },
+    {
+     "label": "b",
+     "as": "মাইট'কণ্ড্ৰিয়াত"
+    },
+    {
+     "label": "c",
+     "as": "ক্ল'ৰপ্লাষ্টত"
+    },
+    {
+     "label": "d",
+     "as": "কোষকেন্দ্ৰত"
+    }
+   ],
+   "answer": "b",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b6-5",
+   "source": "book",
+   "chapter": 6,
+   "no": 5,
+   "page": 113,
+   "as": "আমাৰ শৰীৰত চৰ্বীজাতীয় খাদ্যসমূহ কেনেদৰে পাচন হয়? এই প্ৰক্ৰিয়াটো শৰীৰৰ কোন অংশত সংঘটিত হয়?"
+  },
+  {
+   "id": "b6-6",
+   "source": "book",
+   "chapter": 6,
+   "no": 6,
+   "page": 113,
+   "as": "পাচনত লালটিৰ ভূমিকা কি?"
+  },
+  {
+   "id": "b6-7",
+   "source": "book",
+   "chapter": 6,
+   "no": 7,
+   "page": 113,
+   "as": "স্বপোষীত পুষ্টিৰ কাৰণে কি কি কাৰকৰ প্ৰয়োজন? ইয়াৰ উপজাত পদাৰ্থবোৰ কি কি?"
+  },
+  {
+   "id": "b6-8",
+   "source": "book",
+   "chapter": 6,
+   "no": 8,
+   "page": 113,
+   "as": "সবাত আৰু অবাত শ্বসনৰ মাজত পাৰ্থক্য কি কি? সবাত আৰু অবাত শ্বসন সম্পাদন কৰা প্ৰাণীৰ নাম লিখা।"
+  },
+  {
+   "id": "b6-9",
+   "source": "book",
+   "chapter": 6,
+   "no": 9,
+   "page": 113,
+   "as": "প্ৰচুৰ পৰিমাণৰ গেছ বিনিময় কৰিব পৰাকৈ বায়ুকোষবিলাক কেনেকৈ গঠিত হৈছে?"
+  },
+  {
+   "id": "b6-10",
+   "source": "book",
+   "chapter": 6,
+   "no": 10,
+   "page": 113,
+   "as": "আমাৰ দেহত হিম'গ্লবিনৰ পৰিমাণ কমি গ'লে কি হ'ব?"
+  },
+  {
+   "id": "b6-11",
+   "source": "book",
+   "chapter": 6,
+   "no": 11,
+   "page": 113,
+   "as": "মানুহৰ দেহত সংঘটিত দ্বৈত ৰক্ত সংবহন তন্ত্ৰটো বৰ্ণনা কৰা। ইয়াৰ প্ৰয়োজন কি?"
+  },
+  {
+   "id": "b6-12",
+   "source": "book",
+   "chapter": 6,
+   "no": 12,
+   "page": 113,
+   "as": "জাইলেম আৰু ফ্ল'য়েম দ্ৰব্যৰ পৰিবহনৰ পাৰ্থক্যবোৰ কি কি?"
+  },
+  {
+   "id": "b6-13",
+   "source": "book",
+   "chapter": 6,
+   "no": 13,
+   "page": 113,
+   "as": "হাঁওফাঁওৰ বায়ুকোষ আৰু বৃক্কৰ নেফ্ৰনৰ গঠন আৰু কাৰ্যৰ মাজত তুলনা কৰা।"
+  },
+  {
+   "id": "b7-1",
+   "source": "book",
+   "chapter": 7,
+   "no": 1,
+   "page": 125,
+   "as": "তলত উল্লেখ কৰা কোনবিধ উদ্ভিদৰ সঞ্জীৱনী পদাৰ্থ?",
+   "options": [
+    {
+     "label": "a",
+     "as": "ইনচুলিন"
+    },
+    {
+     "label": "b",
+     "as": "থাইৰ'ক্সিন"
+    },
+    {
+     "label": "c",
+     "as": "অ'ৱেষ্ট্ৰজেন"
+    },
+    {
+     "label": "d",
+     "as": "চাইট'কাইনিন"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b7-2",
+   "source": "book",
+   "chapter": 7,
+   "no": 2,
+   "page": 125,
+   "as": "দুটা নিউৰণৰ মাজৰ ফাঁকটোক কি বুলি কয়?",
+   "options": [
+    {
+     "label": "a",
+     "as": "ডেনড্ৰাইট"
+    },
+    {
+     "label": "b",
+     "as": "চাইনেপচ"
+    },
+    {
+     "label": "c",
+     "as": "এক্সন"
+    },
+    {
+     "label": "d",
+     "as": "প্ৰেৰণা"
+    }
+   ],
+   "answer": "b",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b7-3",
+   "source": "book",
+   "chapter": 7,
+   "no": 3,
+   "page": 126,
+   "as": "মগজুৱে কি কাম কৰে —",
+   "options": [
+    {
+     "label": "a",
+     "as": "ভাৱ আৰু চিন্তা কৰা"
+    },
+    {
+     "label": "b",
+     "as": "হৃদপিণ্ড স্পন্দন নিয়ন্ত্ৰণ"
+    },
+    {
+     "label": "c",
+     "as": "দেহৰ সমতা ৰক্ষা"
+    },
+    {
+     "label": "d",
+     "as": "ওপৰৰ আটাইকেইটা"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b7-4",
+   "source": "book",
+   "chapter": 7,
+   "no": 4,
+   "page": 126,
+   "as": "আমাৰ দেহৰ গ্ৰাহক অংগৰ কাম কি? গ্ৰাহক অংগই যথোপযুক্তভাৱে কাম নকৰিলে কেনে পৰিস্থিতি হ'ব ভাবাচোন। ইয়াৰ ফলত কি সমস্যা হ'ব পাৰে?"
+  },
+  {
+   "id": "b7-5",
+   "source": "book",
+   "chapter": 7,
+   "no": 5,
+   "page": 126,
+   "as": "নিউৰন গঠনৰ এটা চিত্ৰ আঁকা। ইয়াৰ কাৰ্য বৰ্ণনা কৰা।"
+  },
+  {
+   "id": "b7-6",
+   "source": "book",
+   "chapter": 7,
+   "no": 6,
+   "page": 126,
+   "as": "উদ্ভিদৰ পোহৰানুবেগী প্ৰতিক্ৰিয়া কেনেকৈ সংঘটিত হয়?"
+  },
+  {
+   "id": "b7-7",
+   "source": "book",
+   "chapter": 7,
+   "no": 7,
+   "page": 126,
+   "as": "স্নায়ুৰজ্জুত আঘাট হ'লে কেনে বাৰ্তাত ব্যাঘাট ঘটে?"
+  },
+  {
+   "id": "b7-8",
+   "source": "book",
+   "chapter": 7,
+   "no": 8,
+   "page": 126,
+   "as": "উদ্ভিদৰ ৰাসায়নিক সমন্বয় কেনেদৰে সংঘটিত হয়?"
+  },
+  {
+   "id": "b7-9",
+   "source": "book",
+   "chapter": 7,
+   "no": 9,
+   "page": 126,
+   "as": "জীৱদেহৰ নিয়ন্ত্ৰণ আৰু সমন্বয়ৰ কাৰণে কি প্ৰয়োজন?"
+  },
+  {
+   "id": "b7-10",
+   "source": "book",
+   "chapter": 7,
+   "no": 10,
+   "page": 126,
+   "as": "ঐচ্ছিক ক্ৰিয়া আৰু প্ৰতীপ ক্ৰিয়াৰ মাজত পাৰ্থক্য কেনেকৈ উলিয়াবা?"
+  },
+  {
+   "id": "b7-11",
+   "source": "book",
+   "chapter": 7,
+   "no": 11,
+   "page": 126,
+   "as": "প্ৰাণীৰ নিয়ন্ত্ৰণ আৰু সমন্বয়ৰ স্নায়ুতন্ত্ৰৰ আৰু হৰম'নৰ ক্ৰিয়াৰ মাজত তুলনামূলক আলোকপাত কৰা।"
+  },
+  {
+   "id": "b7-12",
+   "source": "book",
+   "chapter": 7,
+   "no": 12,
+   "page": 126,
+   "as": "নিলাজী বনৰ পাতৰ চলনৰ লগত আমাৰ ভৰিৰ চলনৰ আচৰণৰ মাজত পাৰ্থক্য কি?"
+  },
+  {
+   "id": "b8-1",
+   "source": "book",
+   "chapter": 8,
+   "no": 1,
+   "page": 141,
+   "as": "অযৌন প্ৰজননৰ মুকুলোদ্গম সংঘটিত হয় —",
+   "options": [
+    {
+     "label": "ক",
+     "as": "এমিবাত"
+    },
+    {
+     "label": "খ",
+     "as": "ইষ্টত"
+    },
+    {
+     "label": "গ",
+     "as": "প্লাজম'ডিয়ামত"
+    },
+    {
+     "label": "ঘ",
+     "as": "লেইচমেনিয়াত"
+    }
+   ],
+   "answer": "খ",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b8-2",
+   "source": "book",
+   "chapter": 8,
+   "no": 2,
+   "page": 141,
+   "as": "তলৰ কোনটো মানুহৰ দেহৰ স্ত্ৰীজনন অংগ নহয়?",
+   "options": [
+    {
+     "label": "ক",
+     "as": "ডিম্বাশয়।"
+    },
+    {
+     "label": "খ",
+     "as": "জৰায়ু"
+    },
+    {
+     "label": "গ",
+     "as": "শুক্ৰবাহী নলী"
+    },
+    {
+     "label": "ঘ",
+     "as": "ফেলোপিয়ান নলী।"
+    }
+   ],
+   "answer": "গ",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b8-3",
+   "source": "book",
+   "chapter": 8,
+   "no": 3,
+   "page": 141,
+   "as": "পৰাগধানীত পোৱা হয় —",
+   "options": [
+    {
+     "label": "ক",
+     "as": "বেটুপাত"
+    },
+    {
+     "label": "খ",
+     "as": "ডিম্বক"
+    },
+    {
+     "label": "গ",
+     "as": "স্ত্ৰীকেশৰ"
+    },
+    {
+     "label": "ঘ",
+     "as": "পৰাগ ৰেণু"
+    }
+   ],
+   "answer": "ঘ",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b8-4",
+   "source": "book",
+   "chapter": 8,
+   "no": 4,
+   "page": 141,
+   "as": "অযৌন প্ৰজনন প্ৰক্ৰিয়াতকৈ যৌন প্ৰজনন প্ৰক্ৰিয়াৰ সুবিধাসমূহ কি কি?"
+  },
+  {
+   "id": "b8-5",
+   "source": "book",
+   "chapter": 8,
+   "no": 5,
+   "page": 141,
+   "as": "মানুহৰ শুক্ৰাশয় কেইটাই কি কি কাম কৰে?"
+  },
+  {
+   "id": "b8-6",
+   "source": "book",
+   "chapter": 8,
+   "no": 6,
+   "page": 141,
+   "as": "ঋতুস্ৰাৱ কিয় হয়?"
+  },
+  {
+   "id": "b8-7",
+   "source": "book",
+   "chapter": 8,
+   "no": 7,
+   "page": 141,
+   "as": "দীৰ্ঘচ্ছেদত এপাহ ফুলৰ চিত্ৰ আঁকি বিভিন্ন অংশসমূহ চিহ্নিত কৰা।"
+  },
+  {
+   "id": "b8-8",
+   "source": "book",
+   "chapter": 8,
+   "no": 8,
+   "page": 141,
+   "as": "বিভিন্ন প্ৰকাৰৰ গৰ্ভনিৰোধ পদ্ধতিসমূহ কি কি?"
+  },
+  {
+   "id": "b8-9",
+   "source": "book",
+   "chapter": 8,
+   "no": 9,
+   "page": 141,
+   "as": "এককোষী আৰু বহুকোষী জীৱৰ অযৌন আৰু যৌন প্ৰজনন প্ৰক্ৰিয়াৰ কৌশল সমূহৰ ভিন্নতা কেনেধৰণৰ?"
+  },
+  {
+   "id": "b8-10",
+   "source": "book",
+   "chapter": 8,
+   "no": 10,
+   "page": 141,
+   "as": "প্ৰজনন প্ৰক্ৰিয়াই কোনো প্ৰজাতিৰ জীৱৰ আবাদীৰ স্থিতি কেনেকৈ ৰক্ষাত সহায় কৰে?"
+  },
+  {
+   "id": "b8-11",
+   "source": "book",
+   "chapter": 8,
+   "no": 11,
+   "page": 141,
+   "as": "গৰ্ভনিৰোধ পদ্ধতি অৱলম্বন কৰাৰ কাৰণ কি?"
+  },
+  {
+   "id": "b9-1",
+   "source": "book",
+   "chapter": 9,
+   "no": 1,
+   "page": 159,
+   "as": "মেণ্ডেলৰ পৰীক্ষা মতে মটৰ মাহৰ ওখ গছৰ সৈতে বেঙুনীয়া ফুল আৰু চাপৰ গছৰ সৈতে বগা ফুল, এই দুই জোপাৰ মাজত সংকৰণ ঘটোৱা হ'ল। উৎপাদিত গছবোৰৰ বেঙুনীয়া ফুল হ'ল যদিও আধা সংখ্যক মটৰ মাহৰ গছ চাপৰ হ'ল। ইয়াৰ আভাসত পৈতৃক পুৰুষৰ মটৰ মাহ গছ জোপাৰ তলৰ কোনটো জিনীয় সংযুক্তি (Genetic make up) বৰ্ণনা কৰিব পৰা হ'ব?",
+   "options": [
+    {
+     "label": "a",
+     "as": "TTWW"
+    },
+    {
+     "label": "b",
+     "as": "TTww"
+    },
+    {
+     "label": "c",
+     "as": "TtWW"
+    },
+    {
+     "label": "d",
+     "as": "TtWw"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b9-2",
+   "source": "book",
+   "chapter": 9,
+   "no": 2,
+   "page": 159,
+   "as": "সমসংস্থ অংগৰ এটা উদাহৰণ হ'ল —",
+   "options": [
+    {
+     "label": "a",
+     "as": "আমাৰ বাহু আৰু কুকুৰৰ আগ ঠেং"
+    },
+    {
+     "label": "b",
+     "as": "আমাৰ দাঁত আৰু হাতীৰ দাঁত"
+    },
+    {
+     "label": "c",
+     "as": "আলু আৰু ঘাঁহৰ ধাৱক কাণ্ড।"
+    },
+    {
+     "label": "d",
+     "as": "ওপৰৰ আটাইকেইটা"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b9-3",
+   "source": "book",
+   "chapter": 9,
+   "no": 3,
+   "page": 159,
+   "as": "বিবৰ্তনৰ লগত তলৰ কোনটো সাধাৰণভাৱে জড়িত —",
+   "options": [
+    {
+     "label": "a",
+     "as": "এজন চীনা স্কুলীয়া ছাত্ৰ"
+    },
+    {
+     "label": "b",
+     "as": "এটা চিম্পাঞ্জী"
+    },
+    {
+     "label": "c",
+     "as": "এটা মকৰা"
+    },
+    {
+     "label": "d",
+     "as": "এটা বেক্টেৰিয়া"
+    }
+   ],
+   "answer": "a",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b9-4",
+   "source": "book",
+   "chapter": 9,
+   "no": 4,
+   "page": 159,
+   "as": "এটা অধ্যয়নৰ পৰা দেখা গ'ল যে পাতল বৰণৰ চকুৰ ল'ৰা-ছোৱালীৰ মাক-দেউতাকৰ চকুৰ বৰণও পাতল ৰঙৰ হয়। ইয়াৰ ভিত্তিত চকুৰ পাতল ৰঙটো প্ৰভাৱী নে অপ্ৰভাৱী চৰিত্ৰ সেইবিষয়ে মতামত দিব পাৰিমনে? যদি পাৰি কিয় আৰু যদি নোৱাৰি কিয়?"
+  },
+  {
+   "id": "b9-5",
+   "source": "book",
+   "chapter": 9,
+   "no": 5,
+   "page": 159,
+   "as": "বিবৰ্তন আৰু শ্ৰেণীবিভাজনৰ অধ্যয়ন কেনেকৈ পৰস্পৰে পৰস্পৰৰ লগত সংযোগ হৈ আছে?"
+  },
+  {
+   "id": "b9-6",
+   "source": "book",
+   "chapter": 9,
+   "no": 6,
+   "page": 159,
+   "as": "উদাহৰণসহ সমসংস্থ আৰু সমবৃত্তিক অংগৰ বিষয়ে ব্যাখ্যা কৰা।"
+  },
+  {
+   "id": "b9-7",
+   "source": "book",
+   "chapter": 9,
+   "no": 7,
+   "page": 159,
+   "as": "কুকুৰৰ ৰঙবিলাকৰ প্ৰভাৱী চৰিত্ৰ বিচাৰি উলিওৱাৰ প্ৰতি লক্ষ্য ৰাখি এটা প্ৰকল্পৰ পৰিকল্পনা কৰা।"
+  },
+  {
+   "id": "b9-8",
+   "source": "book",
+   "chapter": 9,
+   "no": 8,
+   "page": 159,
+   "as": "জীৱৰ বিৱৰ্তনৰ সম্পৰ্ক নিৰ্ণয়ত জীৱাশ্মৰ গুৰুত্ব ব্যাখ্যা কৰা।"
+  },
+  {
+   "id": "b9-9",
+   "source": "book",
+   "chapter": 9,
+   "no": 9,
+   "page": 159,
+   "as": "কি সাক্ষ্যৰ ওপৰত ভিত্তি কৰি অজৈৱিক পদাৰ্থৰ পৰা জীৱ উৎপত্তি হৈছে বুলি ভাবিব পাৰি?"
+  },
+  {
+   "id": "b9-10",
+   "source": "book",
+   "chapter": 9,
+   "no": 10,
+   "page": 159,
+   "as": "অযৌন প্ৰজনন প্ৰক্ৰিয়াতকৈ যৌন প্ৰজনন প্ৰক্ৰিয়াৰ দ্বাৰা বেছি বিকাশসহ (viable) ভিন্নতা সৃষ্টি হয় কেনেকৈ ব্যাখ্যা কৰা? ই বিবৰ্তনত কেনেদৰে প্ৰভাৱ পেলায়?"
+  },
+  {
+   "id": "b9-11",
+   "source": "book",
+   "chapter": 9,
+   "no": 11,
+   "page": 159,
+   "as": "কেনেকৈ পিতৃপুৰুষ আৰু মাতৃ পুৰুষ সমান জিনীয় অৱদান অপত্যজনুলৈ হস্তান্তৰ কৰে?"
+  },
+  {
+   "id": "b9-12",
+   "source": "book",
+   "chapter": 9,
+   "no": 12,
+   "page": 159,
+   "as": "\"কোনো এটা জীৱৰ জীৱন ক্ৰিয়াত সুবিধা প্ৰদান কৰা ভিন্নতাইহে আবাদীত স্থায়িত্ব লাভ কৰে।\" এই উক্তিৰ সৈতে একমতনে? যদি হয় কিয় আৰু যদি নহয় কিয়?"
+  },
+  {
+   "id": "b10-1",
+   "source": "book",
+   "chapter": 10,
+   "no": 1,
+   "page": 185,
+   "as": "তলত দিয়া কোনটো পদাৰ্থ লেন্ছ তৈয়াৰ কৰিবলৈ ব্যৱহাৰ কৰিব নোৱাৰি?",
+   "options": [
+    {
+     "label": "a",
+     "as": "পানী"
+    },
+    {
+     "label": "b",
+     "as": "কাঁচ"
+    },
+    {
+     "label": "c",
+     "as": "প্লাষ্টিক"
+    },
+    {
+     "label": "d",
+     "as": "মৃত্তিকা (clay)"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b10-2",
+   "source": "book",
+   "chapter": 10,
+   "no": 2,
+   "page": 185,
+   "as": "অবতল দাপোণ এখনে গঠন কৰা প্ৰতিবিম্বটো অসৎ, থিয় আৰু লক্ষ্যবস্তুতকৈ ডাঙৰ পোৱা গ'ল। লক্ষ্যবস্তুৰ অৱস্থান ক'ত হ'ব লাগিব?",
+   "options": [
+    {
+     "label": "a",
+     "as": "মুখ্য ফ'কাছ আৰু ভাঁজ ব্যাসাৰ্ধৰ মাজত"
+    },
+    {
+     "label": "b",
+     "as": "ভাঁজ কেন্দ্ৰত"
+    },
+    {
+     "label": "c",
+     "as": "ভাঁজ কেন্দ্ৰৰ বাহিৰত"
+    },
+    {
+     "label": "d",
+     "as": "দাপোণৰ মেৰু আৰু তাৰ মুখ্য ফ'কাছৰ মাজত।"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b10-3",
+   "source": "book",
+   "chapter": 10,
+   "no": 3,
+   "page": 185,
+   "as": "লক্ষ্যবস্তুৰ সমান আকাৰৰ সৎ প্ৰতিবিম্ব পাবলৈ হ'লে লক্ষ্যবস্তুটো উত্তল লেন্ছৰ সম্মুখত কোন স্থানত ৰাখিব লাগিব?",
+   "options": [
+    {
+     "label": "a",
+     "as": "লেন্ছৰ মুখ্য ফ'কাছত"
+    },
+    {
+     "label": "b",
+     "as": "ফ'কাছ দৈৰ্ঘ্যৰ দুগুণ দূৰত্বত"
+    },
+    {
+     "label": "c",
+     "as": "অসীমত"
+    },
+    {
+     "label": "d",
+     "as": "লেন্ছৰ আলোক কেন্দ্ৰ আৰু মুখ্য ফ'কাছৰ মাজত"
+    }
+   ],
+   "answer": "b",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b10-4",
+   "source": "book",
+   "chapter": 10,
+   "no": 4,
+   "page": 185,
+   "as": "এখন গোলাকাৰ দাপোণ আৰু এখন ক্ষীণ গোলাকাৰ লেন্ছ প্ৰত্যেকৰে ফ'কাছ দৈৰ্ঘ্য –15 cm। দাপোণ আৰু লেন্ছৰ প্ৰকৃত কেনেকুৱা হ'ব পাৰে?",
+   "options": [
+    {
+     "label": "a",
+     "as": "দুয়োখন অবতল"
+    },
+    {
+     "label": "b",
+     "as": "দুয়োখন উত্তল"
+    },
+    {
+     "label": "c",
+     "as": "দাপোণখন অবতল লেন্ছখন উত্তল"
+    },
+    {
+     "label": "d",
+     "as": "দাপোণখন উত্তল লেন্ছখন অবতল।"
+    }
+   ],
+   "answer": "a",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b10-5",
+   "source": "book",
+   "chapter": 10,
+   "no": 5,
+   "page": 186,
+   "as": "দাপোণ এখনৰ পৰা যিমানে দূৰত থিয় নোহোৱা লাগে প্ৰতিবিম্বটো সদায় থিয় হয়। দাপোণখন কেনেকুৱা হ'ব পাৰে?",
+   "options": [
+    {
+     "label": "a",
+     "as": "সমতল"
+    },
+    {
+     "label": "b",
+     "as": "অবতল"
+    },
+    {
+     "label": "c",
+     "as": "উত্তল"
+    },
+    {
+     "label": "d",
+     "as": "হয় সমতল নতুবা উত্তল।"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b10-6",
+   "source": "book",
+   "chapter": 10,
+   "no": 6,
+   "page": 186,
+   "as": "অভিধানত থকা সৰু সৰু আখৰবোৰ পঢ়িবলৈ তুমি কেনে ধৰণৰ লেন্ছ ব্যৱহাৰ কৰিবলৈ বিচাৰিবা?",
+   "options": [
+    {
+     "label": "a",
+     "as": "50 cm ফ'কাছ দৈৰ্ঘ্যৰ উত্তল লেন্ছ"
+    },
+    {
+     "label": "b",
+     "as": "5 cm ফ'কাছ দৈৰ্ঘ্যৰ অবতল লেন্ছ"
+    },
+    {
+     "label": "c",
+     "as": "5 cm ফ'কাছ দৈৰ্ঘ্যৰ উত্তল লেন্ছ"
+    },
+    {
+     "label": "d",
+     "as": "5 cm ফ'কাছ দৈৰ্ঘ্যৰ অবতল লেন্ছ"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b10-7",
+   "source": "book",
+   "chapter": 10,
+   "no": 7,
+   "page": 186,
+   "as": "50 ছেমি ফ'কাছ দৈৰ্ঘ্যৰ অবতল দাপোণ এখন ব্যৱহাৰ কৰি আমি লক্ষ্যবস্তু এটাৰ থিয় প্ৰতিবিম্ব পাব বিচাৰিছোঁ। দাপোণৰ পৰা লক্ষ্যবস্তুৰ দূৰত্বৰ পৰিসৰ কিমান হোৱা উচিত? প্ৰতিবিম্বৰ প্ৰকৃতি কি হ'ব? প্ৰতিবিম্বটো লক্ষ্যবস্তুতকৈ ডাঙৰ নে সৰু? এই ক্ষেত্ৰত প্ৰতিবিম্বৰ গঠন দেখুৱাবৰ বাবে এটা ৰশ্মিচিত্ৰ আঁকা।",
+   "keyAnswer": "দূৰত্ব 15 cm তকৈ কম; অসৎ আৰু বিবৰ্ধিত। (টোকা: কিতাপত 50 ছেমি ছপা হৈছে, কিন্তু উত্তৰমালা আৰু মূল প্ৰশ্নত ফ'কাছ দৈৰ্ঘ্য 15 cm ধৰা হৈছে। লক্ষ্যবস্তুটো দাপোণৰ মেৰু আৰু ফ'কাছৰ মাজত থাকিব লাগিব।)"
+  },
+  {
+   "id": "b10-8",
+   "source": "book",
+   "chapter": 10,
+   "no": 8,
+   "page": 186,
+   "as": "তলত দিয়া পৰিস্থিতি সমূহত ব্যৱহাৰ কৰা দাপোণৰ প্ৰকাৰ লিখা —\n(a) গাড়ীৰ হেডলাইট\n(b) গাড়ীৰ পিছলৈ চোৱা দাপোণ\n(c) সৌৰ ভাঁতী"
+  },
+  {
+   "id": "b10-9",
+   "source": "book",
+   "chapter": 10,
+   "no": 9,
+   "page": 186,
+   "as": "উত্তল লেন্ছ এখনৰ অৰ্ধাংশ ক'লা কাগজেৰে ঢাকি দিয়া হ'ল। এই লেন্ছখনে বস্তু এটাৰ সম্পূৰ্ণ প্ৰতিবিম্ব গঠন কৰিবনে? তোমাৰ উত্তৰ পৰীক্ষাৰ যোগেদি প্ৰতিপন্ন কৰা। তোমাৰ পৰ্যবেক্ষণসমূহ ব্যাখ্যা কৰা।",
+   "keyAnswer": "হয়, কৰিব।"
+  },
+  {
+   "id": "b10-10",
+   "source": "book",
+   "chapter": 10,
+   "no": 10,
+   "page": 186,
+   "as": "5 cm দৈৰ্ঘ্যৰ বস্তু এটা 10 cm ফ'কাছ দৈৰ্ঘ্যৰ অভিসাৰী লেন্ছ এখনৰ পৰা 25 cm দূৰত্বত ৰখা হ'ল। ইয়াৰ ৰশ্মিচিত্ৰ আঁকা আৰু গঠিত প্ৰতিবিম্বৰ অৱস্থান, আকাৰ আৰু প্ৰকৃতি নিৰ্ণয় কৰা।",
+   "keyAnswer": "লেন্ছৰ আনটো ফালে লেন্ছৰপৰা 16.7 cm দূৰত্বত; 3.3 cm, সংকুচিত, ওলোটা।"
+  },
+  {
+   "id": "b10-11",
+   "source": "book",
+   "chapter": 10,
+   "no": 11,
+   "page": 186,
+   "as": "15 cm ফ'কাছ দৈৰ্ঘ্যৰ অবতল লেন্ছ এখনে তাৰ পৰা 10 cm দূৰত্বত প্ৰতিবিম্ব এটা গঠন কৰে। লক্ষ্যবস্তুটো লেন্ছৰ পৰা কিমান দূৰত্বত আছে? ৰশ্মিচিত্ৰ আঁকা।",
+   "keyAnswer": "30 cm"
+  },
+  {
+   "id": "b10-12",
+   "source": "book",
+   "chapter": 10,
+   "no": 12,
+   "page": 186,
+   "as": "15 cm ফ'কাছ দৈৰ্ঘ্যৰ উত্তল দাপোণ এখনৰ পৰা 10 cm দূৰত্ব বস্তু এটা ৰখা হ'ল। প্ৰতিবিম্বৰ অৱস্থান আৰু প্ৰকৃতি নিৰ্ণয় কৰা।",
+   "keyAnswer": "6.0 cm, দাপোণৰ পিছফালে, অসৎ, থিয়।"
+  },
+  {
+   "id": "b10-13",
+   "source": "book",
+   "chapter": 10,
+   "no": 13,
+   "page": 186,
+   "as": "সমতল দাপোণে +1 বিবৰ্ধন দিয়ে। ইয়াৰ অৰ্থ কি?",
+   "keyAnswer": "m = 1 বুজায় যে দাপোণত গঠন হোৱা প্ৰতিবিম্ব লক্ষ্যবস্তুৰ সৈতে সমান আকাৰৰ। তাৰোপৰি m ৰ ধনাত্মক চিহ্নই বুজায় যে প্ৰতিবিম্ব অসৎ আৰু থিয়।"
+  },
+  {
+   "id": "b10-14",
+   "source": "book",
+   "chapter": 10,
+   "no": 14,
+   "page": 186,
+   "as": "30 cm ভাঁজ ব্যাসাৰ্ধৰ উত্তল দাপোণ এখনৰ সম্মুখত 20 cm দূৰত্বত 5 ছেমি দৈৰ্ঘ্যৰ বস্তু এটা ৰখা হ'ল। প্ৰতিবিম্বৰ অৱস্থান, ইয়াৰ প্ৰকৃতি আৰু আকাৰ নিৰ্ণয় কৰা।",
+   "keyAnswer": "দাপোণৰ পিছফালে 8.6 cm দূৰত্বত, অসৎ; 2.2 cm, সংকুচিত।"
+  },
+  {
+   "id": "b10-15",
+   "source": "book",
+   "chapter": 10,
+   "no": 15,
+   "page": 186,
+   "as": "18 cm ফ'কাছ দৈৰ্ঘ্যৰ অবতল দাপোণ এখনৰ সম্মুখত 27 cm দূৰত্বত 7 cm আকাৰৰ বস্তু এটা ৰখা হৈছে। দাপোণখনৰ পৰা কিমান দূৰত্বত পৰ্দা এখন ৰাখিলে তাত স্পষ্টকৈ গঠন হোৱা কৰা প্ৰতিবিম্ব এটা পোৱা যাব? প্ৰতিবিম্বৰ আকাৰ আৰু প্ৰকৃতি নিৰ্ণয় কৰা।",
+   "keyAnswer": "লক্ষ্যবস্তুৰ ফালে 54 cm দূৰত্বত; 14 cm, বিবৰ্ধিত, সৎ, ওলোটা।"
+  },
+  {
+   "id": "b10-16",
+   "source": "book",
+   "chapter": 10,
+   "no": 16,
+   "page": 186,
+   "as": "–2.0 D ক্ষমতাৰ লেন্ছ এখনৰ ফ'কাছ দৈৰ্ঘ্য কিমান? লেন্ছখনৰ প্ৰকৃতি কেনেকুৱা?",
+   "keyAnswer": "–0.50 m; অবতল লেন্ছ"
+  },
+  {
+   "id": "b10-17",
+   "source": "book",
+   "chapter": 10,
+   "no": 17,
+   "page": 186,
+   "as": "ডাক্তৰে এজনে বিধান দিয়া সংশোধনীমূলক লেন্ছৰ ক্ষমতা +1.5D। লেন্ছখনৰ ফ'কাছ দৈৰ্ঘ্য নিৰ্ণয় কৰা। এই লেন্ছখন অভিসাৰী নে অপসাৰী?",
+   "keyAnswer": "+0.67 m; অভিসাৰী লেন্ছ।"
+  },
+  {
+   "id": "b11-1",
+   "source": "book",
+   "chapter": 11,
+   "no": 1,
+   "page": 197,
+   "as": "মানুহৰ চকুৱে চকুৰ লেন্ছৰ ফ'কাছ দৈৰ্ঘ্য সালসলনি কৰি বিভিন্ন দূৰত্বত অৱস্থিত বস্তু ফ'কাছ কৰিব পাৰে। ইয়াৰ কাৰণ হ'ল —",
+   "options": [
+    {
+     "label": "a",
+     "as": "প্ৰেছবায়'পিয়া"
+    },
+    {
+     "label": "b",
+     "as": "উপযোজন ক্ষমতা"
+    },
+    {
+     "label": "c",
+     "as": "নিকট দৃষ্টিগ্ৰস্ততা"
+    },
+    {
+     "label": "d",
+     "as": "দূৰ দৃষ্টিগ্ৰস্ততা"
+    }
+   ],
+   "answer": "b",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b11-2",
+   "source": "book",
+   "chapter": 11,
+   "no": 2,
+   "page": 197,
+   "as": "মানুহৰ চকুৱে বস্তু এটাৰ প্ৰতিবিম্ব গঠন কৰাৰ স্থান",
+   "options": [
+    {
+     "label": "a",
+     "as": "কৰ্ণিয়া (Cornea)"
+    },
+    {
+     "label": "b",
+     "as": "চকুৰ পতা (Iris)"
+    },
+    {
+     "label": "c",
+     "as": "চকুৰ মণি (Pupil)"
+    },
+    {
+     "label": "d",
+     "as": "অক্ষিপট (Retina)"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b11-3",
+   "source": "book",
+   "chapter": 11,
+   "no": 3,
+   "page": 198,
+   "as": "নিয়মীয়া দৃষ্টিৰ সদ্য প্ৰাপ্তবয়স্কৰ বাবে স্পষ্টকৈ দেখা ন্যূনতম দূৰত্ব —",
+   "options": [
+    {
+     "label": "a",
+     "as": "25 m"
+    },
+    {
+     "label": "b",
+     "as": "2.5 cm"
+    },
+    {
+     "label": "c",
+     "as": "25 cm"
+    },
+    {
+     "label": "d",
+     "as": "2.5 m"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b11-4",
+   "source": "book",
+   "chapter": 11,
+   "no": 4,
+   "page": 198,
+   "as": "চকুৰ কি অঙ্গৰ ক্ৰিয়াৰ বাবে চকুৰ লেন্ছৰ ফ'কাছ দৈৰ্ঘ্যৰ পৰিবৰ্তন হয়?",
+   "options": [
+    {
+     "label": "a",
+     "as": "চকুৰ মণি"
+    },
+    {
+     "label": "b",
+     "as": "অক্ষিপট"
+    },
+    {
+     "label": "c",
+     "as": "চিলিয়াৰী"
+    },
+    {
+     "label": "d",
+     "as": "চকুৰ পতা"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b11-5",
+   "source": "book",
+   "chapter": 11,
+   "no": 5,
+   "page": 198,
+   "as": "এজন মানুহৰ দূৰ দৃষ্টিগ্ৰস্ততা সংশোধনৰ বাবে -5.5 ডায়প্টাৰ ক্ষমতাৰ লেন্ছৰ আৱশ্যক। তেওঁৰ নিকট দৃষ্টিগ্ৰস্ততাৰ সংশোধনৰ বাবে আৱশ্যকীয় লেন্ছৰ ক্ষমতা +1.5 ডায়প্টাৰ হ'লে (i) দূৰ দৃষ্টিগ্ৰস্ততা (ii) নিকট দৃষ্টিগ্ৰস্ততাৰ সংশোধনৰ বাবে আৱশ্যক হোৱা লেন্ছৰ ফ'কাছ দৈৰ্ঘ্য কিমান?",
+   "keyAnswer": "(i) –0.18 m; (ii) +0.67 m"
+  },
+  {
+   "id": "b11-6",
+   "source": "book",
+   "chapter": 11,
+   "no": 6,
+   "page": 198,
+   "as": "নিকট দৃষ্টিগ্ৰস্ত মানুহ এজনৰ দূৰ বিন্দু চকুৰ সন্মুখত 80 cm দূৰত্বত। এই বিকাৰৰ সংশোধনৰ বাবে প্ৰয়োজন হোৱা লেন্ছৰ প্ৰকৃতি কি আৰু ক্ষমতা কিমান?",
+   "keyAnswer": "অবতল লেন্ছ; –1.25 D"
+  },
+  {
+   "id": "b11-7",
+   "source": "book",
+   "chapter": 11,
+   "no": 7,
+   "page": 198,
+   "as": "দূৰ দৃষ্টিগ্ৰস্ততাৰ সংশোধন দেখুৱাই ৰশ্মিচিত্ৰ অংকন কৰা। দূৰ দৃষ্টিগ্ৰস্ত চকু এটাৰ বাবে নিকট বিন্দু 1 m। এই বিকাৰৰ সংশোধনৰ বাবে প্ৰয়োজন হোৱা লেন্ছৰ ক্ষমতা কিমান? ধৰি লোৱা স্বাভাৱিক চকুৰ বাবে নিকট বিন্দু 25 cm।",
+   "keyAnswer": "উত্তল লেন্ছ; +3.0 D"
+  },
+  {
+   "id": "b11-8",
+   "source": "book",
+   "chapter": 11,
+   "no": 8,
+   "page": 198,
+   "as": "সাধাৰণ চকুৱে এটা 25 cm তকৈ ওচৰত ৰখা বস্তু দেখা নাপায় কিয়?"
+  },
+  {
+   "id": "b11-9",
+   "source": "book",
+   "chapter": 11,
+   "no": 9,
+   "page": 198,
+   "as": "চকুৰ পৰা লক্ষ্যবস্তুৰ দূৰত্ব বঢ়াই নিলে চকুৰ ভিতৰত প্ৰতিবিম্বৰ দূৰত্বৰ কি হয়?"
+  },
+  {
+   "id": "b11-10",
+   "source": "book",
+   "chapter": 11,
+   "no": 10,
+   "page": 198,
+   "as": "তৰাই তিৰ্বিৰাই কিয়?"
+  },
+  {
+   "id": "b11-11",
+   "source": "book",
+   "chapter": 11,
+   "no": 11,
+   "page": 198,
+   "as": "গ্ৰহই তিৰ্বিৰাই নাথাকে কিয়?"
+  },
+  {
+   "id": "b11-12",
+   "source": "book",
+   "chapter": 11,
+   "no": 12,
+   "page": 198,
+   "as": "ৰাতিপুৱা সূৰ্যক ৰঙচুৱা দেখি কিয়?"
+  },
+  {
+   "id": "b11-13",
+   "source": "book",
+   "chapter": 11,
+   "no": 13,
+   "page": 198,
+   "as": "মহাকাশচাৰী এজনে আকাশৰ ৰং নীলাৰ পৰিবৰ্তে ক'লা দেখে কিয়?"
+  },
+  {
+   "id": "b12-1",
+   "source": "book",
+   "chapter": 12,
+   "no": 1,
+   "page": 221,
+   "as": "R ৰোধৰ এডাল তাঁৰ পাঁচটা সমান ভাগলৈ বিভক্ত কৰা হ'ল। এই অংশবোৰ সমান্তৰালভাৱে সংযোগ কৰা হ'ল। যদি সজ্জাটোৰ সমতুল্য ৰোধ R' হয়, তেতিয়া R/R' অনুপাত হ'ব —",
+   "options": [
+    {
+     "label": "a",
+     "as": "1/25"
+    },
+    {
+     "label": "b",
+     "as": "1/5"
+    },
+    {
+     "label": "c",
+     "as": "5"
+    },
+    {
+     "label": "d",
+     "as": "25"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b12-2",
+   "source": "book",
+   "chapter": 12,
+   "no": 2,
+   "page": 221,
+   "as": "তলৰ কোনটো ৰাশিয়ে বৈদ্যুতিক ক্ষমতা নিৰ্দেশ নকৰে?",
+   "options": [
+    {
+     "label": "a",
+     "as": "I²R"
+    },
+    {
+     "label": "b",
+     "as": "IR²"
+    },
+    {
+     "label": "c",
+     "as": "VI"
+    },
+    {
+     "label": "d",
+     "as": "V²/R"
+    }
+   ],
+   "answer": "b",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b12-3",
+   "source": "book",
+   "chapter": 12,
+   "no": 3,
+   "page": 221,
+   "as": "এটা বৈদ্যুতিক বাল্বত 220V আৰু 100W চিহ্নিত কৰা আছে যেতিয়া 110V ত ইয়াক ব্যৱহাৰ কৰা হয়, ই লোৱা ক্ষমতা হ'ব —",
+   "options": [
+    {
+     "label": "a",
+     "as": "100 W"
+    },
+    {
+     "label": "b",
+     "as": "75 W"
+    },
+    {
+     "label": "c",
+     "as": "50 W"
+    },
+    {
+     "label": "d",
+     "as": "25 W"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b12-4",
+   "source": "book",
+   "chapter": 12,
+   "no": 4,
+   "page": 221,
+   "as": "একে পদাৰ্থৰ দুডাল একে দৈৰ্ঘ্যৰ আৰু একে ব্যাসৰ পৰিবাহী তাঁৰ প্ৰথমে শ্ৰেণীবদ্ধ সজ্জাত আৰু পিছত সমান্তৰাল সজ্জাত এটা বৰ্তনীৰ একেটা বিভৱভেদত সংযোগ কৰা হ'ল। শ্ৰেণীবদ্ধ আৰু সমান্তৰাল সজ্জাত সৃষ্টি হোৱা তাপৰ অনুপাত —",
+   "options": [
+    {
+     "label": "a",
+     "as": "1:2"
+    },
+    {
+     "label": "b",
+     "as": "2:1"
+    },
+    {
+     "label": "c",
+     "as": "1:4"
+    },
+    {
+     "label": "d",
+     "as": "4:1"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b12-5",
+   "source": "book",
+   "chapter": 12,
+   "no": 5,
+   "page": 221,
+   "as": "দুটা বিন্দুৰ মাজৰ বিভৱভেদ জুখিবলৈ বৰ্তনী এটাত ভল্টমিটাৰ কেনেকৈ সংযোগ কৰিবা?",
+   "keyAnswer": "সমান্তৰাল"
+  },
+  {
+   "id": "b12-6",
+   "source": "book",
+   "chapter": 12,
+   "no": 6,
+   "page": 221,
+   "as": "এডাল তামৰ তাঁৰৰ ব্যাস 0.5 mm আৰু ৰোধকতা 1.6 × 10⁻⁸ Ω m. 10 Ω ৰোধ পাবৰ বাবে এই তাঁৰডালৰ দৈৰ্ঘ্য কিমান হ'ব লাগিব? যদি তাঁৰডালৰ ব্যাস দুগুণ কৰা হ'ল, ৰোধৰ পৰিবৰ্তন কিমান হ'ব?",
+   "keyAnswer": "122.7 m; ¼ গুণ"
+  },
+  {
+   "id": "b12-7",
+   "source": "book",
+   "chapter": 12,
+   "no": 7,
+   "page": 221,
+   "as": "এটা প্ৰদত্ত ৰোধকৰ মাজেৰে প্ৰবাহিত প্ৰবাহ I ৰ মান আৰু পাৰস্পৰিক বিভৱভেদ V ৰ মান তলত দিয়া হ'ল –\nI (এম্পিয়াৰ): 0.5, 1.0, 2.0, 3.0, 4.0\nV (ভল্ট): 1.6, 3.4, 6.7, 10.2, 13.2\nV আৰু I ৰ মাজৰ লেখ এটা অংকন কৰা আৰু ৰোধকটোৰ ৰোধ উলিওৱা।",
+   "keyAnswer": "3.33 Ω"
+  },
+  {
+   "id": "b12-8",
+   "source": "book",
+   "chapter": 12,
+   "no": 8,
+   "page": 221,
+   "as": "যেতিয়া এটা অজ্ঞাত ৰোধ 12V ৰ এটা বেটেৰীৰ লগত সংযোগ কৰা হয় তাত 2.5 mA প্ৰবাহ চালিত হয়। ৰোধকটোৰ ৰোধ উলিওৱা।",
+   "keyAnswer": "4.8 kΩ"
+  },
+  {
+   "id": "b12-9",
+   "source": "book",
+   "chapter": 12,
+   "no": 9,
+   "page": 221,
+   "as": "এটা 9 V বেটাৰীৰ লগত 0.2 Ω, 0.3 Ω, 0.4 Ω, 0.5 Ω আৰু 12 Ω, ৰোধক কেইটা শ্ৰেণীবদ্ধভাৱে সংযোগ কৰা হৈছে। 12 Ω ৰোধৰ ৰোধকটোৰ মাজেৰে কিমান প্ৰবাহ চালিত হৈছে?",
+   "keyAnswer": "0.67 A"
+  },
+  {
+   "id": "b12-10",
+   "source": "book",
+   "chapter": 12,
+   "no": 10,
+   "page": 221,
+   "as": "176 Ω ৰ কিমানটা ৰোধক হ'লে 220V ৰ লাইন এটাত 5 A প্ৰবাহ পোৱা যাব?",
+   "keyAnswer": "4 টা ৰোধক"
+  },
+  {
+   "id": "b12-11",
+   "source": "book",
+   "chapter": 12,
+   "no": 11,
+   "page": 221,
+   "as": "প্ৰতিটো 6 Ω ৰোধৰ তিনিটা ৰোধক কেনেদৰে সংযোগ কৰিলে সজ্জাটোৰ সমতুল্য ৰোধ (i) 9 Ω, আৰু (ii) 4 Ω হ'ব?"
+  },
+  {
+   "id": "b12-12",
+   "source": "book",
+   "chapter": 12,
+   "no": 12,
+   "page": 221,
+   "as": "বহুকেইটা বৈদ্যুতিক বাল্ব 220 V লাইনত ব্যৱহাৰৰ বাবে তৈয়াৰ কৰা হৈছে আৰু 10 W ৰে চিহ্নিত কৰা হৈছে। যদি চালিত হোৱা সৰ্বোচ্চ প্ৰবাহ 5A হয় কিমানটা বাল্ব সমান্তৰালভাৱে 220 V লাইনৰ লগত সংযোগ কৰিব লাগিব?",
+   "keyAnswer": "110 বাল্ব"
+  },
+  {
+   "id": "b12-13",
+   "source": "book",
+   "chapter": 12,
+   "no": 13,
+   "page": 221,
+   "as": "220 V লাইনৰ লগত সংযোগ কৰা এটা বৈদ্যুতিক চুলাৰ গৰম ফলিখনৰ দুটা ৰোধ কুণ্ডলী A আৰু B আছে আৰু প্ৰত্যেকৰে ৰোধৰ মান 24 Ω, যিকেইটা পৃথকে পৃথকে শ্ৰেণীবদ্ধভাৱে আৰু আৰু সমান্তৰালভাৱে সংযোগ কৰিব পাৰি। এই তিনিও ক্ষেত্ৰত প্ৰবাহ কি হ'ব?",
+   "keyAnswer": "9.2 A, 4.6 A, 18.3 A"
+  },
+  {
+   "id": "b12-14",
+   "source": "book",
+   "chapter": 12,
+   "no": 14,
+   "page": 222,
+   "as": "2 Ω ৰোধক এটাত ব্যৱহৃত ক্ষমতা তলৰ প্ৰতিটো ক্ষেত্ৰতে উলিওৱা (i) 1 Ω আৰু 2 Ω ৰ দুটা ৰোধক 6V ৰ বেটেৰী এটাৰ লগত শ্ৰেণীবদ্ধভাৱে, আৰু (ii) 12 Ω আৰু 2 Ω ৰ ৰোধক এটা 4V ৰ বেটেৰীৰ লগত সমান্তৰালভাৱে সংযোগ কৰিলে।",
+   "keyAnswer": "(i) 8 W; (ii) 8 W"
+  },
+  {
+   "id": "b12-15",
+   "source": "book",
+   "chapter": 12,
+   "no": 15,
+   "page": 222,
+   "as": "এটা 220V ত 100 W চিহ্নিত আৰু অন্যটো 220 V ত 60 W চিহ্নিত দুটা বৈদ্যুতিক চাকি বৈদ্যুতিক যোগানৰ লগত সমান্তৰালভাৱে সংযোগ কৰা হৈছে। যদি যোগান বিভৱ 220V হয়, কিমান প্ৰবাহ ই ল'ব।",
+   "keyAnswer": "0.73 A"
+  },
+  {
+   "id": "b12-16",
+   "source": "book",
+   "chapter": 12,
+   "no": 16,
+   "page": 222,
+   "as": "কোনটোৱে বেছি শক্তি ব্যৱহাৰ কৰিব, এটা 250W ৰ TV চেট 1 ঘণ্টা চলিলে বা এটা 1200W ৰ ৰুটিসেকা সঁজুলি 10 মিনিটত চলিলে?",
+   "keyAnswer": "250 W ৰ টি. ভি. চেট 1 ঘণ্টা চলিলে।"
+  },
+  {
+   "id": "b12-17",
+   "source": "book",
+   "chapter": 12,
+   "no": 17,
+   "page": 222,
+   "as": "8 Ω ৰোধৰ এটা বৈদ্যুতিক চুলাই 2 ঘণ্টা চলোতে মেইনৰ পৰা 15 A প্ৰবাহ লয়। চুলাটোত তাপ উৎপন্ন হোৱা হাৰ উলিওৱা।"
+  },
+  {
+   "id": "b12-18",
+   "source": "book",
+   "chapter": 12,
+   "no": 18,
+   "page": 222,
+   "as": "ব্যাখ্যা কৰা ঃ\n(a) বৈদ্যুতিক চাকিত বেছিভাগ টাংষ্টেনৰ ফিলামেণ্ট কিয় ব্যৱহাৰ হয়?\n(b) বিদ্যুত তাপীয় সঁজুলি যেনে ৰুটি সেকা সঁজুলি আৰু ইস্ত্ৰিৰ বিশুদ্ধ ধাতুৰ পৰিবৰ্তে সংকৰধাতু কিয় ব্যৱহাৰ কৰা হয়?\n(c) ঘৰুৱা বৰ্তনীবিলাকত শ্ৰেণীবদ্ধ সজ্জা কিয় ব্যৱহাৰ কৰা নহয়?\n(d) এডাল পৰিবাহীৰ ৰোধ ইয়াৰ প্ৰস্থচ্ছেদৰ কালিৰ লগত কিদৰে পৰিৱৰ্তন হয়?\n(e) বৈদ্যুতিক সৰবৰাহৰ বাবে সাধাৰণতে তাম আৰু এলুমিনিয়াম তাঁৰ কিয় ব্যৱহাৰ কৰা হয়?",
+   "keyAnswer": "(b) সংকৰ ধাতুৰ উচ্চ ৰোধকতাৰ বাবে। (d) ব্যস্তানুপাতিক।"
+  },
+  {
+   "id": "b13-1",
+   "source": "book",
+   "chapter": 13,
+   "no": 1,
+   "page": 240,
+   "as": "তলৰ কোনটোৱে এডাল পোন, দীঘল পৰিবাহীৰ ওচৰৰ চৌম্বক ক্ষেত্ৰ শুদ্ধভাৱে বৰ্ণনা কৰে?",
+   "options": [
+    {
+     "label": "a",
+     "as": "ক্ষেত্ৰখন তাঁৰডালৰ লম্ব সৰল ৰেখাৰে গঠিত।"
+    },
+    {
+     "label": "b",
+     "as": "ক্ষেত্ৰখন তাঁৰডালৰ সমান্তৰাল সৰল ৰেখাৰে গঠিত।"
+    },
+    {
+     "label": "c",
+     "as": "ক্ষেত্ৰখন তাঁৰডালৰ পৰা ওলোৱা কিছুমান পৰিধিমুখী (radial) ৰেখাৰে গঠিত।"
+    },
+    {
+     "label": "d",
+     "as": "ক্ষেত্ৰখন তাঁৰডালত কেন্দ্ৰ থকা এককেন্দ্ৰীক বৃত্তৰে গঠিত।"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b13-2",
+   "source": "book",
+   "chapter": 13,
+   "no": 2,
+   "page": 240,
+   "as": "বিদ্যুৎ আৱেশৰ পৰিঘটনা হৈছে",
+   "options": [
+    {
+     "label": "a",
+     "as": "বস্তু আহিতকৰণৰ প্ৰক্ৰিয়া"
+    },
+    {
+     "label": "b",
+     "as": "কুণ্ডলীত চালিত প্ৰবাহে চৌম্বক ক্ষেত্ৰ সৃষ্টি কৰা প্ৰক্ৰিয়া।"
+    },
+    {
+     "label": "c",
+     "as": "চুম্বক আৰু কুণ্ডলীৰ মাজৰ আপেক্ষিক গতিৰ বাবে এটা কুণ্ডলীত আৱিষ্ট প্ৰবাহ সৃষ্টি হোৱাৰ প্ৰক্ৰিয়া"
+    },
+    {
+     "label": "d",
+     "as": "বৈদ্যুতিক মটৰৰ কুণ্ডলীৰ ঘূৰ্ণনৰ প্ৰক্ৰিয়া।"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b13-3",
+   "source": "book",
+   "chapter": 13,
+   "no": 3,
+   "page": 240,
+   "as": "বৈদ্যুতিক প্ৰবাহ উৎপন্ন সঁজুলিক",
+   "options": [
+    {
+     "label": "a",
+     "as": "জেনেৰেটৰ বোলা হয়।"
+    },
+    {
+     "label": "b",
+     "as": "গেলভেন'মিটাৰ বোলা হয়।"
+    },
+    {
+     "label": "c",
+     "as": "এমিটাৰ বোলা হয়"
+    },
+    {
+     "label": "d",
+     "as": "মটৰ বোলা হয়।"
+    }
+   ],
+   "answer": "a",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b13-4",
+   "source": "book",
+   "chapter": 13,
+   "no": 4,
+   "page": 240,
+   "as": "পৰিৱৰ্তী প্ৰবাহ জেনেৰেটৰ আৰু প্ৰত্যক্ষ প্ৰবাহ জেনেৰেটৰৰ মাজৰ আৱশ্যকীয় পাৰ্থক্যটো হৈছে",
+   "options": [
+    {
+     "label": "a",
+     "as": "পৰিৱৰ্তী প্ৰবাহ জেনেৰেটৰত বিদ্যুৎ চুম্বক থাকে কিন্তু প্ৰত্যক্ষ প্ৰবাহ জেনেৰেটৰত স্থায়ী চুম্বক থাকে।"
+    },
+    {
+     "label": "b",
+     "as": "প্ৰত্যক্ষ প্ৰবাহ জেনেৰেটৰে উচ্চ বিভৱ ভেদ উৎপন্ন কৰে।"
+    },
+    {
+     "label": "c",
+     "as": "পৰিৱৰ্তী প্ৰবাহ জেনেৰেটৰে উচ্চ বিভৱভেদ উৎপন্ন কৰে।"
+    },
+    {
+     "label": "d",
+     "as": "পৰিৱৰ্তী প্ৰবাহ জেনেৰেটৰত ফলা আঙঠি থাকে কিন্তু প্ৰত্যক্ষ প্ৰবাহ জেনেৰেটৰত এটা দিক্ পৰিৱৰ্তক থাকে।"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b13-5",
+   "source": "book",
+   "chapter": 13,
+   "no": 5,
+   "page": 240,
+   "as": "হ্ৰস্বৱৰ্তনী (Short Circuit) হোৱাৰ সময়ত বৰ্তনীটোত প্ৰবাহ",
+   "options": [
+    {
+     "label": "a",
+     "as": "বুজন পৰিমানে কমি যায়"
+    },
+    {
+     "label": "b",
+     "as": "সলনি নহয়।"
+    },
+    {
+     "label": "c",
+     "as": "বুজন পৰিমাণে বৃদ্ধি পায়।"
+    },
+    {
+     "label": "d",
+     "as": "অবিৰতভাৱে সলনি হয়।"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b13-6",
+   "source": "book",
+   "chapter": 13,
+   "no": 6,
+   "page": 240,
+   "as": "তলৰ উক্তিসমূহ শুদ্ধ নে ভুল কোৱা\n(a) এটা বৈদ্যুতিক মটৰে যান্ত্ৰিক শক্তিক বৈদ্যুতিক শক্তিলৈ ৰূপান্তৰ কৰে।\n(b) এটা বৈদ্যুতিক জেনেৰেটৰে বিদ্যুৎ-চুম্বকীয় আৱেশৰ মূলনীতি অনুসৰি কাৰ্য সম্পাদন কৰে।\n(c) এডাল দীঘল বৃত্তাকাৰ প্ৰবাহযুক্ত পৰিবাহীৰ কেন্দ্ৰত ক্ষেত্ৰখন সমান্তৰাল সৰল ৰেখা হ'ব।\n(d) সেউজীয়া অন্তৰকৰ তাঁৰক সাধাৰণতে বৈদ্যুতিক যোগানৰ সজীৱ তাঁৰ বোলে।",
+   "keyAnswer": "(a) ভুল (b) শুদ্ধ (c) শুদ্ধ (d) ভুল"
+  },
+  {
+   "id": "b13-7",
+   "source": "book",
+   "chapter": 13,
+   "no": 7,
+   "page": 240,
+   "as": "চৌম্বক ক্ষেত্ৰ উৎপন্ন কৰা দুটা পদ্ধতি উল্লেখ কৰা।"
+  },
+  {
+   "id": "b13-8",
+   "source": "book",
+   "chapter": 13,
+   "no": 8,
+   "page": 240,
+   "as": "চ'লেনইডে কেনেদৰে চুম্বকৰ দৰে আচৰণ কৰে? এডাল দণ্ড চুম্বকৰ সহায়ত তুমি প্ৰবাহযুক্ত চ'লেনইড এটাৰ উত্তৰ মেৰু আৰু দক্ষিণ মেৰু নিৰ্ণয় কৰিব পাৰিবানে? ব্যাখ্যা কৰা।"
+  },
+  {
+   "id": "b13-9",
+   "source": "book",
+   "chapter": 13,
+   "no": 9,
+   "page": 241,
+   "as": "চৌম্বক ক্ষেত্ৰত স্থাপন কৰা প্ৰবাহযুক্ত পৰিবাহী এডালে অনুভৱ কৰা বল কেতিয়া সৰ্বোচ্চ হয়?"
+  },
+  {
+   "id": "b13-10",
+   "source": "book",
+   "chapter": 13,
+   "no": 10,
+   "page": 241,
+   "as": "ধৰা হওঁক তুমি কোঠা এটাত বেৰৰ ফালে পিঠি দি বহি আছা। ইলেকট্ৰনৰ কিৰণ এটা পিছফালৰ বেৰৰ পৰা সমুখৰ বেৰলৈ অনুভূমিকভাৱে আহিছে। এই কিৰণ ডাল শক্তিশালী চুম্বকৰ দ্বাৰা সোঁফাললৈ বিচ্যুত হৈছে। চৌম্বক ক্ষেত্ৰৰ দিশ কি হ'ব?",
+   "keyAnswer": "উলম্বভাৱে তললৈ"
+  },
+  {
+   "id": "b13-11",
+   "source": "book",
+   "chapter": 13,
+   "no": 11,
+   "page": 241,
+   "as": "বৈদ্যুতিক মটৰৰ চিহ্নিত চিত্ৰ অংকন কৰা। ইয়াৰ মূলনীতি আৰু কাৰ্যপ্ৰণালী ব্যাখ্যা কৰা। বৈদ্যুতিক মটৰত ফলা আঙঠিৰ কাম কি?"
+  },
+  {
+   "id": "b13-12",
+   "source": "book",
+   "chapter": 13,
+   "no": 12,
+   "page": 241,
+   "as": "বৈদ্যুতিক মটৰ ব্যৱহৃত হোৱা কেইবিধমান সঁজুলীৰ নাম লিখা।"
+  },
+  {
+   "id": "b13-13",
+   "source": "book",
+   "chapter": 13,
+   "no": 13,
+   "page": 241,
+   "as": "অন্তৰিত তামৰ তাঁৰৰ কুণ্ডলী এটা গেলভেন'মিটাৰ এটাৰ লগত সংযোগ কৰা হৈছে। যদি এডাল দণ্ড চুম্বক (i) কুণ্ডলীৰ ভিতৰলৈ ঠেলি দিলে (ii) কুণ্ডলীৰ ভিতৰৰ পৰা আঁতৰাই আনিলে (iii) কুণ্ডলীৰ অন্তভাগত স্থিতিশীল অৱস্থাত ৰাখিলে কি হ'ব?",
+   "keyAnswer": "(i) কাঁটাডালে ক্ষন্তেক সময়ৰ বাবে এটা দিশত বিক্ষেপণ দেখুৱাব। (ii) কাঁটাডালৰ বিক্ষেপণ হ'ব কিন্তু ওলোটা দিশত। (iii) কাঁটাডালৰ বিক্ষেপণ দেখা নাযাব।"
+  },
+  {
+   "id": "b13-14",
+   "source": "book",
+   "chapter": 13,
+   "no": 14,
+   "page": 241,
+   "as": "দুটা বৃত্তাকাৰ কুণ্ডলী A আৰু B পৰস্পৰ ওচৰা ওচৰিকৈ ৰখা হৈছে। A কুণ্ডলীত প্ৰবাহ পৰিৱৰ্তন হ'লে B কুণ্ডলীত প্ৰবাহ আৱিষ্ট হ'বনে? কাৰণ দৰ্শোৱা।"
+  },
+  {
+   "id": "b13-15",
+   "source": "book",
+   "chapter": 13,
+   "no": 15,
+   "page": 241,
+   "as": "(i) প্ৰবাহযুক্ত পোন পৰিবাহীৰ কেউকাষে সৃষ্টি হোৱা চৌম্বক ক্ষেত্ৰৰ, (ii) চৌম্বক ক্ষেত্ৰ এখনৰ লম্বভাৱে স্থাপন কৰা প্ৰবাহযুক্ত পোন পৰিবাহী এডালে অনুভৱ কৰা বল আৰু (iii) চৌম্বক ক্ষেত্ৰ এখনত ঘূৰাওঁতে কুণ্ডলীত আৱিষ্ট হোৱা প্ৰবাহৰ দিশ নিৰ্ণয় কৰাৰ নিয়ম উল্লেখ কৰা।",
+   "keyAnswer": "(i) সোঁহতীয়া বুঢ়া আঙুলি নীতি, (ii) ফ্লেমিংৰ বাওঁহতীয়া নীতি, (iii) ফ্লেমিংৰ সোঁহতীয়া নীতি"
+  },
+  {
+   "id": "b13-16",
+   "source": "book",
+   "chapter": 13,
+   "no": 16,
+   "page": 241,
+   "as": "চিহ্নিত চিত্ৰৰ সহায়ত এটা বৈদ্যুতিক মটৰৰ মূলনীতি আৰু কাৰ্যপ্ৰণালী বৰ্ণনা কৰা। ইয়াত ব্ৰাচদুডালৰ কাম কি?"
+  },
+  {
+   "id": "b13-17",
+   "source": "book",
+   "chapter": 13,
+   "no": 17,
+   "page": 241,
+   "as": "এটা বৈদ্যুতিক হ্ৰস্বৱৰ্তনী (Short Circuit) কেতিয়া সংঘটিত হয়?"
+  },
+  {
+   "id": "b13-18",
+   "source": "book",
+   "chapter": 13,
+   "no": 18,
+   "page": 241,
+   "as": "ভূমি সংলগ্ন তাঁৰৰ কাম কি? ধাতুৰ সঁজুলিবোৰ ভূমি সংলগ্ন কৰাৰ প্ৰয়োজন কিয়?"
+  },
+  {
+   "id": "b14-1",
+   "source": "book",
+   "chapter": 14,
+   "no": 1,
+   "page": 254,
+   "as": "পানী গৰম কৰিবলৈ সৌৰ জল হীটাৰ এটা ব্যৱহাৰ কৰিব নোৱাৰা দিনটো হৈছে এটা —",
+   "options": [
+    {
+     "label": "a",
+     "as": "ৰৌদ্ৰোজ্বল দিন"
+    },
+    {
+     "label": "b",
+     "as": "ডাৱৰীয়া দিন"
+    },
+    {
+     "label": "c",
+     "as": "গৰম দিন"
+    },
+    {
+     "label": "d",
+     "as": "বতাহে কোবোৱা দিন।"
+    }
+   ],
+   "answer": "b",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b14-2",
+   "source": "book",
+   "chapter": 14,
+   "no": 2,
+   "page": 255,
+   "as": "তলৰ কোনটো জীৱ ভৰ শক্তিৰ উৎসৰ উদাহৰণ নহয়?",
+   "options": [
+    {
+     "label": "a",
+     "as": "খৰি"
+    },
+    {
+     "label": "b",
+     "as": "গোবৰ গেছ"
+    },
+    {
+     "label": "c",
+     "as": "নিউক্লীয় শক্তি"
+    },
+    {
+     "label": "d",
+     "as": "কয়লা।"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b14-3",
+   "source": "book",
+   "chapter": 14,
+   "no": 3,
+   "page": 255,
+   "as": "আমি ব্যৱহাৰ কৰা শক্তিৰ সৰহ সংখ্যক উৎসৰ শক্তি হ'ল সঞ্চিত সৌৰশক্তি। তলৰ কোনটো সৌৰ শক্তি আধাৰিত নহয়?",
+   "options": [
+    {
+     "label": "a",
+     "as": "ভূ-তাপীয় শক্তি"
+    },
+    {
+     "label": "b",
+     "as": "বায়ু শক্তি"
+    },
+    {
+     "label": "c",
+     "as": "নিউক্লীয় শক্তি"
+    },
+    {
+     "label": "d",
+     "as": "জৈৱ উপাদান।"
+    }
+   ],
+   "answer": "c",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b14-4",
+   "source": "book",
+   "chapter": 14,
+   "no": 4,
+   "page": 255,
+   "as": "শক্তিৰ প্ৰত্যক্ষ উৎস হিচাপে জীৱাশ্মজাত ইন্ধন আৰু সৌৰশক্তিৰ তুলনা কৰা আৰু সিহঁতৰ পাৰ্থক্য দেখুওৱা।"
+  },
+  {
+   "id": "b14-5",
+   "source": "book",
+   "chapter": 14,
+   "no": 5,
+   "page": 255,
+   "as": "শক্তিৰ উৎস হিচাপে জৈৱ উপাদান জলবিদ্যুতৰ তুলনা কৰা আৰু সিহঁতৰ পাৰ্থক্য দেখুওৱা।"
+  },
+  {
+   "id": "b14-6",
+   "source": "book",
+   "chapter": 14,
+   "no": 6,
+   "page": 255,
+   "as": "তলত দিয়া উৎসসমূহৰ পৰা শক্তি আহৰণ কৰাৰ সীমাবদ্ধতা কি কি?\n(a) বতাহ\n(b) তৰংগ\n(c) জোৱাৰ-ভাতা"
+  },
+  {
+   "id": "b14-7",
+   "source": "book",
+   "chapter": 14,
+   "no": 7,
+   "page": 255,
+   "as": "কি আধাৰত শক্তিৰ উৎসমূহ\n(a) নবীকৰণযোগ্য আৰু অনবীকৰণযোগ্য\n(b) ক্ষয়িষ্ণু যোৱা আৰু অক্ষয়িষ্ণু\nবুলি শ্ৰেণীভুক্ত কৰিবা? (a) আৰু (b) ত উল্লেখ কৰা বাছনি (option) একেই নে?"
+  },
+  {
+   "id": "b14-8",
+   "source": "book",
+   "chapter": 14,
+   "no": 8,
+   "page": 255,
+   "as": "এটা আদৰ্শশক্তি উৎসৰ গুণসমূহ কি কি?"
+  },
+  {
+   "id": "b14-9",
+   "source": "book",
+   "chapter": 14,
+   "no": 9,
+   "page": 255,
+   "as": "সৌৰ চুলা ব্যৱহাৰৰ সুবিধা আৰু অসুবিধাসমূহ কি কি? এনে স্থান আছেনে য'ত সৌৰ চুলাৰ ব্যৱহাৰ সীমিত?"
+  },
+  {
+   "id": "b14-10",
+   "source": "book",
+   "chapter": 14,
+   "no": 10,
+   "page": 255,
+   "as": "পৰিবেশৰ ওপৰত শক্তিৰ বৰ্দ্ধিত চাহিদাৰ প্ৰভাৱ কি কি? শক্তিৰ ব্যয় হ্ৰাস কৰিবৰ বাবে তুমি কি কি পদক্ষেপ লোৱাৰ পৰামৰ্শ দিবা?"
+  },
+  {
+   "id": "b15-1",
+   "source": "book",
+   "chapter": 15,
+   "no": 1,
+   "page": 264,
+   "as": "তলত উল্লেখ কৰা কোনখিনিত কেৱল জীৱ নিম্নিকৰণ পদাৰ্থ আছে?\n(a) ঘাঁহ, ফুল আৰু চামৰা\n(b) ঘাঁহ, কাঠ আৰু প্লাষ্টিক\n(c) ফল-মূলৰ বাকলি, পিঠা আৰু টেঙাৰ ৰস\n(d) পিঠা, কাঠ আৰু ঘাঁহ",
+   "keyAnswer": "(a), (c), (d) — একাধিক শুদ্ধ উত্তৰ"
+  },
+  {
+   "id": "b15-2",
+   "source": "book",
+   "chapter": 15,
+   "no": 2,
+   "page": 264,
+   "as": "তলত উল্লেখ কৰা কোনখিনিয়ে খাদ্য শৃংখল গঠন কৰে?",
+   "options": [
+    {
+     "label": "a",
+     "as": "ঘাঁহ, ঘেঁহু আৰু আম"
+    },
+    {
+     "label": "b",
+     "as": "ঘাঁহ, ছাগলী আৰু মানুহ"
+    },
+    {
+     "label": "c",
+     "as": "ছাগলী, গৰু আৰু হাতী"
+    },
+    {
+     "label": "d",
+     "as": "ঘাঁহ, মাছ আৰু ছাগলী"
+    }
+   ],
+   "answer": "b",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b15-3",
+   "source": "book",
+   "chapter": 15,
+   "no": 3,
+   "page": 264,
+   "as": "তলত উল্লেখ কৰাবিলাকৰ কোনকেইটা পৰিবেশ অনুকূল অভ্যাসৰ অন্তৰ্ভুক্ত?",
+   "options": [
+    {
+     "label": "a",
+     "as": "দোকান বা বজাৰ কৰিবলৈ যাওতে হাতত কাপোৰৰ মোনা লৈ যোৱা অভ্যাস"
+    },
+    {
+     "label": "b",
+     "as": "অপ্ৰয়োজনীয়ভাৱে জ্বলি থকা লাইট বা চলি থকা ফেনৰ ছুইচ (Switch) বন্ধ কৰি ৰখা অভ্যাস।"
+    },
+    {
+     "label": "c",
+     "as": "তোমাক মায়ে স্কুটাৰেৰে বিদ্যালয়লৈ অনা নিয়া কৰাৰ পৰিৱৰ্তে তুমি নিজে খোজ কাঢ়ি যোৱা অভ্যাস।"
+    },
+    {
+     "label": "d",
+     "as": "ওপৰৰ আটাইকেইটা অভ্যাস।"
+    }
+   ],
+   "answer": "d",
+   "answerSource": "textbook"
+  },
+  {
+   "id": "b15-4",
+   "source": "book",
+   "chapter": 15,
+   "no": 4,
+   "page": 265,
+   "as": "কোনো এটা পৌষ্টিক স্তৰৰ সকলোবিলাক জীৱকে ধ্বংস কৰি পেলালে কি ঘটিব?"
+  },
+  {
+   "id": "b15-5",
+   "source": "book",
+   "chapter": 15,
+   "no": 5,
+   "page": 265,
+   "as": "বেলেগ বেলেগ পৌষ্টিক স্তৰৰ পৰা সকলোবিলাক জীৱক ধংস কৰিলে প্ৰত্যেক পৌষ্টিক স্তৰৰ ফলাফলৰ সৈতে একেদৰে প্ৰভাৱ পৰিবনে? পৰিস্থিতি তন্ত্ৰৰ কোনো হানি নোহোৱাকৈ যি কোনো এটা পৌষ্টিক স্তৰৰ সকলোবিলাক জীৱক আঁতৰাব পাৰিমনে?"
+  },
+  {
+   "id": "b15-6",
+   "source": "book",
+   "chapter": 15,
+   "no": 6,
+   "page": 265,
+   "as": "জৈৱিক বিবৰ্ধক (Biological Magnification) বুলিলে কি বুজা? পৰিস্থিতি তন্ত্ৰৰ বেলেগ বেলেগ স্তৰত ইয়াৰ প্ৰভাৱ বেলেগ বেলেগ হবনে?"
+  },
+  {
+   "id": "b15-7",
+   "source": "book",
+   "chapter": 15,
+   "no": 7,
+   "page": 265,
+   "as": "আমি সৃষ্টি কৰা জীৱ অনিম্নিকৰণ পদাৰ্থবিলাকৰ পৰা আমাৰ কি কি সমস্যা হ'ব পাৰে?"
+  },
+  {
+   "id": "b15-8",
+   "source": "book",
+   "chapter": 15,
+   "no": 8,
+   "page": 265,
+   "as": "আমি সৃষ্টি কৰা আৱৰ্জনাবিলাকৰ সকলোবিলাকেই যদি জীৱ নিম্নিকৰণ পদাৰ্থ হয় তেনেহ'লে পৰিবেশৰ ওপৰত একো প্ৰভাৱ নপৰাকৈ থাকিবনে?"
+  },
+  {
+   "id": "b16-1",
+   "source": "book",
+   "chapter": 16,
+   "no": 1,
+   "page": 278,
+   "as": "পৰিবেশৰ ক্ষমতা ৰক্ষাৰ কাৰণে ঘৰখনত কেনেধৰণৰ পৰিৱৰ্তনৰ পৰামৰ্শ আগবঢ়াবা?"
+  },
+  {
+   "id": "b16-2",
+   "source": "book",
+   "chapter": 16,
+   "no": 2,
+   "page": 278,
+   "as": "পৰিবেশৰ ক্ষমতা ৰক্ষাৰ কাৰণে তোমালোকৰ বিদ্যালয়ত কেনেধৰণৰ পৰিৱৰ্তনৰ পৰামৰ্শ দিবা?"
+  },
+  {
+   "id": "b16-3",
+   "source": "book",
+   "chapter": 16,
+   "no": 3,
+   "page": 278,
+   "as": "এই অধ্যায়ত আমি দেখিলো বন আৰু বন্যপ্ৰাণীৰ প্ৰধানকৈ চাৰিটা অংশীদাৰ (Stake holders) আছে। এইবোৰৰ ভিতৰত কোনটো অংশীদাৰৰ বনসম্পদৰ ব্যৱস্থাপনাৰ বিষয়ে সিদ্ধান্ত ল'ব পৰা কৰ্তৃত্ব থাকিব লাগে? তুমি কিয় তেনেকৈ ভাবা?"
+  },
+  {
+   "id": "b16-4",
+   "source": "book",
+   "chapter": 16,
+   "no": 4,
+   "page": 279,
+   "as": "তলৰ সম্পদসমূহৰ ওপৰত এজন সাধাৰণ ব্যক্তি হিচাপে কেনেধৰণৰ ব্যৱস্থাপনাৰ দায়িত্ব ল'বা\n(a) বন আৰু বন্যপ্ৰাণী\n(b) জলসম্পদ\n(c) কয়লা আৰু পেট্ৰ'লিয়াম"
+  },
+  {
+   "id": "b16-5",
+   "source": "book",
+   "chapter": 16,
+   "no": 5,
+   "page": 279,
+   "as": "তুমি এজন সাধাৰণ ব্যক্তি হিচাপে বিভিন্ন ধৰণৰ প্ৰাকৃতিক সম্পদবোৰৰ ব্যৱহাৰ কম কৰিবলৈ কি কৰিবা?"
+  },
+  {
+   "id": "b16-6",
+   "source": "book",
+   "chapter": 16,
+   "no": 6,
+   "page": 279,
+   "as": "যোৱা এটা সপ্তাহ ধৰি তুমি কেনেধৰণৰ কাৰ্যপন্থা হাতত লৈছা তাৰ এটা তালিকা প্ৰস্তুত কৰা (পাঁচটাকৈ)\n(a) আমাৰ প্ৰাকৃতিক সম্পদ সংৰক্ষণ\n(b) আমাৰ প্ৰাকৃতিক সম্পদৰ ওপৰত হেঁচা বৃদ্ধি"
+  },
+  {
+   "id": "b16-7",
+   "source": "book",
+   "chapter": 16,
+   "no": 7,
+   "page": 279,
+   "as": "এই পাঠত উত্থাপন হোৱা সমস্যাৰ ভিত্তিত আমাৰ প্ৰাকৃতিক সম্পদসমূহৰ বহনক্ষম ব্যৱহাৰৰ কাৰণে তোমালোকৰ জীৱন শৈলীৰ কি পৰিবৰ্তন কৰিবা?"
+  }
+ ]
 }
